@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CourseWeaver Workbench</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">CW</div>
+          <div>
+            <h1>CourseWeaver</h1>
+            <p id="project-subtitle">课件到笔记工作台</p>
+          </div>
+        </div>
+
+        <div class="top-stats" aria-label="Project metrics">
+          <span><strong id="metric-pages">0</strong> 页</span>
+          <span><strong id="metric-chunks">0</strong> 节笔记</span>
+          <span><strong id="metric-units">0</strong> 知识点</span>
+          <span><strong id="metric-coverage">0%</strong> 覆盖</span>
+        </div>
+
+        <div class="top-actions">
+          <button id="download-note" class="primary-action" type="button">下载笔记.md</button>
+          <label class="icon-button" title="导入 project.json">
+            <span aria-hidden="true">⇪</span>
+            <input id="file-input" type="file" accept="application/json,.json" />
+          </label>
+          <button id="load-demo" class="icon-button" title="加载本地 demo" type="button">
+            <span aria-hidden="true">⌁</span>
+          </button>
+          <div class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="global-search" type="search" placeholder="搜索笔记、知识点、原文" />
+          </div>
+        </div>
+      </header>
+
+      <main class="workbench">
+        <section class="panel source-panel">
+          <div class="panel-head compact-head">
+            <div>
+              <span class="eyebrow">Source</span>
+              <h2 id="selected-page-title">课件原文</h2>
+            </div>
+            <div class="page-controls">
+              <button id="prev-page" class="icon-button small" type="button" title="上一页">‹</button>
+              <span id="page-indicator">0 / 0</span>
+              <button id="next-page" class="icon-button small" type="button" title="下一页">›</button>
+            </div>
+          </div>
+
+          <div class="pdf-shell">
+            <iframe id="pdf-frame" title="PDF 课件预览"></iframe>
+          </div>
+
+          <div id="page-list" class="page-strip" aria-label="Pages"></div>
+
+          <details class="parse-drawer">
+            <summary>解析层 <span id="block-count">0 blocks</span></summary>
+            <div id="block-list" class="block-list"></div>
+          </details>
+        </section>
+
+        <section class="panel note-panel">
+          <div class="panel-head compact-head">
+            <div>
+              <span class="eyebrow">Generated Note</span>
+              <h2>生成笔记</h2>
+            </div>
+            <div id="coverage-mini" class="coverage-mini"></div>
+          </div>
+          <article id="note-content" class="note-document"></article>
+        </section>
+
+        <aside class="panel tool-panel">
+          <div class="tool-tabs" aria-label="Right tools">
+            <button class="tool-tab active" data-tool="tree" type="button">知识树</button>
+            <button class="tool-tab" data-tool="trace" type="button">溯源</button>
+            <button class="tool-tab" data-tool="review" type="button">漏洞</button>
+          </div>
+          <div id="tool-content" class="tool-content"></div>
+        </aside>
+      </main>
+    </div>
+
+    <template id="empty-state-template">
+      <div class="empty-state">
+        <div class="empty-glyph" aria-hidden="true">◇</div>
+        <h2>Load CourseIR</h2>
+        <p>Open `project.json` or load the local demo.</p>
+      </div>
+    </template>
+
+    <script type="module" src="./ui.mjs"></script>
+  </body>
+</html>

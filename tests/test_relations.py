@@ -1,0 +1,57 @@
+import unittest
+
+from courseweaver.models import KnowledgeUnit, NotePlanSection
+from courseweaver.relations import build_relations
+
+
+def unit(unit_id, name, unit_type="summary"):
+    return KnowledgeUnit(
+        unit_id=unit_id,
+        name=name,
+        unit_type=unit_type,
+        summary=name,
+        source_pages=[1],
+        source_blocks=[f"{unit_id}_b001"],
+        importance="core",
+    )
+
+
+def section(section_id, title, units):
+    return NotePlanSection(
+        section_id=section_id,
+        section_title=title,
+        units=units,
+        goal="test",
+    )
+
+
+class RelationTests(unittest.TestCase):
+    def test_builds_learning_order_between_note_sections(self):
+        relations = build_relations(
+            [unit("u1", "Random Variables"), unit("u2", "Mean and Variance")],
+            [section("s1", "Random Variables", ["u1"]), section("s2", "Mean and Variance", ["u2"])],
+        )
+
+        self.assertTrue(any(item.relation_type == "next" and item.source_id == "s1" and item.target_id == "s2" for item in relations))
+
+    def test_builds_domain_specific_relationships(self):
+        relations = build_relations(
+            [
+                unit("u1", "Maximum Likelihood Estimation"),
+                unit("u2", "Ridge Regression"),
+                unit("u3", "Frequentist v.s. Bayesian"),
+            ],
+            [
+                section("s1", "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)", ["u1"]),
+                section("s2", "Ridge Regression: MSE with L2 Regularization", ["u2"]),
+                section("s3", "Frequentist v.s. Bayesian", ["u3"]),
+            ],
+        )
+
+        typed = {(item.source_id, item.target_id, item.relation_type) for item in relations}
+        self.assertIn(("s1", "s2", "foundation_for"), typed)
+        self.assertIn(("s1", "s3", "contrasts_with"), typed)
+
+
+if __name__ == "__main__":
+    unittest.main()
