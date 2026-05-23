@@ -78,6 +78,7 @@ loadDemoProject({ silent: true });
 async function loadDemoProject({ silent = false } = {}) {
   try {
     const project = await fetchFirstProject([
+      "/examples/lecture3-deepseek/ir/project.json",
       "/output/lecture3-deepseek/ir/project.json",
       "/output/lecture3/ir/project.json",
     ]);

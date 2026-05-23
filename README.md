@@ -135,7 +135,7 @@ python3 -m http.server 8787
 http://localhost:8787/web/
 ```
 
-前端会优先加载本地 DeepSeek demo：`/output/lecture3-deepseek/ir/project.json`，如果不存在再回退到 `/output/lecture3/ir/project.json`。也可以点击左上角导入任意 CourseWeaver 导出的 `project.json`。
+前端会优先加载随仓库提交的 DeepSeek demo：`/examples/lecture3-deepseek/ir/project.json`。如果你本地重新生成过结果，也会回退读取 `/output/lecture3-deepseek/ir/project.json` 或 `/output/lecture3/ir/project.json`。也可以点击左上角导入任意 CourseWeaver 导出的 `project.json`。
 
 新版界面按学习者工作台组织：
 
