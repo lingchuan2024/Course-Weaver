@@ -565,6 +565,187 @@ code {
   font-size: 12px;
 }
 
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 10px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 24px;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.legend-item i {
+  width: 14px;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.graph-viewport {
+  position: relative;
+  min-height: 560px;
+  max-height: calc(100vh - 310px);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgb(37 111 76 / 5%) 1px, transparent 1px),
+    linear-gradient(rgb(47 95 159 / 5%) 1px, transparent 1px),
+    #fbfcf8;
+  background-size: 34px 34px;
+}
+
+.knowledge-graph-canvas {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.graph-edge-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.graph-edge {
+  fill: none;
+  stroke: #9ba69b;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  opacity: 0.86;
+}
+
+.graph-node {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 4px 7px;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 8px 18px rgb(38 52 43 / 8%);
+  color: var(--ink);
+  text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.graph-node:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+  box-shadow: 0 13px 28px rgb(47 95 159 / 14%);
+}
+
+.graph-node.active {
+  border-color: var(--blue);
+  background: #f6f9ff;
+  box-shadow: 0 0 0 3px rgb(47 95 159 / 15%), 0 13px 28px rgb(47 95 159 / 18%);
+}
+
+.graph-node.completed {
+  border-color: rgb(37 111 76 / 34%);
+  background: #fbfdf9;
+}
+
+.graph-node.upcoming {
+  opacity: 0.72;
+}
+
+.graph-node-index {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.graph-node.active .graph-node-index {
+  background: var(--blue);
+}
+
+.graph-node strong {
+  min-width: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  line-height: 1.05;
+}
+
+.graph-node em {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-style: normal;
+}
+
+.graph-edge-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  min-height: 22px;
+  padding: 2px 7px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgb(38 52 43 / 10%);
+}
+
+.edge-next {
+  color: #879184;
+  stroke: #a0aa9c;
+}
+
+.edge-foundation_for {
+  color: #256f4c;
+  stroke: #256f4c;
+}
+
+.edge-contrasts_with {
+  color: #bd3154;
+  stroke: #bd3154;
+}
+
+.edge-parallel_with {
+  color: #7b5a1c;
+  stroke: #b88327;
+}
+
+.edge-example_of {
+  color: #2f5f9f;
+  stroke: #2f5f9f;
+}
+
+.edge-regularizes {
+  color: #6f4da0;
+  stroke: #6f4da0;
+}
+
+.edge-supports {
+  color: #2c7978;
+  stroke: #2c7978;
+}
+
 .tree-map {
   position: relative;
   display: grid;

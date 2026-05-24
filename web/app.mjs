@@ -142,6 +142,85 @@ export function buildKnowledgeTree(project) {
   });
 }
 
+export function buildKnowledgeGraph(project) {
+  const stageOrder = [
+    "orientation",
+    "foundation",
+    "modeling",
+    "estimation",
+    "analysis",
+    "diagnosis",
+    "regularization",
+    "statistical_view",
+    "review",
+    "exercise",
+  ];
+  const tree = buildKnowledgeTree(project);
+  const stageRank = new Map(stageOrder.map((stage, index) => [stage, index]));
+  const nodes = tree.map((node, order) => {
+    const stage = node.learningStages[0] || inferLearningStage(node.title);
+    return {
+      ...node,
+      order,
+      stage,
+      stageIndex: stageRank.get(stage) ?? 1,
+    };
+  });
+
+  const activeStages = [...new Set(nodes.map((node) => node.stageIndex))].sort((a, b) => a - b);
+  const columnByStage = new Map(activeStages.map((stage, index) => [stage, index]));
+  const rowsByColumn = new Map();
+  const nodeWidth = 156;
+  const nodeHeight = 54;
+  const columnGap = 190;
+  const rowGap = 86;
+  const marginX = 36;
+  const marginY = 62;
+
+  for (const node of nodes) {
+    const column = columnByStage.get(node.stageIndex) ?? 0;
+    const row = rowsByColumn.get(column) || 0;
+    rowsByColumn.set(column, row + 1);
+    node.x = marginX + column * columnGap;
+    node.y = marginY + row * rowGap;
+    node.width = nodeWidth;
+    node.height = nodeHeight;
+  }
+
+  const nodeById = new Map(nodes.map((node) => [node.id, node]));
+  const edges = (project.relations || [])
+    .map((relation) => {
+      const source = nodeById.get(relation.source_id);
+      const target = nodeById.get(relation.target_id);
+      if (!source || !target) return null;
+      const sx = source.x + source.width;
+      const sy = source.y + source.height / 2;
+      const tx = target.x;
+      const ty = target.y + target.height / 2;
+      const bend = Math.max(42, Math.abs(tx - sx) * 0.36);
+      return {
+        ...relation,
+        sx,
+        sy,
+        tx,
+        ty,
+        labelX: (sx + tx) / 2,
+        labelY: (sy + ty) / 2,
+        path: `M ${sx} ${sy} C ${sx + bend} ${sy}, ${tx - bend} ${ty}, ${tx} ${ty}`,
+      };
+    })
+    .filter(Boolean);
+
+  const maxX = Math.max(...nodes.map((node) => node.x + node.width), 420);
+  const maxY = Math.max(...nodes.map((node) => node.y + node.height), 360);
+  return {
+    nodes,
+    edges,
+    width: maxX + marginX,
+    height: maxY + marginY,
+  };
+}
+
 function inferLearningStage(title) {
   const text = String(title || "").toLowerCase();
   if (text.includes("homework")) return "exercise";

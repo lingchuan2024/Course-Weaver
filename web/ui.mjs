@@ -1,7 +1,7 @@
 import {
   RELATION_LABELS,
   STATUS_LABELS,
-  buildKnowledgeTree,
+  buildKnowledgeGraph,
   buildNoteMarkdown,
   escapeHtml,
   getPageBlocks,
@@ -246,23 +246,33 @@ function renderTool() {
 
 function renderKnowledgeTree() {
   const query = state.query.trim().toLowerCase();
-  const tree = buildKnowledgeTree(state.project).filter((node) => {
+  const graph = buildKnowledgeGraph(state.project);
+  const visibleNodes = graph.nodes.filter((node) => {
     if (!query) return true;
     return [node.title, ...node.units.map((unit) => unit.name), ...node.relations.map((relation) => relation.target_label)]
       .some((value) => String(value).toLowerCase().includes(query));
   });
+  const visibleIds = new Set(visibleNodes.map((node) => node.id));
+  const visibleEdges = graph.edges.filter((edge) => visibleIds.has(edge.source_id) && visibleIds.has(edge.target_id));
+  const viewWidth = graph.width;
+  const viewHeight = graph.height;
 
   els.toolContent.innerHTML = `
     <div class="tool-summary">
-      <strong>学习路径图</strong>
-      <span id="learning-progress-text">${learningProgressText(tree)}</span>
+      <strong>知识关系图</strong>
+      <span id="learning-progress-text">${learningProgressText(visibleNodes)}</span>
     </div>
-    <div class="tree-map learning-graph" role="tree">
-      <div class="tree-root">
-        <strong>Lecture</strong>
-        <span>Progress</span>
+    <div class="graph-legend" aria-label="关系颜色图例">
+      ${renderGraphLegend()}
+    </div>
+    <div class="graph-viewport" role="group" aria-label="知识关系图">
+      <div class="knowledge-graph-canvas" style="width:${viewWidth}px;height:${viewHeight}px">
+        <svg class="graph-edge-svg" viewBox="0 0 ${viewWidth} ${viewHeight}" aria-hidden="true">
+          ${visibleEdges.map(renderGraphEdge).join("")}
+        </svg>
+        ${visibleEdges.map(renderGraphEdgeLabel).join("")}
+        ${visibleNodes.map(renderGraphNode).join("") || emptyMarkup("没有匹配的知识节点")}
       </div>
-      ${tree.map(renderTreeNode).join("") || emptyMarkup("没有匹配的知识节点")}
     </div>
   `;
 
@@ -272,38 +282,55 @@ function renderKnowledgeTree() {
   updateGraphProgressClasses();
 }
 
-function renderTreeNode(node) {
+function renderGraphNode(node) {
   const topicItems = [
     ...node.parentTopics.slice(0, 2).map((topic) => `<span class="topic-chip">${escapeHtml(topic)}</span>`),
     ...node.learningStages.slice(0, 1).map((stage) => `<span class="stage-chip">${escapeHtml(stageLabel(stage))}</span>`),
   ].join("");
-  const unitItems = node.units
-    .slice(0, 8)
-    .map((unit) => `<button class="leaf-node" title="${escapeHtml(unit.summary || unit.name)}" type="button">${escapeHtml(unit.name)}</button>`)
-    .join("");
-  const relationItems = node.relations
-    .filter((relation) => relation.relation_type !== "next")
-    .slice(0, 6)
-    .map((relation) => `
-      <span class="relation-edge">
-        <i>${RELATION_LABELS[relation.relation_type] || relation.relation_type}</i>
-        <button data-jump-title="${escapeHtml(relation.target_label)}" type="button">${escapeHtml(relation.target_label)}</button>
-      </span>
-    `)
-    .join("");
 
   return `
-    <section class="branch-node" role="treeitem" data-section-title="${escapeHtml(node.title)}" data-section-index="${node.index}">
-      <div class="branch-stem" aria-hidden="true"></div>
-      <div class="branch-card">
-        <span class="branch-index">${String(node.index).padStart(2, "0")}</span>
-        <button class="branch-title" data-jump-title="${escapeHtml(node.title)}" type="button">${escapeHtml(node.title)}</button>
-        ${topicItems ? `<div class="topic-branches">${topicItems}</div>` : ""}
-        <div class="unit-branches">${unitItems || '<span class="leaf-node muted-leaf">暂无知识单元</span>'}</div>
-        ${relationItems ? `<div class="relation-branches">${relationItems}</div>` : ""}
-      </div>
-    </section>
+    <button
+      class="graph-node"
+      style="left:${node.x}px;top:${node.y}px;width:${node.width}px;height:${node.height}px"
+      data-jump-title="${escapeHtml(node.title)}"
+      data-section-title="${escapeHtml(node.title)}"
+      data-section-index="${node.index}"
+      title="${escapeHtml(node.title)}"
+      type="button"
+    >
+      <span class="graph-node-index">${String(node.index).padStart(2, "0")}</span>
+      <strong>${escapeHtml(shortGraphTitle(node.title))}</strong>
+      ${topicItems ? `<em>${topicItems}</em>` : ""}
+    </button>
   `;
+}
+
+function renderGraphEdge(edge) {
+  return `<path class="graph-edge edge-${edge.relation_type}" d="${edge.path}" />`;
+}
+
+function renderGraphEdgeLabel(edge) {
+  if (edge.relation_type === "next") return "";
+  return `
+    <button
+      class="graph-edge-label edge-${edge.relation_type}"
+      style="left:${edge.labelX}px;top:${edge.labelY}px"
+      data-jump-title="${escapeHtml(edge.target_label)}"
+      title="${escapeHtml(edge.reason || edge.relation_type)}"
+      type="button"
+    >${escapeHtml(RELATION_LABELS[edge.relation_type] || edge.relation_type)}</button>
+  `;
+}
+
+function renderGraphLegend() {
+  return ["next", "foundation_for", "contrasts_with", "parallel_with", "example_of", "regularizes", "supports"]
+    .map((type) => `<span class="legend-item edge-${type}"><i></i>${escapeHtml(RELATION_LABELS[type] || type)}</span>`)
+    .join("");
+}
+
+function shortGraphTitle(title) {
+  const clean = String(title || "");
+  return clean.length > 48 ? `${clean.slice(0, 47)}…` : clean;
 }
 
 function stageLabel(stage) {
@@ -440,7 +467,7 @@ function updateActiveSectionFromScroll() {
 }
 
 function updateGraphProgressClasses() {
-  const nodes = [...els.toolContent.querySelectorAll(".branch-node")];
+  const nodes = [...els.toolContent.querySelectorAll(".graph-node")];
   if (!nodes.length) return;
   const activeIndex = nodes.findIndex((node) => node.dataset.sectionTitle === state.activeSectionTitle);
   nodes.forEach((node, index) => {

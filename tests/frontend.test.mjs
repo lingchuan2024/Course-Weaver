@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  buildKnowledgeGraph,
   buildKnowledgeTree,
   buildNoteMarkdown,
   filterCoverageItems,
@@ -116,6 +117,12 @@ test("builds downloadable markdown and knowledge tree", () => {
   assert.equal(tree[0].parentTopics[0], "Statistical Modeling");
   assert.equal(tree[0].learningStages[0], "modeling");
   assert.equal(tree[0].relations[0].target_label, "Ridge Regression");
+
+  const graph = buildKnowledgeGraph(project);
+  assert.equal(graph.nodes.length, 2);
+  assert.equal(graph.edges.length, 1);
+  assert.equal(graph.edges[0].relation_type, "foundation_for");
+  assert.ok(graph.width >= 420);
 });
 
 test("prioritizes review items that need attention", () => {
