@@ -11,6 +11,7 @@ from courseweaver.models import (
     NotePlanSection,
     PageIR,
     ProjectIR,
+    Relation,
 )
 from courseweaver.pdf_parser import parse_bbox_layout_xml
 
@@ -87,6 +88,18 @@ class ParserAndExportTests(unittest.TestCase):
                     goal="Explain the topic.",
                 )
             ],
+            relations=[
+                Relation(
+                    relation_id="R_0001",
+                    source_id="S_0001",
+                    target_id="S_0001",
+                    relation_type="parallel_with",
+                    source_label="Linear Regression",
+                    target_label="Ridge Regression",
+                    reason="Both are regression viewpoints.",
+                    evidence_units=["U_0001"],
+                )
+            ],
             note_chunks=[
                 NoteChunk(
                     chunk_id="N_0001",
@@ -117,6 +130,8 @@ class ParserAndExportTests(unittest.TestCase):
             coverage = (Path(tmpdir) / "notes" / "07_coverage_report.md").read_text(encoding="utf-8")
 
         self.assertIn("Linear Regression", note)
+        self.assertIn("关系导读", note)
+        self.assertIn("| 关系 | 知识点 A | 知识点 B | 阅读建议 |", note)
         self.assertIn("covered", coverage)
 
 

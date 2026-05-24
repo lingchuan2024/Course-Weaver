@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from courseweaver.models import KnowledgeUnit, ProjectIR
+from courseweaver.notes import add_relationship_review_chunk
 
 
 def export_project(project: ProjectIR, output_dir: Path) -> None:
@@ -67,7 +68,15 @@ def _overview(project: ProjectIR) -> str:
 
 def _lecture_notes(project: ProjectIR) -> str:
     title = _project_title(project)
-    chunks = "\n".join(chunk.content for chunk in project.note_chunks)
+    note_chunks = project.note_chunks
+    if note_chunks and note_chunks[0].section_title != "关系导读与对比总结":
+        note_chunks = add_relationship_review_chunk(
+            note_chunks,
+            project.knowledge_units,
+            project.relations,
+            project.note_plan,
+        )
+    chunks = "\n".join(chunk.content for chunk in note_chunks)
     return f"# {title} 讲义式笔记\n\n{chunks}\n"
 
 

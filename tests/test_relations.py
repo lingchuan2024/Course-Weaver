@@ -52,6 +52,26 @@ class RelationTests(unittest.TestCase):
         self.assertIn(("s1", "s2", "foundation_for"), typed)
         self.assertIn(("s1", "s3", "contrasts_with"), typed)
 
+    def test_builds_parallel_relationships_for_sibling_viewpoints(self):
+        relations = build_relations(
+            [
+                unit("u1", "Bias-Variance Trade-off: An Indicator of Model Misspecification"),
+                unit("u2", "Bias-Variance Trade-off: An Indicator of Training Process"),
+                unit("u3", "Ridge Regression: MSE with L2 Regularization"),
+                unit("u4", "Ridge Regression: A Bayesian Viewpoint"),
+            ],
+            [
+                section("s1", "Bias-Variance Trade-off: An Indicator of Model Misspecification", ["u1"]),
+                section("s2", "Bias-Variance Trade-off: An Indicator of Training Process", ["u2"]),
+                section("s3", "Ridge Regression: MSE with L2 Regularization", ["u3"]),
+                section("s4", "Ridge Regression: A Bayesian Viewpoint", ["u4"]),
+            ],
+        )
+
+        typed = {(item.source_id, item.target_id, item.relation_type) for item in relations}
+        self.assertIn(("s1", "s2", "parallel_with"), typed)
+        self.assertIn(("s3", "s4", "parallel_with"), typed)
+
 
 if __name__ == "__main__":
     unittest.main()

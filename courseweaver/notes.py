@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from courseweaver.models import KnowledgeUnit, NoteChunk, NotePlanSection
+from courseweaver.models import KnowledgeUnit, NoteChunk, NotePlanSection, Relation
 
 
 def plan_notes(units: list[KnowledgeUnit]) -> list[NotePlanSection]:
@@ -76,6 +76,37 @@ def generate_note_chunks(units: list[KnowledgeUnit], plan: list[NotePlanSection]
     return chunks
 
 
+def add_relationship_review_chunk(
+    chunks: list[NoteChunk],
+    units: list[KnowledgeUnit],
+    relations: list[Relation],
+    plan: list[NotePlanSection],
+) -> list[NoteChunk]:
+    if not chunks or not relations:
+        return chunks
+
+    content, source_units = _relationship_review_content(relations, plan)
+    if not content:
+        return chunks
+
+    unit_by_id = {unit.unit_id: unit for unit in units}
+    source_blocks = []
+    for unit_id in source_units:
+        unit = unit_by_id.get(unit_id)
+        if unit:
+            source_blocks.extend(unit.source_blocks)
+
+    review = NoteChunk(
+        chunk_id="N_0000",
+        note_file="01_lecture_notes.md",
+        section_title="关系导读与对比总结",
+        content=content,
+        source_units=list(dict.fromkeys(source_units)),
+        source_blocks=list(dict.fromkeys(source_blocks)),
+    )
+    return [review, *chunks]
+
+
 def refine_note_chunks_with_llm(chunks: list[NoteChunk], units: list[KnowledgeUnit], client) -> list[NoteChunk]:
     unit_by_id = {unit.unit_id: unit for unit in units}
     refined: list[NoteChunk] = []
@@ -86,6 +117,107 @@ def refine_note_chunks_with_llm(chunks: list[NoteChunk], units: list[KnowledgeUn
         content = client.chat(messages, max_tokens=2600, temperature=0.45)
         refined.append(chunk.model_copy(update={"content": content or chunk.content}))
     return refined
+
+
+def _relationship_review_content(relations: list[Relation], plan: list[NotePlanSection]) -> tuple[str, list[str]]:
+    next_relations = [relation for relation in relations if relation.relation_type == "next"]
+    comparison_relations = _unique_relation_pairs([
+        relation for relation in relations if relation.relation_type in {"parallel_with", "contrasts_with"}
+    ])
+    dependency_relations = _unique_relation_pairs([
+        relation
+        for relation in relations
+        if relation.relation_type in {"foundation_for", "derives", "regularizes", "supports"}
+    ])
+    example_relations = _unique_relation_pairs([relation for relation in relations if relation.relation_type == "example_of"])
+
+    if not any([next_relations, comparison_relations, dependency_relations, example_relations]):
+        return "", []
+
+    source_units = [unit_id for relation in relations for unit_id in relation.evidence_units]
+    lines = [
+        "## 关系导读与对比总结 [CourseIR]",
+        "",
+        "这一节是 CourseWeaver 根据知识关系自动生成的阅读导航。它不替代正文，而是帮助你先看清：哪些内容是主线，哪些内容应该并列比较，哪些内容只是例子或应用。",
+        "",
+    ]
+
+    if next_relations:
+        path = " → ".join(relation.source_label for relation in next_relations[:8])
+        if len(next_relations) >= 1:
+            path = f"{path} → {next_relations[min(len(next_relations), 8) - 1].target_label}"
+        lines.extend(["### 学习主线", "", path, ""])
+
+    if dependency_relations:
+        lines.extend(
+            [
+                "### 前置与支撑关系",
+                "",
+                "| 先理解 | 再学习 | 为什么这样排 |",
+                "|---|---|---|",
+            ]
+        )
+        for relation in dependency_relations[:8]:
+            lines.append(
+                f"| {_md(relation.source_label)} | {_md(relation.target_label)} | {_md(relation.reason)} |"
+            )
+        lines.append("")
+
+    if comparison_relations:
+        lines.extend(
+            [
+                "### 并列与对比知识点",
+                "",
+                "| 关系 | 知识点 A | 知识点 B | 阅读建议 |",
+                "|---|---|---|---|",
+            ]
+        )
+        for relation in comparison_relations[:8]:
+            label = "并列视角" if relation.relation_type == "parallel_with" else "需要对比"
+            lines.append(
+                f"| {label} | {_md(relation.source_label)} | {_md(relation.target_label)} | {_md(relation.reason)} |"
+            )
+        lines.append("")
+
+    if example_relations:
+        lines.extend(
+            [
+                "### 例子如何服务概念",
+                "",
+                "| 例子 / 场景 | 被解释的概念 | 作用 |",
+                "|---|---|---|",
+            ]
+        )
+        for relation in example_relations[:6]:
+            lines.append(
+                f"| {_md(relation.source_label)} | {_md(relation.target_label)} | {_md(relation.reason)} |"
+            )
+        lines.append("")
+
+    lines.extend(
+        [
+            "读正文时可以按这个顺序检查自己：先能说清前置概念，再看公式推导；遇到并列视角时，不要分别背两段话，而是用表格比较它们的假设、目标和结论。",
+            "",
+            "来源：CourseIR relations",
+        ]
+    )
+    return "\n".join(lines), list(dict.fromkeys(source_units))
+
+
+def _md(value: str) -> str:
+    return value.replace("|", "\\|").replace("\n", " ")
+
+
+def _unique_relation_pairs(relations: list[Relation]) -> list[Relation]:
+    seen = set()
+    unique = []
+    for relation in relations:
+        key = (relation.relation_type, relation.source_label, relation.target_label)
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(relation)
+    return unique
 
 
 def _render_section(section: NotePlanSection, units: list[KnowledgeUnit]) -> str:

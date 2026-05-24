@@ -100,6 +100,7 @@ class Relation(BaseModel):
     target_id: str
     relation_type: Literal[
         "next",
+        "parallel_with",
         "foundation_for",
         "derives",
         "regularizes",

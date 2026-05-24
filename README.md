@@ -143,6 +143,8 @@ http://localhost:8787/web/
 - 中间：DeepSeek/Kimi 生成的讲义式笔记，前端会渲染 Markdown 标题、列表、行内公式和公式块，并支持一键下载 Markdown。
 - 右侧：知识树、溯源、漏洞三个工具页。
 
+主笔记会根据 `project.relations` 自动加入“关系导读与对比总结”，用表格展示前置依赖、并列/对比知识点和例子关系，例如 Bias vs Variance、频率派 vs 贝叶斯、Ridge 的正则化视角 vs 贝叶斯视角。
+
 知识树读取 `project.note_plan`、`project.knowledge_units` 和 `project.relations`，按“Lecture 根节点 -> 章节主干 -> 知识点叶子 -> 关系边”展示。`next` 表示学习顺序，`foundation_for`、`contrasts_with`、`regularizes`、`example_of` 等关系挂在对应章节节点下。溯源页用于查看选中 block 的原文、页码、进入笔记的位置和关联知识点。漏洞页优先展示 missing/uncertain，再展示 merged/ignored，作为人工复核清单。
 
 前端重设计说明见 `docs/frontend_redesign.md`。

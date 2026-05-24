@@ -116,10 +116,12 @@ test("prioritizes review items that need attention", () => {
 });
 
 test("renders minimal markdown safely", () => {
-  const html = markdownToHtml("## Title\n\n- `code` and **bold**\n\n\\[\ny = X\\theta\n\\]\n\ninline \\(x\\)");
+  const html = markdownToHtml("## Title\n\n- `code` and **bold**\n\n| A | B |\n|---|---|\n| x | y |\n\n\\[\ny = X\\theta\n\\]\n\ninline \\(x\\)");
   assert.match(html, /<h2>Title<\/h2>/);
   assert.match(html, /<code>code<\/code>/);
   assert.match(html, /<strong>bold<\/strong>/);
+  assert.match(html, /<table>/);
+  assert.match(html, /<th>A<\/th>/);
   assert.match(html, /class="math-block"/);
   assert.match(html, /class="math-inline"/);
 });

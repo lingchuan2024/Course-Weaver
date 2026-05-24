@@ -9,6 +9,7 @@ export const STATUS_LABELS = {
 
 export const RELATION_LABELS = {
   next: "下一节",
+  parallel_with: "并列",
   foundation_for: "支撑",
   contrasts_with: "对比",
   regularizes: "约束",
@@ -181,6 +182,7 @@ export function markdownToHtml(markdown) {
   let listType = "";
   let inMath = false;
   let mathLines = [];
+  let tableRows = [];
 
   const closeList = (nextType = "") => {
     if (listType && listType !== nextType) {
@@ -203,6 +205,24 @@ export function markdownToHtml(markdown) {
     mathLines = [];
   };
 
+  const closeTable = () => {
+    if (!tableRows.length) return;
+    const [header, separator, ...body] = tableRows;
+    if (!isTableSeparator(separator || "")) {
+      for (const row of tableRows) html.push(`<p>${inlineMarkdown(row)}</p>`);
+      tableRows = [];
+      return;
+    }
+    html.push("<table>");
+    html.push(`<thead><tr>${tableCells(header).map((cell) => `<th>${inlineMarkdown(cell)}</th>`).join("")}</tr></thead>`);
+    html.push("<tbody>");
+    for (const row of body) {
+      html.push(`<tr>${tableCells(row).map((cell) => `<td>${inlineMarkdown(cell)}</td>`).join("")}</tr>`);
+    }
+    html.push("</tbody></table>");
+    tableRows = [];
+  };
+
   for (const line of lines) {
     const trimmed = line.trim();
     if (inMath) {
@@ -214,6 +234,13 @@ export function markdownToHtml(markdown) {
       }
       continue;
     }
+
+    if (trimmed.startsWith("|") && trimmed.endsWith("|")) {
+      closeList();
+      tableRows.push(trimmed);
+      continue;
+    }
+    closeTable();
 
     if (trimmed.startsWith("\\[") && trimmed.endsWith("\\]") && trimmed.length > 4) {
       closeList();
@@ -255,9 +282,22 @@ export function markdownToHtml(markdown) {
       html.push(`<p>${inlineMarkdown(line)}</p>`);
     }
   }
+  closeTable();
   closeList();
   if (inMath) closeMath();
   return html.join("");
+}
+
+function isTableSeparator(value) {
+  return /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(value);
+}
+
+function tableCells(row) {
+  return row
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split("|")
+    .map((cell) => cell.trim());
 }
 
 export function inlineMarkdown(value) {
