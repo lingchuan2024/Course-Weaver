@@ -6,6 +6,7 @@ from courseweaver.models import KnowledgeUnit, NotePlanSection, Relation
 def build_relations(units: list[KnowledgeUnit], plan: list[NotePlanSection]) -> list[Relation]:
     relations: list[Relation] = []
     unit_by_id = {unit.unit_id: unit for unit in units}
+    section_lookup = _section_lookup(plan, unit_by_id)
 
     for left, right in zip(plan, plan[1:]):
         relations.append(
@@ -20,7 +21,63 @@ def build_relations(units: list[KnowledgeUnit], plan: list[NotePlanSection]) -> 
             )
         )
 
-    title_index = {section.section_title.lower(): section for section in plan}
+    for target in plan:
+        for unit_id in target.units:
+            unit = unit_by_id.get(unit_id)
+            if not unit:
+                continue
+            for prerequisite in unit.prerequisites:
+                source = _match_section(prerequisite, section_lookup)
+                if not source or source.section_id == target.section_id:
+                    continue
+                if not _has_relation(relations, source.section_id, target.section_id, "foundation_for"):
+                    relations.append(
+                        _relation(
+                            len(relations) + 1,
+                            source,
+                            target,
+                            "foundation_for",
+                            f"AI 抽取认为“{unit.name}”依赖前置知识“{prerequisite}”。",
+                            _evidence_units(source, target),
+                            confidence=min(0.88, max(0.7, unit.confidence)),
+                        )
+                    )
+            for peer_name in unit.confusable_with:
+                peer = _match_section(peer_name, section_lookup)
+                if not peer or peer.section_id == target.section_id:
+                    continue
+                if _has_relation(relations, target.section_id, peer.section_id, "contrasts_with") or _has_relation(
+                    relations, peer.section_id, target.section_id, "contrasts_with"
+                ):
+                    continue
+                relations.append(
+                    _relation(
+                        len(relations) + 1,
+                        target,
+                        peer,
+                        "contrasts_with",
+                        f"AI 抽取认为“{unit.name}”需要和“{peer_name}”对比理解。",
+                        _evidence_units(target, peer),
+                        confidence=min(0.86, max(0.7, unit.confidence)),
+                    )
+                )
+            if unit.parent_topic:
+                parent = _match_section(unit.parent_topic, section_lookup)
+                if parent and parent.section_id != target.section_id and not _has_relation(
+                    relations, parent.section_id, target.section_id, "supports"
+                ):
+                    relations.append(
+                        _relation(
+                            len(relations) + 1,
+                            parent,
+                            target,
+                            "supports",
+                            f"“{target.section_title}”被归入上级主题“{unit.parent_topic}”。",
+                            _evidence_units(parent, target),
+                            confidence=0.74,
+                        )
+                    )
+
     sections = list(plan)
     for source in sections:
         source_text = _section_text(source, unit_by_id)
@@ -47,6 +104,41 @@ def build_relations(units: list[KnowledgeUnit], plan: list[NotePlanSection]) -> 
                 )
 
     return relations
+
+
+def _section_lookup(
+    plan: list[NotePlanSection],
+    unit_by_id: dict[str, KnowledgeUnit],
+) -> list[tuple[NotePlanSection, str]]:
+    entries = []
+    for section in plan:
+        entries.append((section, section.section_title))
+        for unit_id in section.units:
+            unit = unit_by_id.get(unit_id)
+            if not unit:
+                continue
+            entries.append((section, unit.name))
+            if unit.parent_topic:
+                entries.append((section, unit.parent_topic))
+    return entries
+
+
+def _match_section(label: str, lookup: list[tuple[NotePlanSection, str]]) -> NotePlanSection | None:
+    normalized = _normal_label(label)
+    if not normalized:
+        return None
+    for section, candidate in lookup:
+        if _normal_label(candidate) == normalized:
+            return section
+    for section, candidate in lookup:
+        candidate_label = _normal_label(candidate)
+        if normalized in candidate_label or candidate_label in normalized:
+            return section
+    return None
+
+
+def _normal_label(value: str) -> str:
+    return " ".join(value.lower().replace("v.s.", "vs").replace("v.s", "vs").split())
 
 
 def _infer_relation(source_title: str, target_title: str, source_text: str, target_text: str):

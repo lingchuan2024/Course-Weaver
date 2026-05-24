@@ -273,6 +273,10 @@ function renderKnowledgeTree() {
 }
 
 function renderTreeNode(node) {
+  const topicItems = [
+    ...node.parentTopics.slice(0, 2).map((topic) => `<span class="topic-chip">${escapeHtml(topic)}</span>`),
+    ...node.learningStages.slice(0, 1).map((stage) => `<span class="stage-chip">${escapeHtml(stageLabel(stage))}</span>`),
+  ].join("");
   const unitItems = node.units
     .slice(0, 8)
     .map((unit) => `<button class="leaf-node" title="${escapeHtml(unit.summary || unit.name)}" type="button">${escapeHtml(unit.name)}</button>`)
@@ -294,11 +298,28 @@ function renderTreeNode(node) {
       <div class="branch-card">
         <span class="branch-index">${String(node.index).padStart(2, "0")}</span>
         <button class="branch-title" data-jump-title="${escapeHtml(node.title)}" type="button">${escapeHtml(node.title)}</button>
+        ${topicItems ? `<div class="topic-branches">${topicItems}</div>` : ""}
         <div class="unit-branches">${unitItems || '<span class="leaf-node muted-leaf">暂无知识单元</span>'}</div>
         ${relationItems ? `<div class="relation-branches">${relationItems}</div>` : ""}
       </div>
     </section>
   `;
+}
+
+function stageLabel(stage) {
+  const labels = {
+    orientation: "导览",
+    foundation: "基础",
+    modeling: "建模",
+    estimation: "估计",
+    analysis: "分析",
+    diagnosis: "诊断",
+    regularization: "正则化",
+    statistical_view: "统计视角",
+    review: "复习",
+    exercise: "练习",
+  };
+  return labels[stage] || stage;
 }
 
 function renderTrace() {

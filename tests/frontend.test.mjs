@@ -24,7 +24,13 @@ const project = {
     { block_id: "b2", page_id: "p001", page_number: 1, block_type: "formula", text: "y = Xw" },
   ],
   knowledge_units: [
-    { unit_id: "u1", name: "Linear Regression", source_blocks: ["b1", "b2"] },
+    {
+      unit_id: "u1",
+      name: "Linear Regression",
+      source_blocks: ["b1", "b2"],
+      parent_topic: "Statistical Modeling",
+      learning_stage: "modeling",
+    },
   ],
   note_chunks: [
     { section_title: "Linear Regression", content: "## Linear Regression\n\n- Fit a line\n\n来源：p.1" },
@@ -107,6 +113,8 @@ test("builds downloadable markdown and knowledge tree", () => {
   const tree = buildKnowledgeTree(project);
   assert.equal(tree.length, 2);
   assert.equal(tree[0].units[0].name, "Linear Regression");
+  assert.equal(tree[0].parentTopics[0], "Statistical Modeling");
+  assert.equal(tree[0].learningStages[0], "modeling");
   assert.equal(tree[0].relations[0].target_label, "Ridge Regression");
 });
 

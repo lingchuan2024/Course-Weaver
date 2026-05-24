@@ -716,6 +716,7 @@ code {
   vertical-align: middle;
 }
 
+.topic-branches,
 .unit-branches,
 .relation-branches {
   position: relative;
@@ -724,6 +725,30 @@ code {
   margin: 10px 0 0 42px;
   padding-left: 12px;
   border-left: 2px solid var(--line);
+}
+
+.topic-branches {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topic-chip,
+.stage-chip {
+  min-height: 24px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.topic-chip {
+  background: #f1f4ed;
+  color: var(--green);
+}
+
+.stage-chip {
+  background: rgb(47 95 159 / 12%);
+  color: var(--blue);
 }
 
 .leaf-node,

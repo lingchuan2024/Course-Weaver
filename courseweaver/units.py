@@ -34,6 +34,30 @@ ALLOWED_UNIT_TYPES = {
     "summary",
 }
 ALLOWED_IMPORTANCE = {"core", "supporting", "minor"}
+ALLOWED_TEACHING_ROLES = {
+    "core_concept",
+    "definition",
+    "derivation",
+    "formula_detail",
+    "example",
+    "comparison",
+    "application",
+    "summary",
+    "exercise",
+    "supporting_detail",
+}
+ALLOWED_LEARNING_STAGES = {
+    "orientation",
+    "foundation",
+    "modeling",
+    "estimation",
+    "analysis",
+    "diagnosis",
+    "regularization",
+    "statistical_view",
+    "review",
+    "exercise",
+}
 
 
 def normalize_text(text: str) -> str:
@@ -82,6 +106,9 @@ def extract_units(blocks: list[Block]) -> list[KnowledgeUnit]:
                 source_blocks=[block.block_id],
                 importance=importance,
                 confidence=0.78 if unit_type in {"formula", "algorithm"} else 0.7,
+                teaching_role=_teaching_role_for(unit_type, text),
+                learning_stage=_learning_stage_for(text, unit_type),
+                parent_topic=last_title if block_type != "title" else "",
             )
         )
 
@@ -121,6 +148,14 @@ def merge_units(units: list[KnowledgeUnit]) -> list[KnowledgeUnit]:
         current.source_blocks = _ordered_unique(current.source_blocks + unit.source_blocks)
         current.importance = "core" if "core" in {current.importance, unit.importance} else current.importance
         current.confidence = round((current.confidence + unit.confidence) / 2, 2)
+        if not current.parent_topic and unit.parent_topic:
+            current.parent_topic = unit.parent_topic
+        current.prerequisites = _ordered_unique(current.prerequisites + unit.prerequisites)
+        current.confusable_with = _ordered_unique(current.confusable_with + unit.confusable_with)
+        if not current.merge_reason and unit.merge_reason:
+            current.merge_reason = unit.merge_reason
+        current.teaching_role = _stronger_role(current.teaching_role, unit.teaching_role)
+        current.learning_stage = _earlier_stage(current.learning_stage, unit.learning_stage)
 
     merged = list(grouped.values())
     for index, unit in enumerate(merged, start=1):
@@ -179,14 +214,27 @@ def _extract_messages(blocks: list[Block]) -> list[dict[str, str]]:
                 "3. 不要把孤立页码、装饰符、单个变量或公式碎片单独作为知识点；它们应作为来源 block 并入附近主题。\n"
                 "4. source_blocks 只能使用输入中出现过的 block_id。\n"
                 "5. summary 要说明该知识点在学习中的作用，不要照抄原文。\n\n"
+                "还要判断教学结构：\n"
+                "- teaching_role 表示这个知识点在讲义中的角色。\n"
+                "- learning_stage 表示它更适合出现在学习路径的哪个阶段。\n"
+                "- parent_topic 表示上级主题，用于把知识点组织成树。\n"
+                "- prerequisites 是学习它之前最好先理解的知识点名称。\n"
+                "- confusable_with 是适合做对比表的易混淆或并列知识点名称。\n\n"
                 "只输出 JSON，不要 Markdown。格式如下：\n"
                 "{\n"
                 '  "units": [\n'
                 "    {\n"
                 '      "name": "知识点名称",\n'
                 '      "unit_type": "concept|definition|formula|algorithm|theorem|proof|example|figure|table|comparison|warning|exercise|summary",\n'
+                '      "teaching_role": "core_concept|definition|derivation|formula_detail|example|comparison|application|summary|exercise|supporting_detail",\n'
+                '      "learning_stage": "orientation|foundation|modeling|estimation|analysis|diagnosis|regularization|statistical_view|review|exercise",\n'
+                '      "parent_topic": "上级主题名称，若没有则为空字符串",\n'
                 '      "summary": "面向学生的简洁解释",\n'
+                '      "why_it_matters": "为什么学生需要学这个点",\n'
+                '      "prerequisites": ["前置知识点名称"],\n'
+                '      "confusable_with": ["易混淆或应并列比较的知识点名称"],\n'
                 '      "source_blocks": ["p001_b001"],\n'
+                '      "merge_reason": "为什么这些 blocks 应合并成这个知识点",\n'
                 '      "importance": "core|supporting|minor",\n'
                 '      "confidence": 0.0\n'
                 "    }\n"
@@ -222,8 +270,17 @@ def _units_from_llm_response(content: str, block_by_id: dict[str, Block]) -> lis
         importance = str(raw.get("importance", "supporting")).strip()
         if importance not in ALLOWED_IMPORTANCE:
             importance = "supporting"
+        teaching_role = str(raw.get("teaching_role", "")).strip()
+        if teaching_role not in ALLOWED_TEACHING_ROLES:
+            teaching_role = _role_from_type(unit_type)
+        learning_stage = str(raw.get("learning_stage", "")).strip()
+        if learning_stage not in ALLOWED_LEARNING_STAGES:
+            learning_stage = _learning_stage_for(f"{name} {summary}", unit_type)
 
         pages = sorted({block_by_id[block_id].page_number for block_id in source_blocks})
+        why_it_matters = normalize_text(str(raw.get("why_it_matters", "")))
+        if why_it_matters and why_it_matters not in summary:
+            summary = f"{summary} 学习作用：{why_it_matters}"
         units.append(
             KnowledgeUnit(
                 unit_id=f"AI_{len(units) + 1:04d}",
@@ -234,6 +291,12 @@ def _units_from_llm_response(content: str, block_by_id: dict[str, Block]) -> lis
                 source_blocks=source_blocks,
                 importance=importance,
                 confidence=_confidence(raw.get("confidence", 0.82)),
+                teaching_role=teaching_role,
+                learning_stage=learning_stage,
+                parent_topic=_shorten(normalize_text(str(raw.get("parent_topic", ""))), 120),
+                prerequisites=_string_list(raw.get("prerequisites", [])),
+                confusable_with=_string_list(raw.get("confusable_with", [])),
+                merge_reason=_shorten(normalize_text(str(raw.get("merge_reason", ""))), 300),
             )
         )
     return units
@@ -271,6 +334,17 @@ def _confidence(value) -> float:
     except (TypeError, ValueError):
         number = 0.82
     return round(max(0.0, min(1.0, number)), 2)
+
+
+def _string_list(value) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    result = []
+    for item in value:
+        text = _shorten(normalize_text(str(item)), 120)
+        if text and text not in result:
+            result.append(text)
+    return result
 
 
 def _merge_ai_and_heuristic_units(
@@ -347,6 +421,98 @@ def _importance_for(unit_type: str, text: str) -> str:
     if len(text) < 25:
         return "minor"
     return "supporting"
+
+
+def _teaching_role_for(unit_type: str, text: str) -> str:
+    lowered = text.lower()
+    if unit_type == "summary":
+        return "summary"
+    if unit_type == "definition":
+        return "definition"
+    if unit_type == "formula":
+        if any(word in lowered for word in ["derive", "proof", "⇒", "arg", "min", "max"]):
+            return "derivation"
+        return "formula_detail"
+    if unit_type == "example":
+        return "example"
+    if unit_type == "exercise":
+        return "exercise"
+    if any(word in lowered for word in ["v.s", " vs", "trade-off", "contrast"]):
+        return "comparison"
+    if any(word in lowered for word in ["ridge", "regularization", "overfitting", "underfitting"]):
+        return "application"
+    if _importance_for(unit_type, text) == "core":
+        return "core_concept"
+    return "supporting_detail"
+
+
+def _role_from_type(unit_type: str) -> str:
+    return {
+        "definition": "definition",
+        "formula": "formula_detail",
+        "algorithm": "application",
+        "example": "example",
+        "comparison": "comparison",
+        "exercise": "exercise",
+        "summary": "summary",
+    }.get(unit_type, "core_concept" if unit_type == "concept" else "supporting_detail")
+
+
+def _learning_stage_for(text: str, unit_type: str) -> str:
+    lowered = text.lower()
+    if "homework" in lowered or unit_type == "exercise":
+        return "exercise"
+    if "summary" in lowered or "next" in lowered:
+        return "review"
+    if "random variable" in lowered or "mean" in lowered or "variance" in lowered and "trade" not in lowered:
+        return "foundation"
+    if "linear regression" in lowered or "statistical modeling" in lowered:
+        return "modeling"
+    if "likelihood" in lowered or "mle" in lowered or "map" in lowered or "estimation" in lowered:
+        return "estimation"
+    if "bias-variance" in lowered or "trade-off" in lowered:
+        return "analysis"
+    if "overfitting" in lowered or "underfitting" in lowered or "misspecification" in lowered:
+        return "diagnosis"
+    if "ridge" in lowered or "regularization" in lowered:
+        return "regularization"
+    if "frequentist" in lowered or "bayesian" in lowered:
+        return "statistical_view"
+    if unit_type == "summary":
+        return "orientation"
+    return "foundation"
+
+
+def _stronger_role(left: str, right: str) -> str:
+    rank = {
+        "core_concept": 0,
+        "definition": 1,
+        "derivation": 2,
+        "formula_detail": 3,
+        "comparison": 4,
+        "application": 5,
+        "example": 6,
+        "summary": 7,
+        "exercise": 8,
+        "supporting_detail": 9,
+    }
+    return left if rank.get(left, 99) <= rank.get(right, 99) else right
+
+
+def _earlier_stage(left: str, right: str) -> str:
+    order = {
+        "orientation": 0,
+        "foundation": 1,
+        "modeling": 2,
+        "estimation": 3,
+        "analysis": 4,
+        "diagnosis": 5,
+        "regularization": 6,
+        "statistical_view": 7,
+        "review": 8,
+        "exercise": 9,
+    }
+    return left if order.get(left, 99) <= order.get(right, 99) else right
 
 
 def _shorten(text: str, limit: int) -> str:

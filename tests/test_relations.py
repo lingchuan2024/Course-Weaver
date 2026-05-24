@@ -4,7 +4,7 @@ from courseweaver.models import KnowledgeUnit, NotePlanSection
 from courseweaver.relations import build_relations
 
 
-def unit(unit_id, name, unit_type="summary"):
+def unit(unit_id, name, unit_type="summary", **kwargs):
     return KnowledgeUnit(
         unit_id=unit_id,
         name=name,
@@ -13,6 +13,7 @@ def unit(unit_id, name, unit_type="summary"):
         source_pages=[1],
         source_blocks=[f"{unit_id}_b001"],
         importance="core",
+        **kwargs,
     )
 
 
@@ -71,6 +72,24 @@ class RelationTests(unittest.TestCase):
         typed = {(item.source_id, item.target_id, item.relation_type) for item in relations}
         self.assertIn(("s1", "s2", "parallel_with"), typed)
         self.assertIn(("s3", "s4", "parallel_with"), typed)
+
+    def test_builds_relations_from_ai_unit_metadata(self):
+        relations = build_relations(
+            [
+                unit("u1", "Gaussian Noise", learning_stage="foundation"),
+                unit("u2", "Maximum Likelihood Estimation", prerequisites=["Gaussian Noise"], confusable_with=["MAP"]),
+                unit("u3", "MAP"),
+            ],
+            [
+                section("s1", "Gaussian Noise", ["u1"]),
+                section("s2", "Maximum Likelihood Estimation", ["u2"]),
+                section("s3", "MAP", ["u3"]),
+            ],
+        )
+
+        typed = {(item.source_id, item.target_id, item.relation_type) for item in relations}
+        self.assertIn(("s1", "s2", "foundation_for"), typed)
+        self.assertIn(("s2", "s3", "contrasts_with"), typed)
 
 
 if __name__ == "__main__":

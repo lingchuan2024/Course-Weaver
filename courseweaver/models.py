@@ -65,6 +65,34 @@ class KnowledgeUnit(BaseModel):
     source_blocks: list[str]
     importance: Literal["core", "supporting", "minor"] = "supporting"
     confidence: float = 0.7
+    teaching_role: Literal[
+        "core_concept",
+        "definition",
+        "derivation",
+        "formula_detail",
+        "example",
+        "comparison",
+        "application",
+        "summary",
+        "exercise",
+        "supporting_detail",
+    ] = "supporting_detail"
+    learning_stage: Literal[
+        "orientation",
+        "foundation",
+        "modeling",
+        "estimation",
+        "analysis",
+        "diagnosis",
+        "regularization",
+        "statistical_view",
+        "review",
+        "exercise",
+    ] = "foundation"
+    parent_topic: str = ""
+    prerequisites: list[str] = Field(default_factory=list)
+    confusable_with: list[str] = Field(default_factory=list)
+    merge_reason: str = ""
 
 
 class NotePlanSection(BaseModel):

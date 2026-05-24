@@ -60,7 +60,14 @@ class UnitPipelineTests(unittest.TestCase):
               "name": "Maximum Likelihood Estimation",
               "unit_type": "concept",
               "summary": "MLE explains why Gaussian noise leads to the least-squares objective.",
+              "teaching_role": "core_concept",
+              "learning_stage": "estimation",
+              "parent_topic": "Statistical View of Linear Regression",
+              "why_it_matters": "It connects probability assumptions with the MSE objective.",
+              "prerequisites": ["Gaussian Noise"],
+              "confusable_with": ["MAP"],
               "source_blocks": ["p006_b001", "p006_b002", "p006_b003"],
+              "merge_reason": "All blocks explain the same MLE derivation.",
               "importance": "core",
               "confidence": 0.93
             }
@@ -75,6 +82,12 @@ class UnitPipelineTests(unittest.TestCase):
         self.assertEqual(units[0].source_pages, [6])
         self.assertEqual(units[0].source_blocks, ["p006_b001", "p006_b002", "p006_b003"])
         self.assertEqual(units[0].importance, "core")
+        self.assertEqual(units[0].teaching_role, "core_concept")
+        self.assertEqual(units[0].learning_stage, "estimation")
+        self.assertEqual(units[0].parent_topic, "Statistical View of Linear Regression")
+        self.assertEqual(units[0].prerequisites, ["Gaussian Noise"])
+        self.assertEqual(units[0].confusable_with, ["MAP"])
+        self.assertIn("connects probability", units[0].summary)
 
     def test_llm_extraction_falls_back_to_heuristics(self):
         blocks = [

@@ -1,6 +1,7 @@
 import unittest
 
-from courseweaver.models import Block, PageIR
+from courseweaver.models import Block, KnowledgeUnit, NotePlanSection, PageIR
+from courseweaver.notes import reorder_note_plan_for_learning
 from courseweaver.pipeline import build_project_ir
 
 
@@ -175,6 +176,39 @@ class ProjectPipelineTests(unittest.TestCase):
         self.assertEqual(titles[0], "Random Variables and Instances/Samples")
         self.assertLess(titles.index("Random Variables and Instances/Samples"), titles.index("Linear Regression"))
         self.assertNotIn("Homework 1", titles)
+
+    def test_reorders_note_plan_by_ai_prerequisite_graph(self):
+        units = [
+            KnowledgeUnit(
+                unit_id="u1",
+                name="Ridge Regression",
+                unit_type="concept",
+                summary="Ridge adds L2 regularization.",
+                source_pages=[2],
+                source_blocks=["b1"],
+                importance="core",
+                learning_stage="regularization",
+                prerequisites=["Maximum Likelihood Estimation"],
+            ),
+            KnowledgeUnit(
+                unit_id="u2",
+                name="Maximum Likelihood Estimation",
+                unit_type="concept",
+                summary="MLE maximizes likelihood.",
+                source_pages=[9],
+                source_blocks=["b2"],
+                importance="core",
+                learning_stage="estimation",
+            ),
+        ]
+        plan = [
+            NotePlanSection(section_id="s1", section_title="Ridge Regression", units=["u1"], goal="test"),
+            NotePlanSection(section_id="s2", section_title="Maximum Likelihood Estimation", units=["u2"], goal="test"),
+        ]
+
+        reordered = reorder_note_plan_for_learning(plan, units)
+
+        self.assertEqual([section.section_title for section in reordered], ["Maximum Likelihood Estimation", "Ridge Regression"])
 
 
 if __name__ == "__main__":

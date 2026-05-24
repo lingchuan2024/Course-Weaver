@@ -54,21 +54,49 @@ def plan_notes(units: list[KnowledgeUnit]) -> list[NotePlanSection]:
 
 
 def reorder_note_plan_for_learning(plan: list[NotePlanSection], units: list[KnowledgeUnit]) -> list[NotePlanSection]:
-    """Reorder sections into a stable learning path while preserving source traceability."""
+    """Reorder sections with prerequisite-aware topological traversal."""
     unit_by_id = {unit.unit_id: unit for unit in units}
+    section_by_id = {section.section_id: section for section in plan}
+    edges: dict[str, set[str]] = {section.section_id: set() for section in plan}
+    indegree = {section.section_id: 0 for section in plan}
+    section_lookup = _section_lookup(plan, unit_by_id)
 
-    ranked = []
+    for section in plan:
+        for unit_id in section.units:
+            unit = unit_by_id.get(unit_id)
+            if not unit:
+                continue
+            for prerequisite in unit.prerequisites:
+                source_id = _match_section(prerequisite, section_lookup)
+                if not source_id or source_id == section.section_id:
+                    continue
+                if section.section_id not in edges[source_id]:
+                    edges[source_id].add(section.section_id)
+                    indegree[section.section_id] += 1
+
+    priority = {}
     for original_index, section in enumerate(plan):
-        title = section.section_title.lower()
-        pages = [page for unit_id in section.units for page in _unit_pages(unit_by_id, unit_id)]
-        first_page = min(pages or [9999])
-        stage_index, stage_label = _learning_stage(title)
-        ranked.append((stage_index, first_page, original_index, stage_label, section))
+        priority[section.section_id] = _section_priority(section, unit_by_id, original_index)
+
+    ready = sorted([section_id for section_id, degree in indegree.items() if degree == 0], key=lambda item: priority[item])
+    ordered_ids = []
+    while ready:
+        current_id = ready.pop(0)
+        ordered_ids.append(current_id)
+        for target_id in sorted(edges[current_id], key=lambda item: priority[item]):
+            indegree[target_id] -= 1
+            if indegree[target_id] == 0:
+                ready.append(target_id)
+        ready.sort(key=lambda item: priority[item])
+
+    if len(ordered_ids) < len(plan):
+        remaining = [section.section_id for section in plan if section.section_id not in set(ordered_ids)]
+        ordered_ids.extend(sorted(remaining, key=lambda item: priority[item]))
 
     reordered = []
-    for new_index, ranked_section in enumerate(sorted(ranked), start=1):
-        stage_label = ranked_section[3]
-        section = ranked_section[4]
+    for new_index, section_id in enumerate(ordered_ids, start=1):
+        section = section_by_id[section_id]
+        stage_label = _stage_label_for_section(section, unit_by_id)
         reordered.append(
             section.model_copy(
                 update={
@@ -78,6 +106,104 @@ def reorder_note_plan_for_learning(plan: list[NotePlanSection], units: list[Know
             )
         )
     return reordered
+
+
+def _section_priority(
+    section: NotePlanSection,
+    unit_by_id: dict[str, KnowledgeUnit],
+    original_index: int,
+) -> tuple[int, int, int, int]:
+    stage_index = _stage_index_for_section(section, unit_by_id)
+    pages = [page for unit_id in section.units for page in _unit_pages(unit_by_id, unit_id)]
+    first_page = min(pages or [9999])
+    importance_rank = 0 if any(_unit_importance(unit_by_id, unit_id) == "core" for unit_id in section.units) else 1
+    return (stage_index, importance_rank, first_page, original_index)
+
+
+def _stage_index_for_section(section: NotePlanSection, unit_by_id: dict[str, KnowledgeUnit]) -> int:
+    stage_order = {
+        "orientation": 5,
+        "foundation": 10,
+        "modeling": 20,
+        "estimation": 30,
+        "analysis": 40,
+        "diagnosis": 45,
+        "regularization": 50,
+        "statistical_view": 60,
+        "review": 80,
+        "exercise": 90,
+    }
+    unit_stages = [
+        stage_order.get(unit_by_id[unit_id].learning_stage, 35)
+        for unit_id in section.units
+        if unit_id in unit_by_id and unit_by_id[unit_id].learning_stage
+    ]
+    if unit_stages:
+        return min(unit_stages)
+    return _learning_stage(section.section_title.lower())[0]
+
+
+def _stage_label_for_section(section: NotePlanSection, unit_by_id: dict[str, KnowledgeUnit]) -> str:
+    labels = {
+        "orientation": "课程导览",
+        "foundation": "符号、定义与统计基础",
+        "modeling": "建模任务与模型假设",
+        "estimation": "参数估计与优化目标",
+        "analysis": "估计误差与泛化分析",
+        "diagnosis": "欠拟合、过拟合与模型诊断",
+        "regularization": "正则化与模型改进",
+        "statistical_view": "频率派与贝叶斯统计视角",
+        "review": "总结、预告或复习",
+        "exercise": "作业与练习",
+    }
+    stages = [
+        unit_by_id[unit_id].learning_stage
+        for unit_id in section.units
+        if unit_id in unit_by_id and unit_by_id[unit_id].learning_stage in labels
+    ]
+    if stages:
+        return labels[stages[0]]
+    return _learning_stage(section.section_title.lower())[1]
+
+
+def _section_lookup(
+    plan: list[NotePlanSection],
+    unit_by_id: dict[str, KnowledgeUnit],
+) -> list[tuple[str, str]]:
+    entries = []
+    for section in plan:
+        entries.append((section.section_id, section.section_title))
+        for unit_id in section.units:
+            unit = unit_by_id.get(unit_id)
+            if not unit:
+                continue
+            entries.append((section.section_id, unit.name))
+            if unit.parent_topic:
+                entries.append((section.section_id, unit.parent_topic))
+    return entries
+
+
+def _match_section(label: str, lookup: list[tuple[str, str]]) -> str | None:
+    normalized = _normal_label(label)
+    if not normalized:
+        return None
+    for section_id, candidate in lookup:
+        if _normal_label(candidate) == normalized:
+            return section_id
+    for section_id, candidate in lookup:
+        candidate_label = _normal_label(candidate)
+        if normalized in candidate_label or candidate_label in normalized:
+            return section_id
+    return None
+
+
+def _normal_label(value: str) -> str:
+    return " ".join(value.lower().replace("v.s.", "vs").replace("v.s", "vs").split())
+
+
+def _unit_importance(unit_by_id: dict[str, KnowledgeUnit], unit_id: str) -> str:
+    unit = unit_by_id.get(unit_id)
+    return unit.importance if unit else "supporting"
 
 
 def _unit_pages(unit_by_id: dict[str, KnowledgeUnit], unit_id: str) -> list[int]:

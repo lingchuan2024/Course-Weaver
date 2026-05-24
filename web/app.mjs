@@ -14,6 +14,7 @@ export const RELATION_LABELS = {
   contrasts_with: "对比",
   regularizes: "约束",
   example_of: "例子",
+  supports: "归属",
 };
 
 export function indexProject(project) {
@@ -126,13 +127,33 @@ export function buildKnowledgeTree(project) {
   }
 
   const unitsById = new Map(project.knowledge_units.map((unit) => [unit.unit_id, unit]));
-  return (project.note_plan || []).map((section, index) => ({
-    id: section.section_id,
-    index: index + 1,
-    title: section.section_title,
-    units: (section.units || []).map((unitId) => unitsById.get(unitId)).filter(Boolean),
-    relations: relationsBySource.get(section.section_id) || [],
-  }));
+  return (project.note_plan || []).map((section, index) => {
+    const sectionUnits = (section.units || []).map((unitId) => unitsById.get(unitId)).filter(Boolean);
+    const learningStages = [...new Set(sectionUnits.map((unit) => unit.learning_stage).filter(Boolean))];
+    return {
+      id: section.section_id,
+      index: index + 1,
+      title: section.section_title,
+      units: sectionUnits,
+      parentTopics: [...new Set(sectionUnits.map((unit) => unit.parent_topic).filter(Boolean))],
+      learningStages: learningStages.length ? learningStages : [inferLearningStage(section.section_title)],
+      relations: relationsBySource.get(section.section_id) || [],
+    };
+  });
+}
+
+function inferLearningStage(title) {
+  const text = String(title || "").toLowerCase();
+  if (text.includes("homework")) return "exercise";
+  if (text.includes("summary") || text.includes("next")) return "review";
+  if (text.includes("random") || text.includes("mean") || text.includes("variance of estimation")) return "foundation";
+  if (text.includes("linear regression") || text.includes("statistical modeling")) return "modeling";
+  if (text.includes("likelihood") || text.includes("mle") || text.includes("estimation")) return "estimation";
+  if (text.includes("bias-variance") || text.includes("trade-off")) return "analysis";
+  if (text.includes("overfitting") || text.includes("underfitting")) return "diagnosis";
+  if (text.includes("ridge") || text.includes("regularization")) return "regularization";
+  if (text.includes("frequentist") || text.includes("bayesian")) return "statistical_view";
+  return "foundation";
 }
 
 export function getReviewItems(project, { query = "" } = {}) {
