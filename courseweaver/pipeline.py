@@ -16,7 +16,7 @@ from courseweaver.notes import (
 )
 from courseweaver.pdf_parser import parse_pdf
 from courseweaver.relations import build_relations
-from courseweaver.units import extract_units, merge_units
+from courseweaver.units import extract_units, extract_units_with_llm, merge_units
 
 
 def run_pipeline(
@@ -48,7 +48,7 @@ def build_project_ir(
     blocks: list[Block],
     llm_client=None,
 ) -> ProjectIR:
-    page_units = extract_units(blocks)
+    page_units = extract_units_with_llm(blocks, llm_client) if llm_client is not None else extract_units(blocks)
     knowledge_units = merge_units(page_units)
     note_plan = plan_notes(knowledge_units)
     note_plan = reorder_note_plan_for_learning(note_plan, knowledge_units)

@@ -1,8 +1,9 @@
 import unittest
+from unittest.mock import Mock
 
 from courseweaver.coverage import build_coverage
 from courseweaver.models import Block, KnowledgeUnit, NoteChunk
-from courseweaver.units import classify_block, extract_units, merge_units
+from courseweaver.units import classify_block, extract_units, extract_units_with_llm, merge_units
 
 
 def block(block_id, page, text, y=10):
@@ -44,6 +45,49 @@ class UnitPipelineTests(unittest.TestCase):
         units = extract_units([block("p004_b001", 4, "Recall the Example of Linear Regression")])
 
         self.assertEqual(units[0].unit_type, "summary")
+
+    def test_extracts_semantic_units_with_llm_source_blocks(self):
+        blocks = [
+            block("p006_b001", 6, "A Frequentist Viewpoint: Maximum Likelihood Estimation"),
+            block("p006_b002", 6, "Assume noise epsilon follows a Gaussian distribution."),
+            block("p006_b003", 6, "theta = arg max log P(y|X, theta)"),
+        ]
+        client = Mock()
+        client.chat.return_value = """
+        {
+          "units": [
+            {
+              "name": "Maximum Likelihood Estimation",
+              "unit_type": "concept",
+              "summary": "MLE explains why Gaussian noise leads to the least-squares objective.",
+              "source_blocks": ["p006_b001", "p006_b002", "p006_b003"],
+              "importance": "core",
+              "confidence": 0.93
+            }
+          ]
+        }
+        """
+
+        units = extract_units_with_llm(blocks, client)
+
+        self.assertEqual(len(units), 1)
+        self.assertEqual(units[0].name, "Maximum Likelihood Estimation")
+        self.assertEqual(units[0].source_pages, [6])
+        self.assertEqual(units[0].source_blocks, ["p006_b001", "p006_b002", "p006_b003"])
+        self.assertEqual(units[0].importance, "core")
+
+    def test_llm_extraction_falls_back_to_heuristics(self):
+        blocks = [
+            block("p006_b001", 6, "Maximum Likelihood Estimation"),
+            block("p006_b002", 6, "theta = arg max log P(y|X, theta)"),
+        ]
+        client = Mock()
+        client.chat.side_effect = RuntimeError("api failed")
+
+        units = extract_units_with_llm(blocks, client)
+
+        self.assertGreaterEqual(len(units), 2)
+        self.assertTrue(any(unit.unit_type == "formula" for unit in units))
 
     def test_merges_units_with_same_normalized_name_across_pages(self):
         units = [
