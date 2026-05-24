@@ -53,6 +53,38 @@ def plan_notes(units: list[KnowledgeUnit]) -> list[NotePlanSection]:
     return sections
 
 
+def reorder_note_plan_for_learning(plan: list[NotePlanSection], units: list[KnowledgeUnit]) -> list[NotePlanSection]:
+    """Reorder sections into a stable learning path while preserving source traceability."""
+    unit_by_id = {unit.unit_id: unit for unit in units}
+
+    ranked = []
+    for original_index, section in enumerate(plan):
+        title = section.section_title.lower()
+        pages = [page for unit_id in section.units for page in _unit_pages(unit_by_id, unit_id)]
+        first_page = min(pages or [9999])
+        stage_index, stage_label = _learning_stage(title)
+        ranked.append((stage_index, first_page, original_index, stage_label, section))
+
+    reordered = []
+    for new_index, ranked_section in enumerate(sorted(ranked), start=1):
+        stage_label = ranked_section[3]
+        section = ranked_section[4]
+        reordered.append(
+            section.model_copy(
+                update={
+                    "section_id": f"S_{new_index:04d}",
+                    "goal": f"{section.goal} 学习阶段：{stage_label}。",
+                }
+            )
+        )
+    return reordered
+
+
+def _unit_pages(unit_by_id: dict[str, KnowledgeUnit], unit_id: str) -> list[int]:
+    unit = unit_by_id.get(unit_id)
+    return unit.source_pages if unit else [9999]
+
+
 def generate_note_chunks(units: list[KnowledgeUnit], plan: list[NotePlanSection]) -> list[NoteChunk]:
     unit_by_id = {unit.unit_id: unit for unit in units}
     chunks: list[NoteChunk] = []
@@ -354,6 +386,52 @@ def _single_unit_section(unit: KnowledgeUnit, index: int) -> NotePlanSection:
         goal=goal,
         detail_level=detail_level,
     )
+
+
+def _learning_stage(title: str) -> tuple[int, str]:
+    if _non_learning_section(title):
+        return (90, "总结、预告或作业")
+    if _detail_or_fragment_section(title):
+        return (70, "公式推导或细节补充")
+    if "random variable" in title:
+        return (10, "统计对象与符号基础")
+    if title.startswith("mean") or title.startswith("properties of mean"):
+        return (11, "均值、方差与统计量基础")
+    if "variance of estimation" in title or "bias of estimation" in title or "unbiased estimation" in title:
+        return (12, "估计量偏差与方差")
+    if "maximum likelihood" in title or "ordinary linear regression" in title:
+        return (30, "参数估计与最小二乘")
+    if "linear regression" in title or "statistical modeling" in title:
+        return (20, "建模任务与线性回归例子")
+    if "bias-variance" in title or "trade-off between bias" in title:
+        return (40, "模型误差分解与选择")
+    if "overfitting" in title or "underfitting" in title:
+        return (45, "过拟合与欠拟合")
+    if "ridge regression" in title:
+        return (50, "正则化与 Ridge Regression")
+    if "frequentist" in title or "bayesian" in title:
+        return (60, "统计解释框架")
+    return (35, "课程主线")
+
+
+def _non_learning_section(title: str) -> bool:
+    stripped = title.strip().lower()
+    if stripped in {"in summary", "next...", "next"}:
+        return True
+    if "homework" in stripped or "ddl" in stripped:
+        return True
+    return False
+
+
+def _detail_or_fragment_section(title: str) -> bool:
+    stripped = title.strip().lower()
+    if stripped.startswith(("formula near", "algorithm near", "▶", "•", "-")):
+        return True
+    if len(stripped.split()) <= 2 and any(char.isdigit() for char in stripped):
+        return True
+    if any(symbol in stripped for symbol in ["µ̂", "σ̂", "−"]):
+        return True
+    return False
 
 
 def _section_style(units: list[KnowledgeUnit]) -> str:

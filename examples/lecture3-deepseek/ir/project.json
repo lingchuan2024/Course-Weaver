@@ -13929,6 +13929,81 @@
   "note_plan": [
     {
       "section_id": "S_0001",
+      "section_title": "Random Variables and Instances/Samples",
+      "units": [
+        "U_0027",
+        "U_0028",
+        "U_0029",
+        "U_0030",
+        "U_0031"
+      ],
+      "style": "narrative",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：统计对象与符号基础。 学习阶段：统计对象与符号基础。 学习阶段：统计对象与符号基础。",
+      "detail_level": "medium"
+    },
+    {
+      "section_id": "S_0002",
+      "section_title": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "units": [
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037"
+      ],
+      "style": "formula_explanation",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：均值、方差与统计量基础。 学习阶段：均值、方差与统计量基础。 学习阶段：均值、方差与统计量基础。",
+      "detail_level": "high"
+    },
+    {
+      "section_id": "S_0003",
+      "section_title": "Properties of Mean and Variance",
+      "units": [
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043"
+      ],
+      "style": "formula_explanation",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：均值、方差与统计量基础。 学习阶段：均值、方差与统计量基础。 学习阶段：均值、方差与统计量基础。",
+      "detail_level": "high"
+    },
+    {
+      "section_id": "S_0004",
+      "section_title": "The Variance of Estimation",
+      "units": [
+        "U_0046",
+        "U_0067",
+        "U_0068",
+        "U_0069",
+        "U_0070",
+        "U_0071"
+      ],
+      "style": "formula_explanation",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：估计量偏差与方差。 学习阶段：估计量偏差与方差。 学习阶段：估计量偏差与方差。",
+      "detail_level": "high"
+    },
+    {
+      "section_id": "S_0005",
+      "section_title": "The Bias of Estimation",
+      "units": [
+        "U_0047"
+      ],
+      "style": "narrative",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：估计量偏差与方差。 学习阶段：估计量偏差与方差。 学习阶段：估计量偏差与方差。",
+      "detail_level": "medium"
+    },
+    {
+      "section_id": "S_0006",
+      "section_title": "The Bias of Estimation",
+      "units": [
+        "U_0048"
+      ],
+      "style": "narrative",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：估计量偏差与方差。 学习阶段：估计量偏差与方差。 学习阶段：估计量偏差与方差。",
+      "detail_level": "medium"
+    },
+    {
+      "section_id": "S_0007",
       "section_title": "Recall the Example of Linear Regression",
       "units": [
         "U_0008",
@@ -13940,11 +14015,11 @@
         "U_0016"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：建模任务与线性回归例子。 学习阶段：建模任务与线性回归例子。 学习阶段：建模任务与线性回归例子。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0002",
+      "section_id": "S_0008",
       "section_title": "The Key of Statistical Modeling",
       "units": [
         "U_0017",
@@ -13952,11 +14027,11 @@
         "U_0019"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：建模任务与线性回归例子。 学习阶段：建模任务与线性回归例子。 学习阶段：建模任务与线性回归例子。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0003",
+      "section_id": "S_0009",
       "section_title": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
       "units": [
         "U_0020",
@@ -13965,11 +14040,11 @@
         "U_0023"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：参数估计与最小二乘。 学习阶段：参数估计与最小二乘。 学习阶段：参数估计与最小二乘。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0004",
+      "section_id": "S_0010",
       "section_title": "Key Statistical Analysis for Ordinary Linear Regression",
       "units": [
         "U_0024",
@@ -13977,66 +14052,31 @@
         "U_0026"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：建模任务与线性回归例子。 学习阶段：建模任务与线性回归例子。 学习阶段：参数估计与最小二乘。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0005",
-      "section_title": "Random Variables and Instances/Samples",
+      "section_id": "S_0011",
+      "section_title": "Toy Example 1",
       "units": [
-        "U_0027",
-        "U_0028",
-        "U_0029",
-        "U_0030",
-        "U_0031"
+        "U_0050"
       ],
       "style": "narrative",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：课程主线。 学习阶段：课程主线。 学习阶段：课程主线。",
       "detail_level": "medium"
     },
     {
-      "section_id": "S_0006",
-      "section_title": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "section_id": "S_0012",
+      "section_title": "Toy Example 2",
       "units": [
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037"
+        "U_0056"
       ],
-      "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
-      "detail_level": "high"
+      "style": "narrative",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：课程主线。 学习阶段：课程主线。 学习阶段：课程主线。",
+      "detail_level": "medium"
     },
     {
-      "section_id": "S_0007",
-      "section_title": "Properties of Mean and Variance",
-      "units": [
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043"
-      ],
-      "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
-      "detail_level": "high"
-    },
-    {
-      "section_id": "S_0008",
-      "section_title": "The Variance of Estimation",
-      "units": [
-        "U_0046",
-        "U_0067",
-        "U_0068",
-        "U_0069",
-        "U_0070",
-        "U_0071"
-      ],
-      "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
-      "detail_level": "high"
-    },
-    {
-      "section_id": "S_0009",
+      "section_id": "S_0013",
       "section_title": "The Trade-off Between Bias and Variance",
       "units": [
         "U_0072",
@@ -14046,32 +14086,32 @@
         "U_0078"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：模型误差分解与选择。 学习阶段：模型误差分解与选择。 学习阶段：模型误差分解与选择。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0010",
+      "section_id": "S_0014",
       "section_title": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
       "units": [
         "U_0079"
       ],
       "style": "narrative",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：模型误差分解与选择。 学习阶段：模型误差分解与选择。 学习阶段：模型误差分解与选择。",
       "detail_level": "medium"
     },
     {
-      "section_id": "S_0011",
+      "section_id": "S_0015",
       "section_title": "Bias-Variance Trade-off: An Indicator of Training Process",
       "units": [
         "U_0081",
         "U_0082"
       ],
       "style": "narrative",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：模型误差分解与选择。 学习阶段：模型误差分解与选择。 学习阶段：模型误差分解与选择。",
       "detail_level": "medium"
     },
     {
-      "section_id": "S_0012",
+      "section_id": "S_0016",
       "section_title": "Overfitting and Underfitting",
       "units": [
         "U_0083",
@@ -14081,11 +14121,11 @@
         "U_0087"
       ],
       "style": "narrative",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：过拟合与欠拟合。 学习阶段：过拟合与欠拟合。 学习阶段：过拟合与欠拟合。",
       "detail_level": "medium"
     },
     {
-      "section_id": "S_0013",
+      "section_id": "S_0017",
       "section_title": "Ridge Regression: MSE with L2 Regularization",
       "units": [
         "U_0088",
@@ -14096,11 +14136,11 @@
         "U_0093"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：正则化与 Ridge Regression。 学习阶段：正则化与 Ridge Regression。 学习阶段：正则化与 Ridge Regression。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0014",
+      "section_id": "S_0018",
       "section_title": "Ridge Regression: A Bayesian Viewpoint",
       "units": [
         "U_0094",
@@ -14111,11 +14151,11 @@
         "U_0100"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：正则化与 Ridge Regression。 学习阶段：正则化与 Ridge Regression。 学习阶段：正则化与 Ridge Regression。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0015",
+      "section_id": "S_0019",
       "section_title": "ML: Frequentist Statistic Viewpoint",
       "units": [
         "U_0102",
@@ -14124,11 +14164,11 @@
         "U_0105"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：统计解释框架。 学习阶段：统计解释框架。 学习阶段：统计解释框架。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0016",
+      "section_id": "S_0020",
       "section_title": "ML: Bayesian Statistic Viewpoint",
       "units": [
         "U_0106",
@@ -14138,11 +14178,11 @@
         "U_0110"
       ],
       "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：统计解释框架。 学习阶段：统计解释框架。 学习阶段：统计解释框架。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0017",
+      "section_id": "S_0021",
       "section_title": "Frequentist v.s. Bayesian",
       "units": [
         "U_0111",
@@ -14151,60 +14191,18 @@
         "U_0114"
       ],
       "style": "narrative",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：统计解释框架。 学习阶段：统计解释框架。 学习阶段：统计解释框架。",
       "detail_level": "medium"
     },
     {
-      "section_id": "S_0018",
-      "section_title": "Homework 1: DDL — March 16, 2025, Midnight",
-      "units": [
-        "U_0120",
-        "U_0121",
-        "U_0122"
-      ],
-      "style": "formula_explanation",
-      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。",
-      "detail_level": "high"
-    },
-    {
-      "section_id": "S_0019",
-      "section_title": "The Bias of Estimation",
-      "units": [
-        "U_0047"
-      ],
-      "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
-      "detail_level": "medium"
-    },
-    {
-      "section_id": "S_0020",
-      "section_title": "The Bias of Estimation",
-      "units": [
-        "U_0048"
-      ],
-      "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
-      "detail_level": "medium"
-    },
-    {
-      "section_id": "S_0021",
+      "section_id": "S_0022",
       "section_title": "Formula near The Bias of Estimation",
       "units": [
         "U_0049"
       ],
       "style": "formula_explanation",
-      "goal": "解释公式含义、符号直觉和使用场景。",
+      "goal": "解释公式含义、符号直觉和使用场景。 学习阶段：估计量偏差与方差。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。",
       "detail_level": "high"
-    },
-    {
-      "section_id": "S_0022",
-      "section_title": "Toy Example 1",
-      "units": [
-        "U_0050"
-      ],
-      "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
-      "detail_level": "medium"
     },
     {
       "section_id": "S_0023",
@@ -14213,77 +14211,77 @@
         "U_0055"
       ],
       "style": "formula_explanation",
-      "goal": "解释公式含义、符号直觉和使用场景。",
+      "goal": "解释公式含义、符号直觉和使用场景。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。",
       "detail_level": "high"
     },
     {
       "section_id": "S_0024",
-      "section_title": "Toy Example 2",
-      "units": [
-        "U_0056"
-      ],
-      "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
-      "detail_level": "medium"
-    },
-    {
-      "section_id": "S_0025",
       "section_title": "Formula near 1 N",
       "units": [
         "U_0058"
       ],
       "style": "formula_explanation",
-      "goal": "解释公式含义、符号直觉和使用场景。",
+      "goal": "解释公式含义、符号直觉和使用场景。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0026",
+      "section_id": "S_0025",
       "section_title": "1 N",
       "units": [
         "U_0060"
       ],
       "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：课程主线。 学习阶段：课程主线。 学习阶段：公式推导或细节补充。",
       "detail_level": "medium"
     },
     {
-      "section_id": "S_0027",
+      "section_id": "S_0026",
       "section_title": "▶ The unbiased estimation is σ̂ 2 =",
       "units": [
         "U_0061"
       ],
       "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：估计量偏差与方差。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。",
       "detail_level": "medium"
     },
     {
-      "section_id": "S_0028",
+      "section_id": "S_0027",
       "section_title": "Formula near 1 N−1",
       "units": [
         "U_0063"
       ],
       "style": "formula_explanation",
-      "goal": "解释公式含义、符号直觉和使用场景。",
+      "goal": "解释公式含义、符号直觉和使用场景。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0029",
+      "section_id": "S_0028",
       "section_title": "Formula near P N",
       "units": [
         "U_0065"
       ],
       "style": "formula_explanation",
-      "goal": "解释公式含义、符号直觉和使用场景。",
+      "goal": "解释公式含义、符号直觉和使用场景。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。",
       "detail_level": "high"
     },
     {
-      "section_id": "S_0030",
+      "section_id": "S_0029",
       "section_title": "− µ̂) 2 .(What if µ is known?)",
       "units": [
         "U_0066"
       ],
       "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：课程主线。 学习阶段：课程主线。 学习阶段：公式推导或细节补充。",
+      "detail_level": "medium"
+    },
+    {
+      "section_id": "S_0030",
+      "section_title": "▶ Model/Feature selection strategies",
+      "units": [
+        "U_0119"
+      ],
+      "style": "narrative",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。 学习阶段：公式推导或细节补充。",
       "detail_level": "medium"
     },
     {
@@ -14293,7 +14291,7 @@
         "U_0116"
       ],
       "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。",
       "detail_level": "medium"
     },
     {
@@ -14303,7 +14301,7 @@
         "U_0117"
       ],
       "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。",
       "detail_level": "medium"
     },
     {
@@ -14313,18 +14311,20 @@
         "U_0118"
       ],
       "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
+      "goal": "解释该知识点的作用、直觉和来源。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。",
       "detail_level": "medium"
     },
     {
       "section_id": "S_0034",
-      "section_title": "▶ Model/Feature selection strategies",
+      "section_title": "Homework 1: DDL — March 16, 2025, Midnight",
       "units": [
-        "U_0119"
+        "U_0120",
+        "U_0121",
+        "U_0122"
       ],
-      "style": "narrative",
-      "goal": "解释该知识点的作用、直觉和来源。",
-      "detail_level": "medium"
+      "style": "formula_explanation",
+      "goal": "按课件标题聚合相关概念、公式和算法线索，生成章节式讲义。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。 学习阶段：总结、预告或作业。",
+      "detail_level": "high"
     }
   ],
   "relations": [
@@ -14332,86 +14332,6 @@
       "relation_id": "R_0001",
       "source_id": "S_0001",
       "target_id": "S_0002",
-      "relation_type": "next",
-      "source_label": "Recall the Example of Linear Regression",
-      "target_label": "The Key of Statistical Modeling",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0008",
-        "U_0010",
-        "U_0011",
-        "U_0012",
-        "U_0013",
-        "U_0014",
-        "U_0016",
-        "U_0017",
-        "U_0018",
-        "U_0019"
-      ]
-    },
-    {
-      "relation_id": "R_0002",
-      "source_id": "S_0002",
-      "target_id": "S_0003",
-      "relation_type": "next",
-      "source_label": "The Key of Statistical Modeling",
-      "target_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0017",
-        "U_0018",
-        "U_0019",
-        "U_0020",
-        "U_0021",
-        "U_0022",
-        "U_0023"
-      ]
-    },
-    {
-      "relation_id": "R_0003",
-      "source_id": "S_0003",
-      "target_id": "S_0004",
-      "relation_type": "next",
-      "source_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
-      "target_label": "Key Statistical Analysis for Ordinary Linear Regression",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0020",
-        "U_0021",
-        "U_0022",
-        "U_0023",
-        "U_0024",
-        "U_0025",
-        "U_0026"
-      ]
-    },
-    {
-      "relation_id": "R_0004",
-      "source_id": "S_0004",
-      "target_id": "S_0005",
-      "relation_type": "next",
-      "source_label": "Key Statistical Analysis for Ordinary Linear Regression",
-      "target_label": "Random Variables and Instances/Samples",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0024",
-        "U_0025",
-        "U_0026",
-        "U_0027",
-        "U_0028",
-        "U_0029",
-        "U_0030",
-        "U_0031"
-      ]
-    },
-    {
-      "relation_id": "R_0005",
-      "source_id": "S_0005",
-      "target_id": "S_0006",
       "relation_type": "next",
       "source_label": "Random Variables and Instances/Samples",
       "target_label": "Mean, (Co)variance, and Their Unbiased Estimation",
@@ -14430,9 +14350,9 @@
       ]
     },
     {
-      "relation_id": "R_0006",
-      "source_id": "S_0006",
-      "target_id": "S_0007",
+      "relation_id": "R_0002",
+      "source_id": "S_0002",
+      "target_id": "S_0003",
       "relation_type": "next",
       "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
       "target_label": "Properties of Mean and Variance",
@@ -14450,9 +14370,9 @@
       ]
     },
     {
-      "relation_id": "R_0007",
-      "source_id": "S_0007",
-      "target_id": "S_0008",
+      "relation_id": "R_0003",
+      "source_id": "S_0003",
+      "target_id": "S_0004",
       "relation_type": "next",
       "source_label": "Properties of Mean and Variance",
       "target_label": "The Variance of Estimation",
@@ -14472,12 +14392,12 @@
       ]
     },
     {
-      "relation_id": "R_0008",
-      "source_id": "S_0008",
-      "target_id": "S_0009",
+      "relation_id": "R_0004",
+      "source_id": "S_0004",
+      "target_id": "S_0005",
       "relation_type": "next",
       "source_label": "The Variance of Estimation",
-      "target_label": "The Trade-off Between Bias and Variance",
+      "target_label": "The Bias of Estimation",
       "reason": "学习路径中的下一节。",
       "confidence": 0.85,
       "evidence_units": [
@@ -14487,6 +14407,144 @@
         "U_0069",
         "U_0070",
         "U_0071",
+        "U_0047"
+      ]
+    },
+    {
+      "relation_id": "R_0005",
+      "source_id": "S_0005",
+      "target_id": "S_0006",
+      "relation_type": "next",
+      "source_label": "The Bias of Estimation",
+      "target_label": "The Bias of Estimation",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0047",
+        "U_0048"
+      ]
+    },
+    {
+      "relation_id": "R_0006",
+      "source_id": "S_0006",
+      "target_id": "S_0007",
+      "relation_type": "next",
+      "source_label": "The Bias of Estimation",
+      "target_label": "Recall the Example of Linear Regression",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0048",
+        "U_0008",
+        "U_0010",
+        "U_0011",
+        "U_0012",
+        "U_0013",
+        "U_0014",
+        "U_0016"
+      ]
+    },
+    {
+      "relation_id": "R_0007",
+      "source_id": "S_0007",
+      "target_id": "S_0008",
+      "relation_type": "next",
+      "source_label": "Recall the Example of Linear Regression",
+      "target_label": "The Key of Statistical Modeling",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0008",
+        "U_0010",
+        "U_0011",
+        "U_0012",
+        "U_0013",
+        "U_0014",
+        "U_0016",
+        "U_0017",
+        "U_0018",
+        "U_0019"
+      ]
+    },
+    {
+      "relation_id": "R_0008",
+      "source_id": "S_0008",
+      "target_id": "S_0009",
+      "relation_type": "next",
+      "source_label": "The Key of Statistical Modeling",
+      "target_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0017",
+        "U_0018",
+        "U_0019",
+        "U_0020",
+        "U_0021",
+        "U_0022",
+        "U_0023"
+      ]
+    },
+    {
+      "relation_id": "R_0009",
+      "source_id": "S_0009",
+      "target_id": "S_0010",
+      "relation_type": "next",
+      "source_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
+      "target_label": "Key Statistical Analysis for Ordinary Linear Regression",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0020",
+        "U_0021",
+        "U_0022",
+        "U_0023",
+        "U_0024",
+        "U_0025",
+        "U_0026"
+      ]
+    },
+    {
+      "relation_id": "R_0010",
+      "source_id": "S_0010",
+      "target_id": "S_0011",
+      "relation_type": "next",
+      "source_label": "Key Statistical Analysis for Ordinary Linear Regression",
+      "target_label": "Toy Example 1",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0024",
+        "U_0025",
+        "U_0026",
+        "U_0050"
+      ]
+    },
+    {
+      "relation_id": "R_0011",
+      "source_id": "S_0011",
+      "target_id": "S_0012",
+      "relation_type": "next",
+      "source_label": "Toy Example 1",
+      "target_label": "Toy Example 2",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0050",
+        "U_0056"
+      ]
+    },
+    {
+      "relation_id": "R_0012",
+      "source_id": "S_0012",
+      "target_id": "S_0013",
+      "relation_type": "next",
+      "source_label": "Toy Example 2",
+      "target_label": "The Trade-off Between Bias and Variance",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0056",
         "U_0072",
         "U_0073",
         "U_0074",
@@ -14495,9 +14553,9 @@
       ]
     },
     {
-      "relation_id": "R_0009",
-      "source_id": "S_0009",
-      "target_id": "S_0010",
+      "relation_id": "R_0013",
+      "source_id": "S_0013",
+      "target_id": "S_0014",
       "relation_type": "next",
       "source_label": "The Trade-off Between Bias and Variance",
       "target_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
@@ -14513,9 +14571,9 @@
       ]
     },
     {
-      "relation_id": "R_0010",
-      "source_id": "S_0010",
-      "target_id": "S_0011",
+      "relation_id": "R_0014",
+      "source_id": "S_0014",
+      "target_id": "S_0015",
       "relation_type": "next",
       "source_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
       "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
@@ -14528,9 +14586,9 @@
       ]
     },
     {
-      "relation_id": "R_0011",
-      "source_id": "S_0011",
-      "target_id": "S_0012",
+      "relation_id": "R_0015",
+      "source_id": "S_0015",
+      "target_id": "S_0016",
       "relation_type": "next",
       "source_label": "Bias-Variance Trade-off: An Indicator of Training Process",
       "target_label": "Overfitting and Underfitting",
@@ -14547,9 +14605,9 @@
       ]
     },
     {
-      "relation_id": "R_0012",
-      "source_id": "S_0012",
-      "target_id": "S_0013",
+      "relation_id": "R_0016",
+      "source_id": "S_0016",
+      "target_id": "S_0017",
       "relation_type": "next",
       "source_label": "Overfitting and Underfitting",
       "target_label": "Ridge Regression: MSE with L2 Regularization",
@@ -14570,9 +14628,9 @@
       ]
     },
     {
-      "relation_id": "R_0013",
-      "source_id": "S_0013",
-      "target_id": "S_0014",
+      "relation_id": "R_0017",
+      "source_id": "S_0017",
+      "target_id": "S_0018",
       "relation_type": "next",
       "source_label": "Ridge Regression: MSE with L2 Regularization",
       "target_label": "Ridge Regression: A Bayesian Viewpoint",
@@ -14594,9 +14652,9 @@
       ]
     },
     {
-      "relation_id": "R_0014",
-      "source_id": "S_0014",
-      "target_id": "S_0015",
+      "relation_id": "R_0018",
+      "source_id": "S_0018",
+      "target_id": "S_0019",
       "relation_type": "next",
       "source_label": "Ridge Regression: A Bayesian Viewpoint",
       "target_label": "ML: Frequentist Statistic Viewpoint",
@@ -14616,9 +14674,9 @@
       ]
     },
     {
-      "relation_id": "R_0015",
-      "source_id": "S_0015",
-      "target_id": "S_0016",
+      "relation_id": "R_0019",
+      "source_id": "S_0019",
+      "target_id": "S_0020",
       "relation_type": "next",
       "source_label": "ML: Frequentist Statistic Viewpoint",
       "target_label": "ML: Bayesian Statistic Viewpoint",
@@ -14637,9 +14695,9 @@
       ]
     },
     {
-      "relation_id": "R_0016",
-      "source_id": "S_0016",
-      "target_id": "S_0017",
+      "relation_id": "R_0020",
+      "source_id": "S_0020",
+      "target_id": "S_0021",
       "relation_type": "next",
       "source_label": "ML: Bayesian Statistic Viewpoint",
       "target_label": "Frequentist v.s. Bayesian",
@@ -14658,12 +14716,12 @@
       ]
     },
     {
-      "relation_id": "R_0017",
-      "source_id": "S_0017",
-      "target_id": "S_0018",
+      "relation_id": "R_0021",
+      "source_id": "S_0021",
+      "target_id": "S_0022",
       "relation_type": "next",
       "source_label": "Frequentist v.s. Bayesian",
-      "target_label": "Homework 1: DDL — March 16, 2025, Midnight",
+      "target_label": "Formula near The Bias of Estimation",
       "reason": "学习路径中的下一节。",
       "confidence": 0.85,
       "evidence_units": [
@@ -14671,67 +14729,7 @@
         "U_0112",
         "U_0113",
         "U_0114",
-        "U_0120",
-        "U_0121",
-        "U_0122"
-      ]
-    },
-    {
-      "relation_id": "R_0018",
-      "source_id": "S_0018",
-      "target_id": "S_0019",
-      "relation_type": "next",
-      "source_label": "Homework 1: DDL — March 16, 2025, Midnight",
-      "target_label": "The Bias of Estimation",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0120",
-        "U_0121",
-        "U_0122",
-        "U_0047"
-      ]
-    },
-    {
-      "relation_id": "R_0019",
-      "source_id": "S_0019",
-      "target_id": "S_0020",
-      "relation_type": "next",
-      "source_label": "The Bias of Estimation",
-      "target_label": "The Bias of Estimation",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0047",
-        "U_0048"
-      ]
-    },
-    {
-      "relation_id": "R_0020",
-      "source_id": "S_0020",
-      "target_id": "S_0021",
-      "relation_type": "next",
-      "source_label": "The Bias of Estimation",
-      "target_label": "Formula near The Bias of Estimation",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0048",
         "U_0049"
-      ]
-    },
-    {
-      "relation_id": "R_0021",
-      "source_id": "S_0021",
-      "target_id": "S_0022",
-      "relation_type": "next",
-      "source_label": "Formula near The Bias of Estimation",
-      "target_label": "Toy Example 1",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0049",
-        "U_0050"
       ]
     },
     {
@@ -14739,12 +14737,12 @@
       "source_id": "S_0022",
       "target_id": "S_0023",
       "relation_type": "next",
-      "source_label": "Toy Example 1",
+      "source_label": "Formula near The Bias of Estimation",
       "target_label": "Formula near E X|µ [X n ] − µ",
       "reason": "学习路径中的下一节。",
       "confidence": 0.85,
       "evidence_units": [
-        "U_0050",
+        "U_0049",
         "U_0055"
       ]
     },
@@ -14754,32 +14752,18 @@
       "target_id": "S_0024",
       "relation_type": "next",
       "source_label": "Formula near E X|µ [X n ] − µ",
-      "target_label": "Toy Example 2",
+      "target_label": "Formula near 1 N",
       "reason": "学习路径中的下一节。",
       "confidence": 0.85,
       "evidence_units": [
         "U_0055",
-        "U_0056"
+        "U_0058"
       ]
     },
     {
       "relation_id": "R_0024",
       "source_id": "S_0024",
       "target_id": "S_0025",
-      "relation_type": "next",
-      "source_label": "Toy Example 2",
-      "target_label": "Formula near 1 N",
-      "reason": "学习路径中的下一节。",
-      "confidence": 0.85,
-      "evidence_units": [
-        "U_0056",
-        "U_0058"
-      ]
-    },
-    {
-      "relation_id": "R_0025",
-      "source_id": "S_0025",
-      "target_id": "S_0026",
       "relation_type": "next",
       "source_label": "Formula near 1 N",
       "target_label": "1 N",
@@ -14791,9 +14775,9 @@
       ]
     },
     {
-      "relation_id": "R_0026",
-      "source_id": "S_0026",
-      "target_id": "S_0027",
+      "relation_id": "R_0025",
+      "source_id": "S_0025",
+      "target_id": "S_0026",
       "relation_type": "next",
       "source_label": "1 N",
       "target_label": "▶ The unbiased estimation is σ̂ 2 =",
@@ -14805,9 +14789,9 @@
       ]
     },
     {
-      "relation_id": "R_0027",
-      "source_id": "S_0027",
-      "target_id": "S_0028",
+      "relation_id": "R_0026",
+      "source_id": "S_0026",
+      "target_id": "S_0027",
       "relation_type": "next",
       "source_label": "▶ The unbiased estimation is σ̂ 2 =",
       "target_label": "Formula near 1 N−1",
@@ -14819,9 +14803,9 @@
       ]
     },
     {
-      "relation_id": "R_0028",
-      "source_id": "S_0028",
-      "target_id": "S_0029",
+      "relation_id": "R_0027",
+      "source_id": "S_0027",
+      "target_id": "S_0028",
       "relation_type": "next",
       "source_label": "Formula near 1 N−1",
       "target_label": "Formula near P N",
@@ -14833,9 +14817,9 @@
       ]
     },
     {
-      "relation_id": "R_0029",
-      "source_id": "S_0029",
-      "target_id": "S_0030",
+      "relation_id": "R_0028",
+      "source_id": "S_0028",
+      "target_id": "S_0029",
       "relation_type": "next",
       "source_label": "Formula near P N",
       "target_label": "− µ̂) 2 .(What if µ is known?)",
@@ -14847,16 +14831,30 @@
       ]
     },
     {
-      "relation_id": "R_0030",
-      "source_id": "S_0030",
-      "target_id": "S_0031",
+      "relation_id": "R_0029",
+      "source_id": "S_0029",
+      "target_id": "S_0030",
       "relation_type": "next",
       "source_label": "− µ̂) 2 .(What if µ is known?)",
-      "target_label": "In Summary",
+      "target_label": "▶ Model/Feature selection strategies",
       "reason": "学习路径中的下一节。",
       "confidence": 0.85,
       "evidence_units": [
         "U_0066",
+        "U_0119"
+      ]
+    },
+    {
+      "relation_id": "R_0030",
+      "source_id": "S_0030",
+      "target_id": "S_0031",
+      "relation_type": "next",
+      "source_label": "▶ Model/Feature selection strategies",
+      "target_label": "In Summary",
+      "reason": "学习路径中的下一节。",
+      "confidence": 0.85,
+      "evidence_units": [
+        "U_0119",
         "U_0116"
       ]
     },
@@ -14894,18 +14892,342 @@
       "target_id": "S_0034",
       "relation_type": "next",
       "source_label": "Next...",
-      "target_label": "▶ Model/Feature selection strategies",
+      "target_label": "Homework 1: DDL — March 16, 2025, Midnight",
       "reason": "学习路径中的下一节。",
       "confidence": 0.85,
       "evidence_units": [
         "U_0118",
-        "U_0119"
+        "U_0120",
+        "U_0121",
+        "U_0122"
       ]
     },
     {
       "relation_id": "R_0034",
       "source_id": "S_0001",
+      "target_id": "S_0002",
+      "relation_type": "foundation_for",
+      "source_label": "Random Variables and Instances/Samples",
+      "target_label": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "reason": "均值和方差建立在随机变量及其分布的定义之上。",
+      "confidence": 0.75,
+      "evidence_units": [
+        "U_0027",
+        "U_0028",
+        "U_0029",
+        "U_0030",
+        "U_0031",
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037"
+      ]
+    },
+    {
+      "relation_id": "R_0035",
+      "source_id": "S_0001",
       "target_id": "S_0003",
+      "relation_type": "foundation_for",
+      "source_label": "Random Variables and Instances/Samples",
+      "target_label": "Properties of Mean and Variance",
+      "reason": "均值和方差建立在随机变量及其分布的定义之上。",
+      "confidence": 0.75,
+      "evidence_units": [
+        "U_0027",
+        "U_0028",
+        "U_0029",
+        "U_0030",
+        "U_0031",
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043"
+      ]
+    },
+    {
+      "relation_id": "R_0036",
+      "source_id": "S_0002",
+      "target_id": "S_0005",
+      "relation_type": "foundation_for",
+      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "target_label": "The Bias of Estimation",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037",
+        "U_0047"
+      ]
+    },
+    {
+      "relation_id": "R_0037",
+      "source_id": "S_0002",
+      "target_id": "S_0006",
+      "relation_type": "foundation_for",
+      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "target_label": "The Bias of Estimation",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037",
+        "U_0048"
+      ]
+    },
+    {
+      "relation_id": "R_0038",
+      "source_id": "S_0002",
+      "target_id": "S_0013",
+      "relation_type": "foundation_for",
+      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "target_label": "The Trade-off Between Bias and Variance",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037",
+        "U_0072",
+        "U_0073",
+        "U_0074",
+        "U_0076",
+        "U_0078"
+      ]
+    },
+    {
+      "relation_id": "R_0039",
+      "source_id": "S_0002",
+      "target_id": "S_0014",
+      "relation_type": "foundation_for",
+      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "target_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037",
+        "U_0079"
+      ]
+    },
+    {
+      "relation_id": "R_0040",
+      "source_id": "S_0002",
+      "target_id": "S_0015",
+      "relation_type": "foundation_for",
+      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037",
+        "U_0081",
+        "U_0082"
+      ]
+    },
+    {
+      "relation_id": "R_0041",
+      "source_id": "S_0003",
+      "target_id": "S_0005",
+      "relation_type": "foundation_for",
+      "source_label": "Properties of Mean and Variance",
+      "target_label": "The Bias of Estimation",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043",
+        "U_0047"
+      ]
+    },
+    {
+      "relation_id": "R_0042",
+      "source_id": "S_0003",
+      "target_id": "S_0006",
+      "relation_type": "foundation_for",
+      "source_label": "Properties of Mean and Variance",
+      "target_label": "The Bias of Estimation",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043",
+        "U_0048"
+      ]
+    },
+    {
+      "relation_id": "R_0043",
+      "source_id": "S_0003",
+      "target_id": "S_0013",
+      "relation_type": "foundation_for",
+      "source_label": "Properties of Mean and Variance",
+      "target_label": "The Trade-off Between Bias and Variance",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043",
+        "U_0072",
+        "U_0073",
+        "U_0074",
+        "U_0076",
+        "U_0078"
+      ]
+    },
+    {
+      "relation_id": "R_0044",
+      "source_id": "S_0003",
+      "target_id": "S_0014",
+      "relation_type": "foundation_for",
+      "source_label": "Properties of Mean and Variance",
+      "target_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043",
+        "U_0079"
+      ]
+    },
+    {
+      "relation_id": "R_0045",
+      "source_id": "S_0003",
+      "target_id": "S_0015",
+      "relation_type": "foundation_for",
+      "source_label": "Properties of Mean and Variance",
+      "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
+      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
+      "confidence": 0.76,
+      "evidence_units": [
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043",
+        "U_0081",
+        "U_0082"
+      ]
+    },
+    {
+      "relation_id": "R_0046",
+      "source_id": "S_0004",
+      "target_id": "S_0005",
+      "relation_type": "parallel_with",
+      "source_label": "The Variance of Estimation",
+      "target_label": "The Bias of Estimation",
+      "reason": "Bias 和 Variance 是评估估计量误差的两个并列维度，需要放在一起比较。",
+      "confidence": 0.79,
+      "evidence_units": [
+        "U_0046",
+        "U_0067",
+        "U_0068",
+        "U_0069",
+        "U_0070",
+        "U_0071",
+        "U_0047"
+      ]
+    },
+    {
+      "relation_id": "R_0047",
+      "source_id": "S_0004",
+      "target_id": "S_0006",
+      "relation_type": "parallel_with",
+      "source_label": "The Variance of Estimation",
+      "target_label": "The Bias of Estimation",
+      "reason": "Bias 和 Variance 是评估估计量误差的两个并列维度，需要放在一起比较。",
+      "confidence": 0.79,
+      "evidence_units": [
+        "U_0046",
+        "U_0067",
+        "U_0068",
+        "U_0069",
+        "U_0070",
+        "U_0071",
+        "U_0048"
+      ]
+    },
+    {
+      "relation_id": "R_0048",
+      "source_id": "S_0004",
+      "target_id": "S_0013",
+      "relation_type": "foundation_for",
+      "source_label": "The Variance of Estimation",
+      "target_label": "The Trade-off Between Bias and Variance",
+      "reason": "Bias-Variance trade-off 直接使用方差和偏差定义。",
+      "confidence": 0.8,
+      "evidence_units": [
+        "U_0046",
+        "U_0067",
+        "U_0068",
+        "U_0069",
+        "U_0070",
+        "U_0071",
+        "U_0072",
+        "U_0073",
+        "U_0074",
+        "U_0076",
+        "U_0078"
+      ]
+    },
+    {
+      "relation_id": "R_0049",
+      "source_id": "S_0004",
+      "target_id": "S_0014",
+      "relation_type": "foundation_for",
+      "source_label": "The Variance of Estimation",
+      "target_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
+      "reason": "Bias-Variance trade-off 直接使用方差和偏差定义。",
+      "confidence": 0.8,
+      "evidence_units": [
+        "U_0046",
+        "U_0067",
+        "U_0068",
+        "U_0069",
+        "U_0070",
+        "U_0071",
+        "U_0079"
+      ]
+    },
+    {
+      "relation_id": "R_0050",
+      "source_id": "S_0004",
+      "target_id": "S_0015",
+      "relation_type": "foundation_for",
+      "source_label": "The Variance of Estimation",
+      "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
+      "reason": "Bias-Variance trade-off 直接使用方差和偏差定义。",
+      "confidence": 0.8,
+      "evidence_units": [
+        "U_0046",
+        "U_0067",
+        "U_0068",
+        "U_0069",
+        "U_0070",
+        "U_0071",
+        "U_0081",
+        "U_0082"
+      ]
+    },
+    {
+      "relation_id": "R_0051",
+      "source_id": "S_0007",
+      "target_id": "S_0009",
       "relation_type": "example_of",
       "source_label": "Recall the Example of Linear Regression",
       "target_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
@@ -14926,9 +15248,9 @@
       ]
     },
     {
-      "relation_id": "R_0035",
-      "source_id": "S_0003",
-      "target_id": "S_0013",
+      "relation_id": "R_0052",
+      "source_id": "S_0009",
+      "target_id": "S_0017",
       "relation_type": "foundation_for",
       "source_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
       "target_label": "Ridge Regression: MSE with L2 Regularization",
@@ -14948,9 +15270,9 @@
       ]
     },
     {
-      "relation_id": "R_0036",
-      "source_id": "S_0003",
-      "target_id": "S_0014",
+      "relation_id": "R_0053",
+      "source_id": "S_0009",
+      "target_id": "S_0018",
       "relation_type": "foundation_for",
       "source_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
       "target_label": "Ridge Regression: A Bayesian Viewpoint",
@@ -14970,9 +15292,9 @@
       ]
     },
     {
-      "relation_id": "R_0037",
-      "source_id": "S_0003",
-      "target_id": "S_0017",
+      "relation_id": "R_0054",
+      "source_id": "S_0009",
+      "target_id": "S_0021",
       "relation_type": "contrasts_with",
       "source_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
       "target_label": "Frequentist v.s. Bayesian",
@@ -14990,9 +15312,9 @@
       ]
     },
     {
-      "relation_id": "R_0038",
-      "source_id": "S_0004",
-      "target_id": "S_0003",
+      "relation_id": "R_0055",
+      "source_id": "S_0010",
+      "target_id": "S_0009",
       "relation_type": "example_of",
       "source_label": "Key Statistical Analysis for Ordinary Linear Regression",
       "target_label": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
@@ -15009,331 +15331,9 @@
       ]
     },
     {
-      "relation_id": "R_0039",
-      "source_id": "S_0005",
-      "target_id": "S_0006",
-      "relation_type": "foundation_for",
-      "source_label": "Random Variables and Instances/Samples",
-      "target_label": "Mean, (Co)variance, and Their Unbiased Estimation",
-      "reason": "均值和方差建立在随机变量及其分布的定义之上。",
-      "confidence": 0.75,
-      "evidence_units": [
-        "U_0027",
-        "U_0028",
-        "U_0029",
-        "U_0030",
-        "U_0031",
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037"
-      ]
-    },
-    {
-      "relation_id": "R_0040",
-      "source_id": "S_0005",
-      "target_id": "S_0007",
-      "relation_type": "foundation_for",
-      "source_label": "Random Variables and Instances/Samples",
-      "target_label": "Properties of Mean and Variance",
-      "reason": "均值和方差建立在随机变量及其分布的定义之上。",
-      "confidence": 0.75,
-      "evidence_units": [
-        "U_0027",
-        "U_0028",
-        "U_0029",
-        "U_0030",
-        "U_0031",
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043"
-      ]
-    },
-    {
-      "relation_id": "R_0041",
-      "source_id": "S_0006",
-      "target_id": "S_0009",
-      "relation_type": "foundation_for",
-      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
-      "target_label": "The Trade-off Between Bias and Variance",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037",
-        "U_0072",
-        "U_0073",
-        "U_0074",
-        "U_0076",
-        "U_0078"
-      ]
-    },
-    {
-      "relation_id": "R_0042",
-      "source_id": "S_0006",
-      "target_id": "S_0010",
-      "relation_type": "foundation_for",
-      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
-      "target_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037",
-        "U_0079"
-      ]
-    },
-    {
-      "relation_id": "R_0043",
-      "source_id": "S_0006",
-      "target_id": "S_0011",
-      "relation_type": "foundation_for",
-      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
-      "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037",
-        "U_0081",
-        "U_0082"
-      ]
-    },
-    {
-      "relation_id": "R_0044",
-      "source_id": "S_0006",
-      "target_id": "S_0019",
-      "relation_type": "foundation_for",
-      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
-      "target_label": "The Bias of Estimation",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037",
-        "U_0047"
-      ]
-    },
-    {
-      "relation_id": "R_0045",
-      "source_id": "S_0006",
-      "target_id": "S_0020",
-      "relation_type": "foundation_for",
-      "source_label": "Mean, (Co)variance, and Their Unbiased Estimation",
-      "target_label": "The Bias of Estimation",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037",
-        "U_0048"
-      ]
-    },
-    {
-      "relation_id": "R_0046",
-      "source_id": "S_0007",
-      "target_id": "S_0009",
-      "relation_type": "foundation_for",
-      "source_label": "Properties of Mean and Variance",
-      "target_label": "The Trade-off Between Bias and Variance",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043",
-        "U_0072",
-        "U_0073",
-        "U_0074",
-        "U_0076",
-        "U_0078"
-      ]
-    },
-    {
-      "relation_id": "R_0047",
-      "source_id": "S_0007",
-      "target_id": "S_0010",
-      "relation_type": "foundation_for",
-      "source_label": "Properties of Mean and Variance",
-      "target_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043",
-        "U_0079"
-      ]
-    },
-    {
-      "relation_id": "R_0048",
-      "source_id": "S_0007",
-      "target_id": "S_0011",
-      "relation_type": "foundation_for",
-      "source_label": "Properties of Mean and Variance",
-      "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043",
-        "U_0081",
-        "U_0082"
-      ]
-    },
-    {
-      "relation_id": "R_0049",
-      "source_id": "S_0007",
-      "target_id": "S_0019",
-      "relation_type": "foundation_for",
-      "source_label": "Properties of Mean and Variance",
-      "target_label": "The Bias of Estimation",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043",
-        "U_0047"
-      ]
-    },
-    {
-      "relation_id": "R_0050",
-      "source_id": "S_0007",
-      "target_id": "S_0020",
-      "relation_type": "foundation_for",
-      "source_label": "Properties of Mean and Variance",
-      "target_label": "The Bias of Estimation",
-      "reason": "偏差与方差分析依赖均值、方差和无偏估计的概念。",
-      "confidence": 0.76,
-      "evidence_units": [
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043",
-        "U_0048"
-      ]
-    },
-    {
-      "relation_id": "R_0051",
-      "source_id": "S_0008",
-      "target_id": "S_0009",
-      "relation_type": "foundation_for",
-      "source_label": "The Variance of Estimation",
-      "target_label": "The Trade-off Between Bias and Variance",
-      "reason": "Bias-Variance trade-off 直接使用方差和偏差定义。",
-      "confidence": 0.8,
-      "evidence_units": [
-        "U_0046",
-        "U_0067",
-        "U_0068",
-        "U_0069",
-        "U_0070",
-        "U_0071",
-        "U_0072",
-        "U_0073",
-        "U_0074",
-        "U_0076",
-        "U_0078"
-      ]
-    },
-    {
-      "relation_id": "R_0052",
-      "source_id": "S_0008",
-      "target_id": "S_0010",
-      "relation_type": "foundation_for",
-      "source_label": "The Variance of Estimation",
-      "target_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
-      "reason": "Bias-Variance trade-off 直接使用方差和偏差定义。",
-      "confidence": 0.8,
-      "evidence_units": [
-        "U_0046",
-        "U_0067",
-        "U_0068",
-        "U_0069",
-        "U_0070",
-        "U_0071",
-        "U_0079"
-      ]
-    },
-    {
-      "relation_id": "R_0053",
-      "source_id": "S_0008",
-      "target_id": "S_0011",
-      "relation_type": "foundation_for",
-      "source_label": "The Variance of Estimation",
-      "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
-      "reason": "Bias-Variance trade-off 直接使用方差和偏差定义。",
-      "confidence": 0.8,
-      "evidence_units": [
-        "U_0046",
-        "U_0067",
-        "U_0068",
-        "U_0069",
-        "U_0070",
-        "U_0071",
-        "U_0081",
-        "U_0082"
-      ]
-    },
-    {
-      "relation_id": "R_0054",
-      "source_id": "S_0008",
-      "target_id": "S_0019",
-      "relation_type": "parallel_with",
-      "source_label": "The Variance of Estimation",
-      "target_label": "The Bias of Estimation",
-      "reason": "Bias 和 Variance 是评估估计量误差的两个并列维度，需要放在一起比较。",
-      "confidence": 0.79,
-      "evidence_units": [
-        "U_0046",
-        "U_0067",
-        "U_0068",
-        "U_0069",
-        "U_0070",
-        "U_0071",
-        "U_0047"
-      ]
-    },
-    {
-      "relation_id": "R_0055",
-      "source_id": "S_0008",
-      "target_id": "S_0020",
-      "relation_type": "parallel_with",
-      "source_label": "The Variance of Estimation",
-      "target_label": "The Bias of Estimation",
-      "reason": "Bias 和 Variance 是评估估计量误差的两个并列维度，需要放在一起比较。",
-      "confidence": 0.79,
-      "evidence_units": [
-        "U_0046",
-        "U_0067",
-        "U_0068",
-        "U_0069",
-        "U_0070",
-        "U_0071",
-        "U_0048"
-      ]
-    },
-    {
       "relation_id": "R_0056",
-      "source_id": "S_0010",
-      "target_id": "S_0011",
+      "source_id": "S_0014",
+      "target_id": "S_0015",
       "relation_type": "parallel_with",
       "source_label": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
       "target_label": "Bias-Variance Trade-off: An Indicator of Training Process",
@@ -15347,8 +15347,8 @@
     },
     {
       "relation_id": "R_0057",
-      "source_id": "S_0012",
-      "target_id": "S_0013",
+      "source_id": "S_0016",
+      "target_id": "S_0017",
       "relation_type": "regularizes",
       "source_label": "Overfitting and Underfitting",
       "target_label": "Ridge Regression: MSE with L2 Regularization",
@@ -15370,8 +15370,8 @@
     },
     {
       "relation_id": "R_0058",
-      "source_id": "S_0012",
-      "target_id": "S_0014",
+      "source_id": "S_0016",
+      "target_id": "S_0018",
       "relation_type": "regularizes",
       "source_label": "Overfitting and Underfitting",
       "target_label": "Ridge Regression: A Bayesian Viewpoint",
@@ -15393,8 +15393,8 @@
     },
     {
       "relation_id": "R_0059",
-      "source_id": "S_0013",
-      "target_id": "S_0014",
+      "source_id": "S_0017",
+      "target_id": "S_0018",
       "relation_type": "parallel_with",
       "source_label": "Ridge Regression: MSE with L2 Regularization",
       "target_label": "Ridge Regression: A Bayesian Viewpoint",
@@ -15417,8 +15417,8 @@
     },
     {
       "relation_id": "R_0060",
-      "source_id": "S_0015",
-      "target_id": "S_0016",
+      "source_id": "S_0019",
+      "target_id": "S_0020",
       "relation_type": "parallel_with",
       "source_label": "ML: Frequentist Statistic Viewpoint",
       "target_label": "ML: Bayesian Statistic Viewpoint",
@@ -15438,8 +15438,8 @@
     },
     {
       "relation_id": "R_0061",
-      "source_id": "S_0015",
-      "target_id": "S_0017",
+      "source_id": "S_0019",
+      "target_id": "S_0021",
       "relation_type": "contrasts_with",
       "source_label": "ML: Frequentist Statistic Viewpoint",
       "target_label": "Frequentist v.s. Bayesian",
@@ -15462,25 +15462,8 @@
       "chunk_id": "N_0000",
       "note_file": "01_lecture_notes.md",
       "section_title": "关系导读与对比总结",
-      "content": "## 关系导读与对比总结 [CourseIR]\n\n这一节是 CourseWeaver 根据知识关系自动生成的阅读导航。它不替代正文，而是帮助你先看清：哪些内容是主线，哪些内容应该并列比较，哪些内容只是例子或应用。\n\n### 学习主线\n\nRecall the Example of Linear Regression → The Key of Statistical Modeling → A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) → Key Statistical Analysis for Ordinary Linear Regression → Random Variables and Instances/Samples → Mean, (Co)variance, and Their Unbiased Estimation → Properties of Mean and Variance → The Variance of Estimation → The Trade-off Between Bias and Variance\n\n### 前置与支撑关系\n\n| 先理解 | 再学习 | 为什么这样排 |\n|---|---|---|\n| A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | Ridge Regression: MSE with L2 Regularization | 先理解 MLE/最小二乘，才能看懂 Ridge 在损失上加入正则项。 |\n| A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | Ridge Regression: A Bayesian Viewpoint | 先理解 MLE/最小二乘，才能看懂 Ridge 在损失上加入正则项。 |\n| Random Variables and Instances/Samples | Mean, (Co)variance, and Their Unbiased Estimation | 均值和方差建立在随机变量及其分布的定义之上。 |\n| Random Variables and Instances/Samples | Properties of Mean and Variance | 均值和方差建立在随机变量及其分布的定义之上。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | The Trade-off Between Bias and Variance | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | Bias-Variance Trade-off: An Indicator of Model Misspecification | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | Bias-Variance Trade-off: An Indicator of Training Process | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | The Bias of Estimation | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n\n### 并列与对比知识点\n\n| 关系 | 知识点 A | 知识点 B | 阅读建议 |\n|---|---|---|---|\n| 需要对比 | A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | Frequentist v.s. Bayesian | 频率派和贝叶斯视角是同一建模问题的两种解释框架。 |\n| 并列视角 | The Variance of Estimation | The Bias of Estimation | Bias 和 Variance 是评估估计量误差的两个并列维度，需要放在一起比较。 |\n| 并列视角 | Bias-Variance Trade-off: An Indicator of Model Misspecification | Bias-Variance Trade-off: An Indicator of Training Process | 这两个小节分别从模型错设和训练过程解释 Bias-Variance trade-off，适合并列表格总结。 |\n| 并列视角 | Ridge Regression: MSE with L2 Regularization | Ridge Regression: A Bayesian Viewpoint | Ridge Regression 可以从正则化损失和贝叶斯先验两个并列视角理解。 |\n| 并列视角 | ML: Frequentist Statistic Viewpoint | ML: Bayesian Statistic Viewpoint | 频率派和贝叶斯视角是机器学习统计解释的两个并列框架。 |\n| 需要对比 | ML: Frequentist Statistic Viewpoint | Frequentist v.s. Bayesian | 频率派和贝叶斯视角是同一建模问题的两种解释框架。 |\n\n### 例子如何服务概念\n\n| 例子 / 场景 | 被解释的概念 | 作用 |\n|---|---|---|\n| Recall the Example of Linear Regression | A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | 线性回归例子用于引出高斯噪声下的最大似然估计。 |\n| Key Statistical Analysis for Ordinary Linear Regression | A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | 线性回归例子用于引出高斯噪声下的最大似然估计。 |\n\n读正文时可以按这个顺序检查自己：先能说清前置概念，再看公式推导；遇到并列视角时，不要分别背两段话，而是用表格比较它们的假设、目标和结论。\n\n来源：CourseIR relations",
+      "content": "## 关系导读与对比总结 [CourseIR]\n\n这一节是 CourseWeaver 根据知识关系自动生成的阅读导航。它不替代正文，而是帮助你先看清：哪些内容是主线，哪些内容应该并列比较，哪些内容只是例子或应用。\n\n### 学习主线\n\nRandom Variables and Instances/Samples → Mean, (Co)variance, and Their Unbiased Estimation → Properties of Mean and Variance → The Variance of Estimation → The Bias of Estimation → The Bias of Estimation → Recall the Example of Linear Regression → The Key of Statistical Modeling → A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)\n\n### 前置与支撑关系\n\n| 先理解 | 再学习 | 为什么这样排 |\n|---|---|---|\n| Random Variables and Instances/Samples | Mean, (Co)variance, and Their Unbiased Estimation | 均值和方差建立在随机变量及其分布的定义之上。 |\n| Random Variables and Instances/Samples | Properties of Mean and Variance | 均值和方差建立在随机变量及其分布的定义之上。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | The Bias of Estimation | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | The Trade-off Between Bias and Variance | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | Bias-Variance Trade-off: An Indicator of Model Misspecification | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Mean, (Co)variance, and Their Unbiased Estimation | Bias-Variance Trade-off: An Indicator of Training Process | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Properties of Mean and Variance | The Bias of Estimation | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n| Properties of Mean and Variance | The Trade-off Between Bias and Variance | 偏差与方差分析依赖均值、方差和无偏估计的概念。 |\n\n### 并列与对比知识点\n\n| 关系 | 知识点 A | 知识点 B | 阅读建议 |\n|---|---|---|---|\n| 并列视角 | The Variance of Estimation | The Bias of Estimation | Bias 和 Variance 是评估估计量误差的两个并列维度，需要放在一起比较。 |\n| 需要对比 | A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | Frequentist v.s. Bayesian | 频率派和贝叶斯视角是同一建模问题的两种解释框架。 |\n| 并列视角 | Bias-Variance Trade-off: An Indicator of Model Misspecification | Bias-Variance Trade-off: An Indicator of Training Process | 这两个小节分别从模型错设和训练过程解释 Bias-Variance trade-off，适合并列表格总结。 |\n| 并列视角 | Ridge Regression: MSE with L2 Regularization | Ridge Regression: A Bayesian Viewpoint | Ridge Regression 可以从正则化损失和贝叶斯先验两个并列视角理解。 |\n| 并列视角 | ML: Frequentist Statistic Viewpoint | ML: Bayesian Statistic Viewpoint | 频率派和贝叶斯视角是机器学习统计解释的两个并列框架。 |\n| 需要对比 | ML: Frequentist Statistic Viewpoint | Frequentist v.s. Bayesian | 频率派和贝叶斯视角是同一建模问题的两种解释框架。 |\n\n### 例子如何服务概念\n\n| 例子 / 场景 | 被解释的概念 | 作用 |\n|---|---|---|\n| Recall the Example of Linear Regression | A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | 线性回归例子用于引出高斯噪声下的最大似然估计。 |\n| Key Statistical Analysis for Ordinary Linear Regression | A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) | 线性回归例子用于引出高斯噪声下的最大似然估计。 |\n\n读正文时可以按这个顺序检查自己：先能说清前置概念，再看公式推导；遇到并列视角时，不要分别背两段话，而是用表格比较它们的假设、目标和结论。\n\n来源：CourseIR relations",
       "source_units": [
-        "U_0008",
-        "U_0010",
-        "U_0011",
-        "U_0012",
-        "U_0013",
-        "U_0014",
-        "U_0016",
-        "U_0017",
-        "U_0018",
-        "U_0019",
-        "U_0020",
-        "U_0021",
-        "U_0022",
-        "U_0023",
-        "U_0024",
-        "U_0025",
-        "U_0026",
         "U_0027",
         "U_0028",
         "U_0029",
@@ -15500,6 +15483,27 @@
         "U_0069",
         "U_0070",
         "U_0071",
+        "U_0047",
+        "U_0048",
+        "U_0008",
+        "U_0010",
+        "U_0011",
+        "U_0012",
+        "U_0013",
+        "U_0014",
+        "U_0016",
+        "U_0017",
+        "U_0018",
+        "U_0019",
+        "U_0020",
+        "U_0021",
+        "U_0022",
+        "U_0023",
+        "U_0024",
+        "U_0025",
+        "U_0026",
+        "U_0050",
+        "U_0056",
         "U_0072",
         "U_0073",
         "U_0074",
@@ -15538,27 +15542,80 @@
         "U_0112",
         "U_0113",
         "U_0114",
-        "U_0120",
-        "U_0121",
-        "U_0122",
-        "U_0047",
-        "U_0048",
         "U_0049",
-        "U_0050",
         "U_0055",
-        "U_0056",
         "U_0058",
         "U_0060",
         "U_0061",
         "U_0063",
         "U_0065",
         "U_0066",
+        "U_0119",
         "U_0116",
         "U_0117",
         "U_0118",
-        "U_0119"
+        "U_0120",
+        "U_0121",
+        "U_0122"
       ],
       "source_blocks": [
+        "p018_b001",
+        "p019_b001",
+        "p020_b001",
+        "p021_b001",
+        "p022_b001",
+        "p018_b002",
+        "p019_b002",
+        "p020_b002",
+        "p021_b002",
+        "p022_b002",
+        "p020_b003",
+        "p021_b003",
+        "p022_b003",
+        "p023_b001",
+        "p024_b001",
+        "p023_b002",
+        "p023_b003",
+        "p024_b002",
+        "p024_b003",
+        "p024_b008",
+        "p023_b004",
+        "p024_b005",
+        "p024_b011",
+        "p025_b001",
+        "p025_b002",
+        "p025_b003",
+        "p025_b004",
+        "p025_b010",
+        "p025_b012",
+        "p025_b016",
+        "p026_b002",
+        "p027_b002",
+        "p028_b002",
+        "p029_b002",
+        "p030_b002",
+        "p039_b002",
+        "p040_b002",
+        "p041_b002",
+        "p039_b001",
+        "p040_b001",
+        "p041_b001",
+        "p039_b003",
+        "p040_b003",
+        "p041_b003",
+        "p040_b004",
+        "p041_b004",
+        "p041_b007",
+        "p041_b006",
+        "p026_b003",
+        "p027_b006",
+        "p029_b007",
+        "p030_b007",
+        "p027_b003",
+        "p028_b003",
+        "p029_b003",
+        "p030_b003",
+        "p030_b008",
         "p004_b001",
         "p004_b003",
         "p005_b003",
@@ -15666,54 +15723,14 @@
         "p017_b003",
         "p017_b004",
         "p017_b007",
-        "p018_b001",
-        "p019_b001",
-        "p020_b001",
-        "p021_b001",
-        "p022_b001",
-        "p018_b002",
-        "p019_b002",
-        "p020_b002",
-        "p021_b002",
-        "p022_b002",
-        "p020_b003",
-        "p021_b003",
-        "p022_b003",
-        "p023_b001",
-        "p024_b001",
-        "p023_b002",
-        "p023_b003",
-        "p024_b002",
-        "p024_b003",
-        "p024_b008",
-        "p023_b004",
-        "p024_b005",
-        "p024_b011",
-        "p025_b001",
-        "p025_b002",
-        "p025_b003",
-        "p025_b004",
-        "p025_b010",
-        "p025_b012",
-        "p025_b016",
-        "p026_b002",
-        "p027_b002",
-        "p028_b002",
-        "p029_b002",
-        "p030_b002",
-        "p039_b002",
-        "p040_b002",
-        "p041_b002",
-        "p039_b001",
-        "p040_b001",
-        "p041_b001",
-        "p039_b003",
-        "p040_b003",
-        "p041_b003",
-        "p040_b004",
-        "p041_b004",
-        "p041_b007",
-        "p041_b006",
+        "p031_b001",
+        "p032_b001",
+        "p033_b001",
+        "p034_b001",
+        "p035_b001",
+        "p036_b001",
+        "p037_b001",
+        "p038_b001",
         "p042_b001",
         "p043_b001",
         "p044_b001",
@@ -15907,19 +15924,6 @@
         "p066_b002",
         "p066_b003",
         "p066_b004",
-        "p068_b001",
-        "p068_b002",
-        "p068_b003",
-        "p068_b004",
-        "p026_b003",
-        "p027_b006",
-        "p029_b007",
-        "p030_b007",
-        "p027_b003",
-        "p028_b003",
-        "p029_b003",
-        "p030_b003",
-        "p030_b008",
         "p027_b004",
         "p028_b004",
         "p028_b006",
@@ -15933,16 +15937,8 @@
         "p032_b005",
         "p032_b007",
         "p032_b008",
-        "p031_b001",
-        "p032_b001",
         "p032_b013",
         "p032_b014",
-        "p033_b001",
-        "p034_b001",
-        "p035_b001",
-        "p036_b001",
-        "p037_b001",
-        "p038_b001",
         "p033_b004",
         "p034_b004",
         "p034_b006",
@@ -15966,14 +15962,156 @@
         "p037_b014",
         "p038_b014",
         "p038_b015",
+        "p067_b005",
         "p067_b002",
         "p067_b003",
         "p067_b004",
-        "p067_b005"
+        "p068_b001",
+        "p068_b002",
+        "p068_b003",
+        "p068_b004"
       ]
     },
     {
       "chunk_id": "N_0001",
+      "note_file": "01_lecture_notes.md",
+      "section_title": "Random Variables and Instances/Samples",
+      "content": "## Random Variables and Instances/Samples [p.18-p.22]\n\n这节课的核心是区分“随机变量”和它的“实例/样本”这两个容易混淆的概念，并建立从单个样本到数据矩阵的符号体系。老师从头开始搭建了一个清晰的框架。\n\n首先，我们定义一个**随机变量**（random variable，简写为 r.v.）\\(X\\)。这个 \\(X\\) 本身是一个抽象的概念，它代表一个随机过程的结果，并且会生成一个**分布** \\(P_X\\)。这个分布 \\(P_X\\) 定义在 \\(X\\) 可能取值的空间 \\(\\mathcal{X}\\) 上。注意，这里的空间 \\(\\mathcal{X}\\) 可以是 \\(D\\) 维的（即 \\(X\\) 可以是一个向量）。课件特别标注了一个记号：有时会把 \\(P_X\\) 写成 \\(\\{P_X\\}\\)，这表示我们关注的是分布本身作为一个对象，而不是它的具体数值。\n\n接着，我们引入**样本**（sample）或**实例**（instance）的概念。一个具体的样本记作 \\(x\\)，它是空间 \\(\\mathcal{X}\\) 中的一个点。关键的关系是：这个 \\(x\\) 是从随机变量 \\(X\\) 的分布 \\(P_X\\) 中抽取出来的，用数学符号表示就是 \\(x \\sim P_X\\)。这里的“\\(\\sim\\)”读作“服从于”或“采样自”，它连接了抽象的随机变量和具体的观测值。\n\n当我们有多个这样的样本 \\(x\\) 时，事情就变得有趣了。多个样本（比如 \\(x_1, x_2, \\dots, x_n\\)）通常会被组织成一个**矩阵**，课件用大写粗体字母 \\(\\mathbf{X}\\) 来表示这个数据矩阵。相应地，这个矩阵 \\(\\mathbf{X}\\) 本身也可以被视为一个“随机矩阵”，它的每一行（或每一列）都来自同一个分布 \\(P_X\\)，因此我们同样可以写 \\(\\mathbf{X} \\sim P_X\\)。这里容易混淆的点是：小写 \\(x\\) 是单个样本（向量），大写粗体 \\(\\mathbf{X}\\) 是样本集合（矩阵），而大写斜体 \\(X\\) 是随机变量（抽象概念）。\n\n最后，课件给出了两个最重要的统计量：**期望**（expectation）和**方差**（variance）。它们都是针对随机变量 \\(X\\) 定义的，记作 \\(\\mathbb{E}_{P_X}[X]\\) 和 \\(\\mathbb{V}_{P_X}[X]\\)。下标 \\(P_X\\) 强调了这些期望和方差是在 \\(X\\) 的分布 \\(P_X\\) 下计算的。理解这一点很重要：当你看到 \\(\\mathbb{E}_{P_X}[X]\\) 时，要意识到它是对整个分布求平均，而不是对某几个样本求平均。\n\n**复习检查**：学完这一节，你应该能回答——随机变量 \\(X\\) 和它的一个样本 \\(x\\) 有什么区别？为什么说数据矩阵 \\(\\mathbf{X}\\) 也是一个“随机”对象？期望和方差的下标 \\(P_X\\) 意味着什么？\n\n来源：p.18-p.22",
+      "source_units": [
+        "U_0027",
+        "U_0028",
+        "U_0029",
+        "U_0030",
+        "U_0031"
+      ],
+      "source_blocks": [
+        "p018_b001",
+        "p019_b001",
+        "p020_b001",
+        "p021_b001",
+        "p022_b001",
+        "p018_b002",
+        "p019_b002",
+        "p020_b002",
+        "p021_b002",
+        "p022_b002",
+        "p020_b003",
+        "p021_b003",
+        "p022_b003"
+      ]
+    },
+    {
+      "chunk_id": "N_0002",
+      "note_file": "01_lecture_notes.md",
+      "section_title": "Mean, (Co)variance, and Their Unbiased Estimation",
+      "content": "## Mean, (Co)variance, and Their Unbiased Estimation [p.23-p.24]\n\n这一节从总体分布出发，先定义我们真正关心的目标量——均值 µ 和方差 σ²，然后说明如何用样本去无偏地估计它们。整条逻辑线是：先明确“真实值是什么”，再问“样本怎么算才能不偏”。\n\n**1. 总体参数的定义**\n\n假设我们观测到一组独立同分布的样本 \\( X = \\{x_1, x_2, \\dots, x_n\\} \\)，每个 \\( x_i \\) 都来自同一个未知分布 \\( P \\)。那么总体的均值 µ 和方差 σ² 定义为：\n\n- 均值：\\( \\mu = \\mathbb{E}_P[X] \\) —— 这是分布 \\( P \\) 下随机变量 \\( X \\) 的期望值，是我们想估计的“真实中心”。\n- 方差：\\( \\sigma^2 = \\mathbb{V}_P[X] = \\mathbb{E}_P[(X - \\mu)^2] = \\mathbb{E}_P[X^2] - \\mathbb{E}_P^2[X] \\) —— 这是真实均值 µ 附近的平均平方偏离。注意最后一个等号是方差的计算恒等式，在推导无偏估计时有用。\n\n**2. 均值的无偏估计**\n\n最自然的想法是用样本均值去估计总体均值：\n\\[\n\\hat{\\mu} = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\n这个估计是无偏的，因为 \\( \\mathbb{E}[\\hat{\\mu}] = \\mu \\)。课件直接给出了这个结论，没有展开证明，但可以记住：样本均值是 µ 的无偏估计。\n\n**3. 方差的无偏估计——关键易错点**\n\n方差的估计需要特别小心。课件给出了两个形式：\n\n- 如果 µ 已知：\\( \\hat{\\sigma}^2 = \\frac{1}{n} \\sum_{i=1}^n (x_i - \\mu)^2 \\) —— 这是无偏的，因为分母用 n 即可。\n- 如果 µ 未知（实际更常见）：我们用样本均值 \\( \\hat{\\mu} \\) 代替 µ，此时 \\( \\frac{1}{n} \\sum_{i=1}^n (x_i - \\hat{\\mu})^2 \\) 会系统性地低估真实方差（因为 \\( \\hat{\\mu} \\) 本身已经最小化了平方和）。为了纠正这个偏差，分母改为 \\( n-1 \\)：\n\\[\n\\hat{\\sigma}^2 = \\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\hat{\\mu})^2\n\\]\n这就是著名的“无偏样本方差”。课件用两个公式并列的方式提醒你：关键区别在于分母是 n 还是 n-1，以及背后 µ 是否已知。\n\n**复习自检**：你能解释为什么用 \\( \\hat{\\mu} \\) 代替 µ 后，分母必须用 n-1 而不是 n 吗？如果不能，说明你还没有真正理解“无偏”的含义——建议回到课件中“自由度损失”的直觉，或者自己写一个小模拟验证。\n\n来源：p.23-p.24",
+      "source_units": [
+        "U_0032",
+        "U_0033",
+        "U_0034",
+        "U_0037"
+      ],
+      "source_blocks": [
+        "p023_b001",
+        "p024_b001",
+        "p023_b002",
+        "p023_b003",
+        "p024_b002",
+        "p024_b003",
+        "p024_b008",
+        "p023_b004",
+        "p024_b005",
+        "p024_b011"
+      ]
+    },
+    {
+      "chunk_id": "N_0003",
+      "note_file": "01_lecture_notes.md",
+      "section_title": "Properties of Mean and Variance",
+      "content": "## Properties of Mean and Variance [p.25]\n\n这一节从期望和方差的运算性质入手，核心是理解线性变换对随机变量的影响，以及方差在独立和非独立情况下的展开规则。老师先给出了期望的线性性质：对于常数 \\(a\\) 和随机变量 \\(X\\)，有 \\(E[aX] = aE[X]\\)；进一步扩展到两个随机变量时，\\(E[aX + bY] = aE[X] + bE[Y]\\)，这里 \\(b\\) 也是常数，\\(Y\\) 是另一个随机变量。这个性质说明期望是线性算子，可以直接分配到每一项上。\n\n接着转向方差的性质。第一个是平移不变性：\\(V[X + a] = V[X]\\)，意思是给随机变量加上常数，离散程度不变。第二个是线性组合的方差公式：\\(V[aX + bY] = a^2 V[X] + b^2 V[Y] + 2ab \\,\\text{Cov}(X, Y)\\)。这里的关键是出现了协方差项 \\(\\text{Cov}(X, Y)\\)，它衡量 \\(X\\) 和 \\(Y\\) 的线性相关程度。如果 \\(X\\) 和 \\(Y\\) 独立，协方差为零，公式就简化为 \\(a^2 V[X] + b^2 V[Y]\\)。\n\n协方差的定义是 \\(\\text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])]\\)，即两个变量各自离均差的乘积的期望。理解这个公式时，注意它衡量的是 \\(X\\) 和 \\(Y\\) 同时偏离各自均值的趋势——同向偏离时协方差为正，反向偏离时为负。\n\n课件还出现了一个求和形式的记号：\\(\\sum_{i=1}^n X_i\\) 表示对 \\(n\\) 个随机变量求和，而 \\(\\sum_{i,j=1}^n\\) 则是对所有下标对 \\((i,j)\\) 求和，这在展开方差公式时会出现，例如 \\(V[\\sum X_i] = \\sum V[X_i] + \\sum_{i \\neq j} \\text{Cov}(X_i, X_j)\\)。不过课件只给出了记号的雏形，没有展开具体推导。\n\n复习时，建议先记住期望的线性性，再对比方差在独立与非独立情况下的区别，最后用协方差定义去理解方差展开式中交叉项的来源。\n\n来源：p.25",
+      "source_units": [
+        "U_0038",
+        "U_0039",
+        "U_0040",
+        "U_0043"
+      ],
+      "source_blocks": [
+        "p025_b001",
+        "p025_b002",
+        "p025_b003",
+        "p025_b004",
+        "p025_b010",
+        "p025_b012",
+        "p025_b016"
+      ]
+    },
+    {
+      "chunk_id": "N_0004",
+      "note_file": "01_lecture_notes.md",
+      "section_title": "The Variance of Estimation",
+      "content": "## The Variance of Estimation [p.26, p.27, p.28, p.29, p.30, p.39, p.40, p.41]\n\n我们从一个统计模型开始：模型由参数θ刻画，观测数据x来自分布Pθ(X)=P(X|θ)。也就是说，每个数据点x都是在给定θ的条件下从该分布中抽取的。基于这些数据，我们构造一个对θ的估计量，记作θ̂。现在的问题是：这个估计量θ̂本身是一个随机变量（因为数据是随机的），它的波动有多大？这就是“估计的方差”要回答的问题。\n\n课件首先给出方差的一般定义：V[θ̂] = E_{X|θ}[(θ̂ − E_{X|θ}[θ̂])²]。这里的关键是理解每个符号的角色：V[θ̂]是我们关心的目标量——估计量的方差；E_{X|θ}表示在给定真实参数θ的条件下，对所有可能的观测数据X求期望；θ̂是依赖于数据的估计量；E_{X|θ}[θ̂]是θ̂的期望（即估计量的均值）。这个公式衡量的是θ̂围绕其自身均值波动的程度。\n\n接着，课件引入了一个重要的特殊情况：当θ̂是无偏估计时（即E_{X|θ}[θ̂] = θ），方差公式可以简化为V[θ̂] = E_{X|θ}[(θ̂ − θ)²]。注意这里的区别：一般公式中减的是E[θ̂]，而无偏情况下减的是真实参数θ。这个简化之所以成立，是因为无偏性保证了θ̂的均值恰好等于θ，所以θ̂与θ的偏差平方的期望就等于方差。这个公式更直观地告诉我们：对于无偏估计，方差直接衡量了估计值偏离真实参数的平均平方距离。\n\n容易混淆的点：不要把“方差”和“均方误差（MSE）”搞混。对于有偏估计，E[(θ̂−θ)²] = V[θ̂] + (bias)²，即均方误差等于方差加上偏差的平方。只有无偏时，两者才相等。课件这里只讨论了无偏情况下的简化形式。\n\n复习时，建议你确认自己能否回答：为什么我们要关心估计量的方差？它告诉我们估计的稳定性如何。如果方差很大，说明即使使用同样的模型和同样的样本量，不同数据集得到的估计值可能相差很大，这样的估计不可靠。\n\n来源：p.26, p.27, p.28, p.29, p.30, p.39, p.40, p.41",
+      "source_units": [
+        "U_0046",
+        "U_0067",
+        "U_0068",
+        "U_0069",
+        "U_0070",
+        "U_0071"
+      ],
+      "source_blocks": [
+        "p026_b002",
+        "p027_b002",
+        "p028_b002",
+        "p029_b002",
+        "p030_b002",
+        "p039_b002",
+        "p040_b002",
+        "p041_b002",
+        "p039_b001",
+        "p040_b001",
+        "p041_b001",
+        "p039_b003",
+        "p040_b003",
+        "p041_b003",
+        "p040_b004",
+        "p041_b004",
+        "p041_b007",
+        "p041_b006"
+      ]
+    },
+    {
+      "chunk_id": "N_0005",
+      "note_file": "01_lecture_notes.md",
+      "section_title": "The Bias of Estimation",
+      "content": "## The Bias of Estimation [p.26, p.27, p.29, p.30]\n\n这一节要回答的核心问题是：当我们用一个估计量（estimator）去推测真实参数时，这个估计量本身会不会系统性地偏离真实值？也就是说，如果我们反复从同一个真实模型生成不同的数据，然后用同一个估计方法去算，这些估计值的平均会不会恰好等于真实参数？如果不等，差多少？这个差值就是“偏差”（bias）。\n\n课件首先引入了符号：真实参数记为 \\(\\theta\\)，基于样本数据 \\(X\\) 得到的估计量记为 \\(\\hat{\\theta}\\)。这里的 \\(\\theta\\) 是未知但固定的真实值（ground truth），而 \\(\\hat{\\theta}\\) 是一个随机变量，因为它依赖于随机抽取的样本 \\(X\\)。偏差的定义就是估计量的期望与真实值之间的差：  \n\\[\n\\text{Bias}(\\hat{\\theta}) = \\mathbb{E}[\\hat{\\theta}] - \\theta\n\\]  \n其中 \\(\\mathbb{E}[\\hat{\\theta}]\\) 是对所有可能的样本 \\(X\\)（这些样本由真实模型 \\(\\theta\\) 生成）取期望。换句话说，偏差衡量的是估计量在长期重复抽样中的平均表现是否瞄准了真实值。\n\n理解偏差的关键在于区分两个概念：一是“估计量的期望” \\(\\mathbb{E}[\\hat{\\theta}]\\)，它是对所有可能数据集的平均；二是“某一个具体样本算出的估计值” \\(\\hat{\\theta}\\)，它只是随机实现。如果偏差为零，称估计量是无偏的（unbiased），意味着平均而言估计不会系统性地偏离目标；如果偏差不为零，则存在系统性误差，即使样本量再大，估计也会偏向某一侧。\n\n课件没有给出具体的无偏估计例子或推导，但这一概念是后续讨论均方误差（MSE）、方差-偏差权衡（bias-variance tradeoff）的基础。理解偏差后，可以问自己：如果我用某个公式去估计参数，重复采样多次，这些估计值的平均值是正好等于真实值，还是偏大或偏小？如果偏了，偏了多少？这就是偏差要回答的问题。\n\n来源：p.26, p.27, p.29, p.30",
+      "source_units": [
+        "U_0047"
+      ],
+      "source_blocks": [
+        "p026_b003",
+        "p027_b006",
+        "p029_b007",
+        "p030_b007"
+      ]
+    },
+    {
+      "chunk_id": "N_0006",
+      "note_file": "01_lecture_notes.md",
+      "section_title": "The Bias of Estimation",
+      "content": "## The Bias of Estimation [p.27-p.30\n\n这一节的核心问题是：当我们用一个统计量去估计某个未知参数时，这个估计到底准不准？偏差（Bias）就是衡量“系统性地偏离真实值”程度的指标。\n\n首先明确符号：我们关心的未知参数记为θ，基于观测数据计算出的估计量记为θ̂。偏差的定义是Bias(θ̂, θ) = E[θ̂] - θ，即估计量的期望与真实参数之间的差。课件特别强调了一个关键等价关系：Bias(θ̂, θ) = 0 ⇔ 估计量θ̂是无偏的（unbiased）。这意味着，如果重复采样无数次并计算估计值，这些估计值的平均值恰好等于真实参数θ。\n\n理解这个概念的难点在于区分“偏差”和“随机误差”。偏差是系统性的，即使样本量增大也不会消失；而随机误差会随着样本量增大而减小。例如，样本方差除以n-1而不是n，就是为了消除偏差——如果除以n，估计量就是有偏的。\n\n判断自己是否理解：能回答“为什么无偏性重要”以及“有偏估计量是否一定不好”这两个问题。前者关系到估计的长期准确性，后者则提示我们有时为了降低方差可以接受少量偏差（比如正则化方法）。\n\n来源：p.27-p.30",
+      "source_units": [
+        "U_0048"
+      ],
+      "source_blocks": [
+        "p027_b003",
+        "p028_b003",
+        "p029_b003",
+        "p030_b003",
+        "p030_b008"
+      ]
+    },
+    {
+      "chunk_id": "N_0007",
       "note_file": "01_lecture_notes.md",
       "section_title": "Recall the Example of Linear Regression",
       "content": "## Recall the Example of Linear Regression [p.4-p.5]\n\n我们从线性回归的经典例子开始，目的是建立从“数据”到“预测”的完整直觉。假设我们手头有N家公司的数据：对于第n家公司，我们有两个特征——它的销售额（sale）和收入（revenue），记作 **xₙ ∈ ℝ²**；同时我们知道这家公司的股票价值，记作 **yₙ ∈ ℝ**。所以，每个样本是一个二维输入（xₙ）和一个一维输出（yₙ）。\n\n**任务**很直接：给定一家公司的销售额和收入，预测它的股票价值。为此，我们选择一个**模型**：带高斯噪声的线性回归模型。这意味着我们假设y和x之间存在线性关系，但观测值会受到随机噪声的干扰。形式上，模型写作：\n\n\\[\ny = x^T \\theta + \\epsilon, \\quad \\epsilon \\sim \\mathcal{N}(0, \\sigma^2)\n\\]\n\n这里，**θ** 是我们需要学习的参数向量（维度与x相同，即ℝ²），它决定了每个特征对y的贡献权重；**ε** 是均值为0、方差为σ²的高斯噪声，它反映了预测的不确定性。因此，给定x后，y的条件分布是高斯分布：\n\n\\[\ny \\sim \\mathcal{N}(x^T \\theta, \\sigma^2)\n\\]\n\n即y的均值由线性部分xᵀθ决定，方差由噪声方差σ²决定。\n\n**损失函数**选择的是均方误差（MSE），即预测值ŷ与真实值y之间差的二范数平方：|y − ŷ|₂²。注意，这里ŷ就是xᵀθ（因为噪声的期望为0，最优预测就是线性部分）。所以，**学习任务**就是找到θ，使得所有样本上的MSE最小化。把N个样本堆叠起来：令矩阵 **X = [x₁, ..., xₙ]ᵀ ∈ ℝ^(N×2)**，每一行是一个样本的二维特征；令向量 **y = [y₁, ..., yₙ]ᵀ ∈ ℝ^N**。那么，整个训练集上的MSE可以写成：\n\n\\[\n\\min_{\\theta} \\sum_{n=1}^N |y_n - x_n^T \\theta|_2^2 = \\min_{\\theta} \\|y - X\\theta\\|_2^2\n\\]\n\n这个公式把问题浓缩成了一个标准的线性最小二乘问题：我们要找一个θ，使得Xθ尽可能接近y（在二范数意义下）。这个优化问题有闭式解，但课件在这里只给出了目标形式，没有展开求解。\n\n**容易混淆的点**：注意，这里的xₙ是二维向量（销售额和收入），不是标量；θ也是二维向量。另外，噪声假设（高斯、同方差σ²）是推导MSE作为损失函数合理性的关键——如果噪声不是高斯分布，MSE可能不是最优的损失。最后，整个推导的结论是：线性回归 + 高斯噪声 → 最小化MSE → 求解最小二乘问题。\n\n**如何判断自己理解了**：你能用自己的话解释为什么模型假设y ~ N(xᵀθ, σ²)会导致MSE损失吗？你能写出X矩阵的具体形状（行数、列数）以及每一行对应什么吗？如果噪声方差σ²很大，对预测的可靠性有什么影响？\n\n来源：p.4-p.5",
@@ -16008,7 +16146,7 @@
       ]
     },
     {
-      "chunk_id": "N_0002",
+      "chunk_id": "N_0008",
       "note_file": "01_lecture_notes.md",
       "section_title": "The Key of Statistical Modeling",
       "content": "## The Key of Statistical Modeling [p.5]\n\n这一节的核心是建立统计建模的基本框架：我们有一个输入空间 \\( x \\in \\mathcal{X} \\)，课件特别强调 \\(\\mathcal{X}\\) 是一个带范数的线性空间——这意味着输入可以是向量，并且我们能够度量输入之间的“距离”或“大小”，这为后续的优化和误差分析提供了结构基础。\n\n在这个框架下，模型假设输出 \\( y \\) 与输入 \\( x \\) 之间存在线性关系，但观测值会受到随机噪声的干扰。具体的数学表达是：\n\n\\[\ny = x^T \\theta + \\epsilon, \\quad \\epsilon \\sim N(0, \\sigma^2)\n\\]\n\n这里：\n- \\( y \\) 是我们要预测或解释的目标量（因变量），是一个标量；\n- \\( x \\) 是输入向量（特征），来自线性空间 \\(\\mathcal{X}\\)；\n- \\( \\theta \\) 是模型的参数向量，是我们需要通过数据估计的未知量；\n- \\( \\epsilon \\) 是随机误差项，服从均值为 0、方差为 \\(\\sigma^2\\) 的正态分布。\n\n从这个假设可以推导出 \\( y \\) 的条件分布：\n\n\\[\ny \\sim N(x^T \\theta, \\sigma^2)\n\\]\n\n这意味着给定输入 \\( x \\)，输出 \\( y \\) 服从以 \\( x^T \\theta \\) 为均值、\\(\\sigma^2\\) 为方差的正态分布。这个分布假设是整个建模过程的关键：它把确定性的线性预测和随机性结合在了一起。\n\n建模的目标是找到最优的参数 \\(\\theta\\)，课件中记为：\n\n\\[\n\\min_{\\theta}\n\\]\n\n虽然没有在这一页给出完整的目标函数，但结合上下文可以理解：我们希望通过某种准则（通常是最大似然估计或最小二乘法）来求解 \\(\\theta\\)，使得模型对观测数据的拟合最好。正态分布假设使得这个优化问题有良好的数学性质。\n\n容易混淆的点：注意区分 \\( x^T \\theta \\)（条件均值，是确定性的）和 \\( y \\)（观测值，是随机变量）。模型假设的是 \\( y \\) 围绕 \\( x^T \\theta \\) 随机波动，而不是 \\( y \\) 本身等于 \\( x^T \\theta \\)。\n\n来源：p.5",
@@ -16027,7 +16165,7 @@
       ]
     },
     {
-      "chunk_id": "N_0003",
+      "chunk_id": "N_0009",
       "note_file": "01_lecture_notes.md",
       "section_title": "A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE)",
       "content": "## A Frequentist Viewpoint: Maximum Likelihood Estimation (MLE) [p.6-p.13]\n\n我们从线性回归模型开始：假设数据由 \\( y = \\mathbf{x}^T \\theta + \\epsilon \\) 生成，其中噪声 \\(\\epsilon\\) 服从均值为0、方差为 \\(\\sigma^2\\) 的正态分布，即 \\(\\epsilon \\sim \\mathcal{N}(0, \\sigma^2)\\)。这里 \\(\\theta\\) 是我们想估计的参数向量，\\(\\mathbf{x}\\) 是输入特征，\\(y\\) 是观测输出。\n\n关键的一步是：既然噪声是正态分布，那么给定 \\(\\theta\\) 和 \\(\\mathbf{x}\\) 后，\\(y - \\mathbf{x}^T\\theta\\) 也服从正态分布 \\(\\mathcal{N}(0, \\sigma^2)\\)。因此，单个样本的条件概率密度为：\n\\[\np(y|\\theta, \\mathbf{x}) = \\frac{1}{\\sqrt{2\\pi\\sigma}} \\exp\\left(-\\frac{(y - \\mathbf{x}^T\\theta)^2}{2\\sigma^2}\\right)\n\\]\n注意这里 \\(p(y|\\theta, \\mathbf{x})\\) 中的竖线表示“给定参数和输入”，这是频率学派看待问题的方式：参数 \\(\\theta\\) 是固定的未知常数，数据是随机的。\n\n现在我们有 \\(N\\) 个独立同分布的样本 \\(\\{(x_n, y_n)\\}_{n=1}^N\\)。根据独立同分布假设，所有样本的联合概率（即似然函数）是每个样本概率的乘积：\n\\[\n\\max_{\\theta} \\prod_{n=1}^N p(y_n - \\mathbf{x}_n^T\\theta)\n\\]\n最大化这个乘积等价于最大化对数似然，也等价于最小化负对数似然。取负对数后，指数项变成平方和，常数项可以忽略，于是优化问题简化为：\n\\[\n\\min_{\\theta} \\frac{1}{2\\sigma^2} \\sum_{n=1}^N (y_n - \\mathbf{x}_n^T\\theta)^2 - \\text{Const.}\n\\]\n进一步去掉常数和正系数，就得到最小二乘形式：\n\\[\n\\min_{\\theta} \\sum_{n=1}^N (y_n - \\mathbf{x}_n^T\\theta)^2 \\quad \\text{或等价地} \\quad \\min_{\\theta} \\| \\mathbf{y} - \\mathbf{X}\\theta \\|_2^2\n\\]\n其中 \\(\\mathbf{X}\\) 是设计矩阵（每行是一个样本 \\(\\mathbf{x}_n^T\\)），\\(\\mathbf{y}\\) 是输出向量。\n\n更一般地，对于任意概率模型 \\(P(\\mathbf{x}|\\theta)\\)，最大似然估计的通用形式是：\n\\[\n\\hat{\\theta}_{\\text{MLE}} = \\arg\\max_{\\theta} \\log P(\\mathbf{X}|\\theta) = \\arg\\max_{\\theta} \\sum_{i=1}^N \\log P(\\mathbf{x}_i|\\theta)\n\\]\n这里 \\(\\mathbf{X} = [\\mathbf{x}_i]\\) 是观测到的样本集合，独立同分布假设让我们能把联合概率分解为乘积，从而对数似然变成求和。\n\n整个频率学派视角的流程是：先假设一个确定性模型（如线性模型），然后通过最大似然估计学习参数，最后将问题转化为一个优化问题（如梯度下降或随机梯度下降求解）。容易混淆的点是：这里的“似然”是数据的概率，而不是参数的概率——频率学派不把参数视为随机变量。\n\n来源：p.6-p.13",
@@ -16100,7 +16238,7 @@
       ]
     },
     {
-      "chunk_id": "N_0004",
+      "chunk_id": "N_0010",
       "note_file": "01_lecture_notes.md",
       "section_title": "Key Statistical Analysis for Ordinary Linear Regression",
       "content": "## Key Statistical Analysis for Ordinary Linear Regression [p.14-p.17]\n\n普通线性回归要解决的核心问题是：给定一组特征 \\(X \\in \\mathbb{R}^{N \\times D}\\)（N个样本，每个样本D维）和对应的标签 \\(y \\in \\mathbb{R}^N\\)，如何找到一个线性预测器，使得预测值尽可能接近真实值。这里的“线性”体现在预测形式为 \\(y = x^T \\theta + \\epsilon\\)，其中 \\(\\theta\\) 是待学习的参数向量，\\(\\epsilon\\) 是噪声项。\n\n**损失函数的设计来源于噪声模型的假设**。课件强调，本质上学习任务是在做最大似然估计（MLE），即最大化 \\(p(y|X, \\theta)\\)。这意味着我们假设给定X和\\(\\theta\\)后，y的分布形式决定了损失函数的具体形式。例如，如果假设噪声服从高斯分布，那么MLE等价于最小化均方误差。\n\n**一个关键统计视角**：课件指出X被视为随机变量，线性回归关注的是**给定X条件下Y的条件期望**，即 \\(E[Y|X]\\)。这意味着我们不是直接预测Y的精确值，而是预测Y在给定X时的平均行为。这个条件期望通过线性预测器 \\(x^T\\theta\\) 来建模。\n\n**优化目标**可以概括为：\n\\[\n\\min_{\\theta} \\text{loss}(y, X\\theta)\n\\]\n其中损失函数的具体形式由噪声模型决定。整个推导的逻辑链条是：先假设数据生成过程（\\(y = x^T\\theta + \\epsilon\\)），再根据噪声分布选择损失函数，最后通过MLE求解最优\\(\\theta\\)。\n\n**容易混淆的点**：不要把“线性回归”误解为只能拟合直线。这里的“线性”指的是参数\\(\\theta\\)与特征\\(x\\)之间是线性关系，但特征本身可以是非线性的（如多项式特征）。另外，MLE和最小化损失函数是同一件事的不同表述——前者是概率视角，后者是优化视角。\n\n来源：p.14-p.17",
@@ -16137,114 +16275,37 @@
       ]
     },
     {
-      "chunk_id": "N_0005",
+      "chunk_id": "N_0011",
       "note_file": "01_lecture_notes.md",
-      "section_title": "Random Variables and Instances/Samples",
-      "content": "## Random Variables and Instances/Samples [p.18-p.22]\n\n这节课的核心是区分“随机变量”和它的“实例/样本”这两个容易混淆的概念，并建立从单个样本到数据矩阵的符号体系。老师从头开始搭建了一个清晰的框架。\n\n首先，我们定义一个**随机变量**（random variable，简写为 r.v.）\\(X\\)。这个 \\(X\\) 本身是一个抽象的概念，它代表一个随机过程的结果，并且会生成一个**分布** \\(P_X\\)。这个分布 \\(P_X\\) 定义在 \\(X\\) 可能取值的空间 \\(\\mathcal{X}\\) 上。注意，这里的空间 \\(\\mathcal{X}\\) 可以是 \\(D\\) 维的（即 \\(X\\) 可以是一个向量）。课件特别标注了一个记号：有时会把 \\(P_X\\) 写成 \\(\\{P_X\\}\\)，这表示我们关注的是分布本身作为一个对象，而不是它的具体数值。\n\n接着，我们引入**样本**（sample）或**实例**（instance）的概念。一个具体的样本记作 \\(x\\)，它是空间 \\(\\mathcal{X}\\) 中的一个点。关键的关系是：这个 \\(x\\) 是从随机变量 \\(X\\) 的分布 \\(P_X\\) 中抽取出来的，用数学符号表示就是 \\(x \\sim P_X\\)。这里的“\\(\\sim\\)”读作“服从于”或“采样自”，它连接了抽象的随机变量和具体的观测值。\n\n当我们有多个这样的样本 \\(x\\) 时，事情就变得有趣了。多个样本（比如 \\(x_1, x_2, \\dots, x_n\\)）通常会被组织成一个**矩阵**，课件用大写粗体字母 \\(\\mathbf{X}\\) 来表示这个数据矩阵。相应地，这个矩阵 \\(\\mathbf{X}\\) 本身也可以被视为一个“随机矩阵”，它的每一行（或每一列）都来自同一个分布 \\(P_X\\)，因此我们同样可以写 \\(\\mathbf{X} \\sim P_X\\)。这里容易混淆的点是：小写 \\(x\\) 是单个样本（向量），大写粗体 \\(\\mathbf{X}\\) 是样本集合（矩阵），而大写斜体 \\(X\\) 是随机变量（抽象概念）。\n\n最后，课件给出了两个最重要的统计量：**期望**（expectation）和**方差**（variance）。它们都是针对随机变量 \\(X\\) 定义的，记作 \\(\\mathbb{E}_{P_X}[X]\\) 和 \\(\\mathbb{V}_{P_X}[X]\\)。下标 \\(P_X\\) 强调了这些期望和方差是在 \\(X\\) 的分布 \\(P_X\\) 下计算的。理解这一点很重要：当你看到 \\(\\mathbb{E}_{P_X}[X]\\) 时，要意识到它是对整个分布求平均，而不是对某几个样本求平均。\n\n**复习检查**：学完这一节，你应该能回答——随机变量 \\(X\\) 和它的一个样本 \\(x\\) 有什么区别？为什么说数据矩阵 \\(\\mathbf{X}\\) 也是一个“随机”对象？期望和方差的下标 \\(P_X\\) 意味着什么？\n\n来源：p.18-p.22",
+      "section_title": "Toy Example 1",
+      "content": "## Toy Example 1 [p.31-p.32]\n\n这节课从一个非常基础但关键的问题开始：**样本均值是否是总体均值的无偏估计？** 这个问题看似简单，却是理解“无偏性”这一统计核心概念的最佳切入点。\n\n老师先明确了符号含义：设总体均值为 μ，我们从中独立随机抽取 n 个样本 X₁, X₂, ..., Xₙ。样本均值记为 \\(\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n}X_i\\)。这里的关键是：μ 是固定的未知参数（目标量），而 \\(\\bar{X}\\) 是依赖于样本的随机变量（估计量）。\n\n推导过程很直接：要判断 \\(\\bar{X}\\) 是否无偏，就是看它的期望是否等于 μ。根据期望的线性性质，\\(E[\\bar{X}] = E[\\frac{1}{n}\\sum X_i] = \\frac{1}{n}\\sum E[X_i]\\)。由于每个样本 X_i 都是从总体中随机抽取的，所以 \\(E[X_i] = μ\\)。于是 \\(E[\\bar{X}] = \\frac{1}{n} \\cdot nμ = μ\\)。\n\n结论是：**样本均值确实是总体均值的无偏估计**。这个结论成立的前提是样本独立同分布且总体均值存在——不需要总体服从任何特定分布，这是它强大的地方。\n\n容易混淆的点：无偏性说的是“平均而言”估计量等于真值，并不意味着某一次抽样的样本均值恰好等于 μ。如果重复抽样很多次，这些样本均值的平均值会趋近 μ。另外，这里讨论的是对均值的估计，如果换成对方差的估计，情况就不同了（样本方差除以 n 是有偏的，除以 n-1 才是无偏的）。\n\n来源：p.31-p.32",
       "source_units": [
-        "U_0027",
-        "U_0028",
-        "U_0029",
-        "U_0030",
-        "U_0031"
+        "U_0050"
       ],
       "source_blocks": [
-        "p018_b001",
-        "p019_b001",
-        "p020_b001",
-        "p021_b001",
-        "p022_b001",
-        "p018_b002",
-        "p019_b002",
-        "p020_b002",
-        "p021_b002",
-        "p022_b002",
-        "p020_b003",
-        "p021_b003",
-        "p022_b003"
+        "p031_b001",
+        "p032_b001"
       ]
     },
     {
-      "chunk_id": "N_0006",
+      "chunk_id": "N_0012",
       "note_file": "01_lecture_notes.md",
-      "section_title": "Mean, (Co)variance, and Their Unbiased Estimation",
-      "content": "## Mean, (Co)variance, and Their Unbiased Estimation [p.23-p.24]\n\n这一节从总体分布出发，先定义我们真正关心的目标量——均值 µ 和方差 σ²，然后说明如何用样本去无偏地估计它们。整条逻辑线是：先明确“真实值是什么”，再问“样本怎么算才能不偏”。\n\n**1. 总体参数的定义**\n\n假设我们观测到一组独立同分布的样本 \\( X = \\{x_1, x_2, \\dots, x_n\\} \\)，每个 \\( x_i \\) 都来自同一个未知分布 \\( P \\)。那么总体的均值 µ 和方差 σ² 定义为：\n\n- 均值：\\( \\mu = \\mathbb{E}_P[X] \\) —— 这是分布 \\( P \\) 下随机变量 \\( X \\) 的期望值，是我们想估计的“真实中心”。\n- 方差：\\( \\sigma^2 = \\mathbb{V}_P[X] = \\mathbb{E}_P[(X - \\mu)^2] = \\mathbb{E}_P[X^2] - \\mathbb{E}_P^2[X] \\) —— 这是真实均值 µ 附近的平均平方偏离。注意最后一个等号是方差的计算恒等式，在推导无偏估计时有用。\n\n**2. 均值的无偏估计**\n\n最自然的想法是用样本均值去估计总体均值：\n\\[\n\\hat{\\mu} = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\n这个估计是无偏的，因为 \\( \\mathbb{E}[\\hat{\\mu}] = \\mu \\)。课件直接给出了这个结论，没有展开证明，但可以记住：样本均值是 µ 的无偏估计。\n\n**3. 方差的无偏估计——关键易错点**\n\n方差的估计需要特别小心。课件给出了两个形式：\n\n- 如果 µ 已知：\\( \\hat{\\sigma}^2 = \\frac{1}{n} \\sum_{i=1}^n (x_i - \\mu)^2 \\) —— 这是无偏的，因为分母用 n 即可。\n- 如果 µ 未知（实际更常见）：我们用样本均值 \\( \\hat{\\mu} \\) 代替 µ，此时 \\( \\frac{1}{n} \\sum_{i=1}^n (x_i - \\hat{\\mu})^2 \\) 会系统性地低估真实方差（因为 \\( \\hat{\\mu} \\) 本身已经最小化了平方和）。为了纠正这个偏差，分母改为 \\( n-1 \\)：\n\\[\n\\hat{\\sigma}^2 = \\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\hat{\\mu})^2\n\\]\n这就是著名的“无偏样本方差”。课件用两个公式并列的方式提醒你：关键区别在于分母是 n 还是 n-1，以及背后 µ 是否已知。\n\n**复习自检**：你能解释为什么用 \\( \\hat{\\mu} \\) 代替 µ 后，分母必须用 n-1 而不是 n 吗？如果不能，说明你还没有真正理解“无偏”的含义——建议回到课件中“自由度损失”的直觉，或者自己写一个小模拟验证。\n\n来源：p.23-p.24",
+      "section_title": "Toy Example 2",
+      "content": "## Toy Example 2 [p.33-p.38]\n\n这一节的核心问题是：**如何对总体方差进行无偏估计？** 它直接承接上一节“有偏估计”的讨论，通过一个具体的小例子（Toy Example）来展示为什么直觉上的样本方差公式（除以 \\(n\\)）是有偏的，以及如何修正得到无偏估计（除以 \\(n-1\\)）。\n\n**推导逻辑**：假设我们有一个总体，其真实均值为 \\(\\mu\\)，真实方差为 \\(\\sigma^2\\)。我们从中抽取一个大小为 \\(n\\) 的样本 \\(X_1, X_2, \\dots, X_n\\)。直觉上，我们会用样本方差 \\(S^2 = \\frac{1}{n} \\sum_{i=1}^n (X_i - \\bar{X})^2\\) 来估计 \\(\\sigma^2\\)，其中 \\(\\bar{X}\\) 是样本均值。但问题是，这个 \\(S^2\\) 的期望值并不等于 \\(\\sigma^2\\)，而是等于 \\(\\frac{n-1}{n} \\sigma^2\\)。也就是说，它系统性低估了真实方差——这就是“有偏”。\n\n**为什么会有偏？** 关键原因在于：当我们用样本均值 \\(\\bar{X}\\) 代替总体均值 \\(\\mu\\) 时，样本点 \\(X_i\\) 与 \\(\\bar{X}\\) 的偏差平方和，总是小于它们与 \\(\\mu\\) 的偏差平方和（因为 \\(\\bar{X}\\) 本身就是让平方和最小的那个点）。因此，\\(\\sum (X_i - \\bar{X})^2\\) 平均而言偏小，导致除以 \\(n\\) 后得到的估计偏小。\n\n**修正方法**：为了得到无偏估计，我们需要将分母从 \\(n\\) 改为 \\(n-1\\)，即定义 \\(S^2_{\\text{unbiased}} = \\frac{1}{n-1} \\sum_{i=1}^n (X_i - \\bar{X})^2\\)。可以证明，这个新统计量的期望正好等于 \\(\\sigma^2\\)。这里的 \\(n-1\\) 被称为“自由度”，它反映了在计算偏差平方和时，由于我们用了 \\(\\bar{X}\\) 来估计 \\(\\mu\\)，实际上损失了一个自由度（因为 \\(\\sum (X_i - \\bar{X}) = 0\\)，所以只有 \\(n-1\\) 个独立的偏差）。\n\n**容易混淆的点**：很多人会问“为什么是 \\(n-1\\) 而不是 \\(n\\)？” 关键在于区分“估计量的期望”和“估计量的具体取值”。无偏性是关于期望的性质，不是保证每一次估计都准确。另外，当样本量 \\(n\\) 很大时，\\(n\\) 和 \\(n-1\\) 的差别很小，有偏和无偏估计的结果会非常接近，但在小样本情况下，修正至关重要。\n\n**如何判断自己理解了？** 如果你能向别人解释清楚：为什么除以 \\(n\\) 会低估方差，以及除以 \\(n-1\\) 如何恰好纠正这个偏差，并且能理解“自由度”在这里的直观含义，那么你就掌握了这一节的核心。\n\n来源：p.33-p.38",
       "source_units": [
-        "U_0032",
-        "U_0033",
-        "U_0034",
-        "U_0037"
+        "U_0056"
       ],
       "source_blocks": [
-        "p023_b001",
-        "p024_b001",
-        "p023_b002",
-        "p023_b003",
-        "p024_b002",
-        "p024_b003",
-        "p024_b008",
-        "p023_b004",
-        "p024_b005",
-        "p024_b011"
+        "p033_b001",
+        "p034_b001",
+        "p035_b001",
+        "p036_b001",
+        "p037_b001",
+        "p038_b001"
       ]
     },
     {
-      "chunk_id": "N_0007",
-      "note_file": "01_lecture_notes.md",
-      "section_title": "Properties of Mean and Variance",
-      "content": "## Properties of Mean and Variance [p.25]\n\n这一节从期望和方差的运算性质入手，核心是理解线性变换对随机变量的影响，以及方差在独立和非独立情况下的展开规则。老师先给出了期望的线性性质：对于常数 \\(a\\) 和随机变量 \\(X\\)，有 \\(E[aX] = aE[X]\\)；进一步扩展到两个随机变量时，\\(E[aX + bY] = aE[X] + bE[Y]\\)，这里 \\(b\\) 也是常数，\\(Y\\) 是另一个随机变量。这个性质说明期望是线性算子，可以直接分配到每一项上。\n\n接着转向方差的性质。第一个是平移不变性：\\(V[X + a] = V[X]\\)，意思是给随机变量加上常数，离散程度不变。第二个是线性组合的方差公式：\\(V[aX + bY] = a^2 V[X] + b^2 V[Y] + 2ab \\,\\text{Cov}(X, Y)\\)。这里的关键是出现了协方差项 \\(\\text{Cov}(X, Y)\\)，它衡量 \\(X\\) 和 \\(Y\\) 的线性相关程度。如果 \\(X\\) 和 \\(Y\\) 独立，协方差为零，公式就简化为 \\(a^2 V[X] + b^2 V[Y]\\)。\n\n协方差的定义是 \\(\\text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])]\\)，即两个变量各自离均差的乘积的期望。理解这个公式时，注意它衡量的是 \\(X\\) 和 \\(Y\\) 同时偏离各自均值的趋势——同向偏离时协方差为正，反向偏离时为负。\n\n课件还出现了一个求和形式的记号：\\(\\sum_{i=1}^n X_i\\) 表示对 \\(n\\) 个随机变量求和，而 \\(\\sum_{i,j=1}^n\\) 则是对所有下标对 \\((i,j)\\) 求和，这在展开方差公式时会出现，例如 \\(V[\\sum X_i] = \\sum V[X_i] + \\sum_{i \\neq j} \\text{Cov}(X_i, X_j)\\)。不过课件只给出了记号的雏形，没有展开具体推导。\n\n复习时，建议先记住期望的线性性，再对比方差在独立与非独立情况下的区别，最后用协方差定义去理解方差展开式中交叉项的来源。\n\n来源：p.25",
-      "source_units": [
-        "U_0038",
-        "U_0039",
-        "U_0040",
-        "U_0043"
-      ],
-      "source_blocks": [
-        "p025_b001",
-        "p025_b002",
-        "p025_b003",
-        "p025_b004",
-        "p025_b010",
-        "p025_b012",
-        "p025_b016"
-      ]
-    },
-    {
-      "chunk_id": "N_0008",
-      "note_file": "01_lecture_notes.md",
-      "section_title": "The Variance of Estimation",
-      "content": "## The Variance of Estimation [p.26, p.27, p.28, p.29, p.30, p.39, p.40, p.41]\n\n我们从一个统计模型开始：模型由参数θ刻画，观测数据x来自分布Pθ(X)=P(X|θ)。也就是说，每个数据点x都是在给定θ的条件下从该分布中抽取的。基于这些数据，我们构造一个对θ的估计量，记作θ̂。现在的问题是：这个估计量θ̂本身是一个随机变量（因为数据是随机的），它的波动有多大？这就是“估计的方差”要回答的问题。\n\n课件首先给出方差的一般定义：V[θ̂] = E_{X|θ}[(θ̂ − E_{X|θ}[θ̂])²]。这里的关键是理解每个符号的角色：V[θ̂]是我们关心的目标量——估计量的方差；E_{X|θ}表示在给定真实参数θ的条件下，对所有可能的观测数据X求期望；θ̂是依赖于数据的估计量；E_{X|θ}[θ̂]是θ̂的期望（即估计量的均值）。这个公式衡量的是θ̂围绕其自身均值波动的程度。\n\n接着，课件引入了一个重要的特殊情况：当θ̂是无偏估计时（即E_{X|θ}[θ̂] = θ），方差公式可以简化为V[θ̂] = E_{X|θ}[(θ̂ − θ)²]。注意这里的区别：一般公式中减的是E[θ̂]，而无偏情况下减的是真实参数θ。这个简化之所以成立，是因为无偏性保证了θ̂的均值恰好等于θ，所以θ̂与θ的偏差平方的期望就等于方差。这个公式更直观地告诉我们：对于无偏估计，方差直接衡量了估计值偏离真实参数的平均平方距离。\n\n容易混淆的点：不要把“方差”和“均方误差（MSE）”搞混。对于有偏估计，E[(θ̂−θ)²] = V[θ̂] + (bias)²，即均方误差等于方差加上偏差的平方。只有无偏时，两者才相等。课件这里只讨论了无偏情况下的简化形式。\n\n复习时，建议你确认自己能否回答：为什么我们要关心估计量的方差？它告诉我们估计的稳定性如何。如果方差很大，说明即使使用同样的模型和同样的样本量，不同数据集得到的估计值可能相差很大，这样的估计不可靠。\n\n来源：p.26, p.27, p.28, p.29, p.30, p.39, p.40, p.41",
-      "source_units": [
-        "U_0046",
-        "U_0067",
-        "U_0068",
-        "U_0069",
-        "U_0070",
-        "U_0071"
-      ],
-      "source_blocks": [
-        "p026_b002",
-        "p027_b002",
-        "p028_b002",
-        "p029_b002",
-        "p030_b002",
-        "p039_b002",
-        "p040_b002",
-        "p041_b002",
-        "p039_b001",
-        "p040_b001",
-        "p041_b001",
-        "p039_b003",
-        "p040_b003",
-        "p041_b003",
-        "p040_b004",
-        "p041_b004",
-        "p041_b007",
-        "p041_b006"
-      ]
-    },
-    {
-      "chunk_id": "N_0009",
+      "chunk_id": "N_0013",
       "note_file": "01_lecture_notes.md",
       "section_title": "The Trade-off Between Bias and Variance",
       "content": "## The Trade-off Between Bias and Variance [p.42-p.47]\n\n假设我们有一个线性模型，其真实参数为 \\(\\theta\\)，真实函数关系为 \\(y = x^T \\theta + \\epsilon = f_\\theta(x) + \\epsilon\\)，其中噪声 \\(\\epsilon \\sim N(0, \\sigma^2)\\)。我们通过观测到的数据集 \\(D = (X, y)\\) 学习得到一个估计量 \\(\\hat{\\theta}\\)，进而得到估计函数 \\(f_{\\hat{\\theta}}(x)\\)。由于 \\(D\\) 是随机变量，\\(\\hat{\\theta}\\) 和 \\(f_{\\hat{\\theta}}(x)\\) 也都是随机变量。\n\n现在考虑对一个未见过的样本 \\(x\\)，我们想衡量预测误差。用均方误差（MSE）作为度量，其定义为对数据集 \\(D\\) 和噪声 \\(\\epsilon\\) 的期望：\n\n\\[\n\\text{MSE} = \\mathbb{E}_{D,\\epsilon}\\left[(y - f_{\\hat{\\theta}}(x))^2\\right]\n\\]\n\n代入 \\(y = f_\\theta(x) + \\epsilon\\)，展开：\n\n\\[\n\\begin{aligned}\n\\text{MSE} &= \\mathbb{E}\\left[(f_\\theta(x) + \\epsilon - f_{\\hat{\\theta}}(x))^2\\right] \\\\\n&= \\mathbb{E}[\\epsilon^2] + \\mathbb{E}\\left[(f_\\theta(x) - f_{\\hat{\\theta}}(x))^2\\right] + 2\\mathbb{E}\\left[\\epsilon (f_\\theta(x) - f_{\\hat{\\theta}}(x))\\right]\n\\end{aligned}\n\\]\n\n由于 \\(\\epsilon\\) 与 \\(f_{\\hat{\\theta}}(x)\\) 独立（噪声独立于数据和估计过程），且 \\(\\mathbb{E}[\\epsilon] = 0\\)，交叉项为零。而 \\(\\mathbb{E}[\\epsilon^2] = \\sigma^2\\)，所以：\n\n\\[\n\\text{MSE} = \\sigma^2 + \\mathbb{E}\\left[(f_\\theta(x) - f_{\\hat{\\theta}}(x))^2\\right]\n\\]\n\n接下来对第二项做关键分解：在期望内加减 \\(\\mathbb{E}[f_{\\hat{\\theta}}(x)]\\)（即 \\(f_{\\hat{\\theta}}(x)\\) 的期望，注意这个期望是对数据集 \\(D\\) 取的）：\n\n\\[\n\\begin{aligned}\n\\mathbb{E}\\left[(f_\\theta(x) - f_{\\hat{\\theta}}(x))^2\\right] &= \\mathbb{E}\\left[\\left(f_\\theta(x) - \\mathbb{E}[f_{\\hat{\\theta}}(x)] + \\mathbb{E}[f_{\\hat{\\theta}}(x)] - f_{\\hat{\\theta}}(x)\\right)^2\\right] \\\\\n&= \\mathbb{E}\\left[(f_\\theta(x) - \\mathbb{E}[f_{\\hat{\\theta}}(x)])^2\\right] + \\mathbb{E}\\left[(\\mathbb{E}[f_{\\hat{\\theta}}(x)] - f_{\\hat{\\theta}}(x))^2\\right] \\\\\n&\\quad + 2\\mathbb{E}\\left[(f_\\theta(x) - \\mathbb{E}[f_{\\hat{\\theta}}(x)])(\\mathbb{E}[f_{\\hat{\\theta}}(x)] - f_{\\hat{\\theta}}(x))\\right]\n\\end{aligned}\n\\]\n\n交叉项中，\\((f_\\theta(x) - \\mathbb{E}[f_{\\hat{\\theta}}(x)])\\) 是常数（相对于数据集 \\(D\\) 而言），而 \\(\\mathbb{E}[\\mathbb{E}[f_{\\hat{\\theta}}(x)] - f_{\\hat{\\theta}}(x)] = 0\\)，因此交叉项期望为零。最终得到：\n\n\\[\n\\text{MSE} = \\sigma^2 + \\underbrace{(f_\\theta(x) - \\mathbb{E}[f_{\\hat{\\theta}}(x)])^2}_{\\text{Bias}^2(f_{\\hat{\\theta}}(x), f_\\theta(x))} + \\underbrace{\\mathbb{E}\\left[(f_{\\hat{\\theta}}(x) - \\mathbb{E}[f_{\\hat{\\theta}}(x)])^2\\right]}_{\\text{Variance}}\n\\]\n\n三项的含义分别是：\n- **\\(\\sigma^2\\)（不可约噪声）**：由数据生成过程中的固有噪声引起，无论模型多好都无法消除。\n- **Bias²（偏差平方）**：真实函数 \\(f_\\theta(x)\\) 与平均估计函数 \\(\\mathbb{E}[f_{\\hat{\\theta}}(x)]\\) 之间的差异，衡量模型对真实关系的系统性偏离。\n- **Variance（方差）**：估计函数 \\(f_{\\hat{\\theta}}(x)\\) 在不同数据集上的波动程度，反映模型对训练数据变化的敏感度。\n\n这就是偏差-方差权衡的核心结论：总误差 = 噪声 + 偏差² + 方差。在实际建模中，过于简单的模型（高偏差、低方差）和过于复杂的模型（低偏差、高方差）都会导致较大的总误差，需要在两者之间找到平衡点。\n\n来源：p.42-p.47",
@@ -16315,7 +16376,7 @@
       ]
     },
     {
-      "chunk_id": "N_0010",
+      "chunk_id": "N_0014",
       "note_file": "01_lecture_notes.md",
       "section_title": "Bias-Variance Trade-off: An Indicator of Model Misspecification",
       "content": "## Bias-Variance Trade-off: An Indicator of Model Misspecification [p.48]\n\n这一节的核心是：**偏差-方差权衡不仅是模型选择时的工具，更是一个诊断模型是否被错误设定的指标**。也就是说，当你发现模型在训练集和测试集上的表现出现系统性差异时，偏差-方差分解能帮你判断问题出在“模型太简单”（高偏差）还是“模型太灵活”（高方差）。\n\n我们先回顾偏差-方差分解的基本逻辑。假设真实关系是 \\( y = f(x) + \\epsilon \\)，其中 \\(\\epsilon\\) 是均值为0、方差为 \\(\\sigma^2\\) 的噪声。我们用一个模型 \\(\\hat{f}(x)\\) 去拟合训练数据，那么模型在某个新点 \\(x_0\\) 上的期望预测误差可以分解为：\n\n\\[\nE[(y - \\hat{f}(x_0))^2] = \\text{Bias}^2(\\hat{f}(x_0)) + \\text{Var}(\\hat{f}(x_0)) + \\sigma^2\n\\]\n\n这里：\n- **Bias** 是模型预测的期望值与真实值之间的差距，衡量模型对真实关系的简化程度；\n- **Variance** 是模型预测在不同训练集上的波动程度，衡量模型对数据变化的敏感度；\n- \\(\\sigma^2\\) 是噪声本身，无法通过模型降低。\n\n课件强调，**当模型被错误设定时，偏差和方差之间的关系会偏离常规的权衡曲线**。例如：\n- 如果模型过于简单（比如用线性模型拟合非线性数据），偏差会很大，但方差通常较小——此时模型“稳定但不准”。\n- 如果模型过于复杂（比如高次多项式），偏差很小，但方差会很大——此时模型“准但不稳”。\n\n但更关键的是：**当你尝试调整模型复杂度时，如果偏差和方差同时增大，或者一方减小而另一方没有按预期变化，这往往是模型设定错误的信号**。比如，你增加模型复杂度后，偏差没有明显下降，方差却急剧上升，说明模型可能根本不适合当前数据分布（例如特征选择错误、缺失关键交互项、或数据存在异方差）。\n\n因此，偏差-方差权衡在这里的作用是：**它不仅帮你选择复杂度，更帮你判断“模型假设”是否合理**。如果权衡曲线出现异常（比如最优复杂度下偏差和方差都偏高），你应该回头检查模型的基本设定，而不是继续调参数。\n\n**如何判断自己理解了？** 当你看到一个模型的训练误差很低但测试误差很高时，能立刻区分这是高方差（过拟合）还是模型设定错误（比如数据分布与模型假设不符）——前者可以通过正则化或增加数据缓解，后者需要重新设计模型结构。\n\n来源：p.48",
@@ -16327,7 +16388,7 @@
       ]
     },
     {
-      "chunk_id": "N_0011",
+      "chunk_id": "N_0015",
       "note_file": "01_lecture_notes.md",
       "section_title": "Bias-Variance Trade-off: An Indicator of Training Process",
       "content": "## Bias-Variance Trade-off: An Indicator of Training Process [p.49]\n\n这一节的核心是把偏差-方差权衡理解成一个**训练过程的监控指标**，而不是一个静态的理论概念。老师上课的逻辑是：先问“我们什么时候该停止训练？”，然后发现常用的停止准则并不合适，最后引出偏差-方差分解作为更合理的判断依据。\n\n课件首先指出一个常见问题：**不合适的停止准则（Unsuitable stop criterion）**。很多人在训练模型时，习惯用验证集误差不再下降作为停止点。但这个做法有一个隐患：验证集误差的波动可能只是噪声，而不是模型真正收敛的信号。更关键的是，即使验证集误差稳定了，模型内部可能还在发生结构性的变化——比如偏差在下降，方差在上升，只是两者恰好抵消了。这时如果停止，你得到的模型其实并不稳定。\n\n那么，什么才是更好的监控指标？答案是：**同时跟踪偏差和方差的变化趋势**。偏差衡量模型对真实关系的拟合程度（欠拟合时偏差高），方差衡量模型对训练数据波动的敏感程度（过拟合时方差高）。训练过程中，偏差通常是下降的，方差通常是上升的，两者之和（即期望泛化误差）会形成一个U形曲线。**最优停止点不是验证集误差最低的点，而是偏差和方差达到平衡的那个点**——也就是总误差开始由下降转为上升的拐点。\n\n需要特别注意的是：偏差和方差不是直接可观测的，因为它们依赖真实分布。但在实际中，我们可以通过交叉验证或多次重复训练来近似估计它们的变化趋势。课件强调，**不要只看单一指标（如验证集损失），而要观察偏差和方差的相对变化**。如果偏差还在快速下降而方差刚刚开始上升，说明模型还有继续训练的空间；如果方差已经急剧上升而偏差几乎不再下降，说明模型已经开始过拟合，应该提前停止。\n\n判断自己是否理解这一节的关键在于：你能不能用偏差-方差的语言解释“为什么验证集误差下降不一定代表模型变好了”？如果能，说明你已经抓住了这个指标作为训练过程指示器的本质。\n\n来源：p.49",
@@ -16341,7 +16402,7 @@
       ]
     },
     {
-      "chunk_id": "N_0012",
+      "chunk_id": "N_0016",
       "note_file": "01_lecture_notes.md",
       "section_title": "Overfitting and Underfitting",
       "content": "## Overfitting and Underfitting [p.50-p.52]\n\n这一节讨论的核心问题是：当模型复杂度与数据复杂度不匹配时，模型会表现出什么现象？以及我们如何应对？\n\n首先需要明确两个关键指标：模型复杂度和数据复杂度。模型复杂度通常用可学习参数的数量来衡量；数据复杂度则指训练样本的数量和多样性。两者之间的相对大小决定了模型的行为倾向。\n\n**过拟合（Overfitting）** 发生在模型复杂度远大于数据复杂度时，即模型参数数量多于数据点数量。课件区分了两种情形：\n- 情形一：模型本身设计得过于复杂（参数过多），此时最直接的解决方法是简化模型结构。\n- 情形二：模型复杂度本身合理，但数据量不足。课件指出这种情况更常见，且解决思路不是减少参数，而是引入额外的侧信息（side information）——即对模型参数施加约束，也就是正则化（regularization）。\n\n**欠拟合（Underfitting）** 则相反，发生在模型复杂度远小于数据复杂度时。此时模型表达能力不足，无法捕捉数据中的模式。\n\n课件特别强调了一个关键问题：**如何从相对稀疏的数据中学习复杂模型？** 这引出了后续的实践策略。课件提到，精心设计的训练过程（如SGD、早停、dropout等）本质上都是在惩罚验证性能的方差或退化。这些技术背后的共同思想是：在模型参数上施加侧信息（作为正则化项），从而在模型容量和数据量之间取得平衡。\n\n理解这一节的关键在于：过拟合和欠拟合不是绝对的，而是模型复杂度与数据复杂度之间的相对关系。过拟合的典型表现是训练误差低但验证误差高；欠拟合则是训练误差和验证误差都高。解决过拟合的核心思路是引入约束（正则化），而解决欠拟合的核心思路是增加模型容量或特征。\n\n来源：p.50-p.52",
@@ -16371,7 +16432,7 @@
       ]
     },
     {
-      "chunk_id": "N_0013",
+      "chunk_id": "N_0017",
       "note_file": "01_lecture_notes.md",
       "section_title": "Ridge Regression: MSE with L2 Regularization",
       "content": "## Ridge Regression: MSE with L2 Regularization [p.53-p.57]\n\nRidge回归要解决的是普通最小二乘（OLS）的一个典型问题：当特征之间存在多重共线性或特征维度接近样本量时，\\(X^T X\\) 可能接近奇异，导致参数估计方差极大、对数据中的噪声非常敏感。Ridge的思路很直接——在最小化均方误差的同时，对参数向量的“能量”（即L2范数）施加惩罚，迫使参数不会过大。这样一来，虽然训练集上的拟合程度会略有下降，但模型的泛化能力通常更强。\n\n从优化目标看，Ridge回归的损失函数写作：\n\\[\n\\min_{\\theta} \\|y - X\\theta\\|_2^2 + \\lambda \\|\\theta\\|_2^2\n\\]\n这里 \\(y\\) 是 \\(n \\times 1\\) 的观测向量，\\(X\\) 是 \\(n \\times p\\) 的设计矩阵（每行一个样本，每列一个特征），\\(\\theta\\) 是 \\(p \\times 1\\) 的参数向量。第一项 \\(\\|y - X\\theta\\|_2^2\\) 是数据拟合误差（MSE），第二项 \\(\\lambda \\|\\theta\\|_2^2\\) 是正则化项，\\(\\lambda \\geq 0\\) 是调节惩罚强度的超参数。整个目标函数记为 \\(L(\\theta)\\)。\n\n对 \\(L(\\theta)\\) 求梯度并令其为零，得到正规方程：\n\\[\n\\frac{\\partial L}{\\partial \\theta} = 2X^T (X\\theta - y) + 2\\lambda \\theta = 0\n\\]\n整理后可得闭式解：\n\\[\n\\theta = (X^T X + \\lambda I)^{-1} X^T y\n\\]\n与OLS的 \\(\\theta = (X^T X)^{-1} X^T y\\) 相比，这里在 \\(X^T X\\) 的对角线上加了一个 \\(\\lambda\\)。正是这个“加在对角线上”的操作，使得原本可能不可逆的矩阵变得可逆，也解释了“ridge”（山脊）这个名字——沿着单位矩阵 \\(I\\) 的对角线，\\(\\lambda\\) 的加入就像在矩阵上隆起一道脊。\n\n如果数据量很大或特征维度很高，直接求逆可能计算代价过高，这时可以用随机梯度下降（SGD）来迭代求解。SGD的更新规则是：\n\\[\n\\theta^{t+1} = \\theta^t - \\tau \\nabla_{\\theta^t} L\n\\]\n其中 \\(\\tau\\) 是学习率，梯度 \\(\\nabla_{\\theta^t} L\\) 由当前参数下的损失函数梯度给出。SGD每次只用一个或一小批样本来估计梯度，适合大规模场景；而闭式解则适用于中小规模数据，且能直接得到精确解。\n\n理解Ridge回归的关键在于：它通过引入偏差来换取方差的大幅降低，\\(\\lambda\\) 越大，正则化越强，参数越趋于零（但不会精确为零，这是L2与L1正则化的区别）。如果 \\(\\lambda = 0\\)，退化为普通最小二乘；如果 \\(\\lambda \\to \\infty\\)，参数趋近于零，模型几乎只靠截距项。\n\n来源：p.53-p.57",
@@ -16420,7 +16481,7 @@
       ]
     },
     {
-      "chunk_id": "N_0014",
+      "chunk_id": "N_0018",
       "note_file": "01_lecture_notes.md",
       "section_title": "Ridge Regression: A Bayesian Viewpoint",
       "content": "## Ridge Regression: A Bayesian Viewpoint [p.58-p.61]\n\n这一节从贝叶斯角度重新理解 Ridge Regression。之前我们看到的 Ridge 是直接给损失函数加一个 L2 惩罚项，这里我们要问：这个惩罚项对应什么样的先验信念？推导顺序是：先给模型参数一个先验分布，然后写出后验，最后最大化后验（MAP）得到与 Ridge 相同的形式。\n\n**模型假设的转变**：之前模型是确定性的，现在我们把模型本身也看作随机变量。具体来说，假设数据由以下方式生成：\n\\[\ny = x^T \\theta + \\epsilon, \\quad \\epsilon \\sim \\mathcal{N}(0, \\sigma^2)\n\\]\n这里 \\(\\theta\\) 是参数向量，\\(\\epsilon\\) 是均值为 0、方差为 \\(\\sigma^2\\) 的高斯噪声。关键的新假设是：**参数 \\(\\theta\\) 本身也服从一个先验分布**，课件中取为零均值高斯：\n\\[\n\\theta \\sim \\mathcal{N}(0, I_D \\gamma^2)\n\\]\n即每个 \\(\\theta_j\\) 独立同分布，均值为 0，方差为 \\(\\gamma^2\\)。\\(I_D\\) 是 \\(D\\) 维单位矩阵，\\(\\gamma^2\\) 控制先验的宽度——\\(\\gamma\\) 越小，我们越相信参数接近 0。\n\n**从先验到后验**：给定观测数据 \\((X, y)\\)，我们关心参数的后验分布 \\(p(\\theta | y, X)\\)。根据贝叶斯定理：\n\\[\np(\\theta | y, X) \\propto p(y | X, \\theta) \\, p(\\theta | X)\n\\]\n注意这里 \\(p(\\theta | X) = p(\\theta)\\)，因为先验与输入 \\(X\\) 无关。右边第一项是似然（给定参数下数据的概率），第二项是先验。\n\n**MAP 估计**：我们不求整个后验分布，而是找使后验最大的那个 \\(\\theta\\)，即最大后验估计（MAP）。因为后验正比于似然×先验，最大化后验等价于最大化：\n\\[\n\\max_{\\theta} \\left[ \\log p(y | X, \\theta) + \\log p(\\theta) \\right]\n\\]\n（取对数是因为乘积变求和，方便求导。）\n\n**代入具体分布**：\n- 似然：\\(p(y | X, \\theta) = \\prod_{n=1}^N \\mathcal{N}(y_n | x_n^T \\theta, \\sigma^2)\\)，取对数后得到 \\(-\\frac{1}{2\\sigma^2} \\|y - X\\theta\\|_2^2\\) 加上常数。\n- 先验：\\(p(\\theta) = \\prod_{j=1}^D \\mathcal{N}(\\theta_j | 0, \\gamma^2)\\)，取对数后得到 \\(-\\frac{1}{2\\gamma^2} \\|\\theta\\|_2^2\\) 加上常数。\n\n于是 MAP 目标变为（忽略常数项）：\n\\[\n\\max_{\\theta} \\left[ -\\frac{1}{2\\sigma^2} \\|y - X\\theta\\|_2^2 - \\frac{1}{2\\gamma^2} \\|\\theta\\|_2^2 \\right]\n\\]\n等价于最小化：\n\\[\n\\frac{1}{2\\sigma^2} \\|y - X\\theta\\|_2^2 + \\frac{1}{2\\gamma^2} \\|\\theta\\|_2^2\n\\]\n两边乘以 \\(2\\sigma^2\\) 得到：\n\\[\n\\|y - X\\theta\\|_2^2 + \\frac{\\sigma^2}{\\gamma^2} \\|\\theta\\|_2^2\n\\]\n这正是 Ridge Regression 的形式，其中惩罚系数 \\(\\lambda = \\sigma^2 / \\gamma^2\\)。所以：**Ridge 的 L2 惩罚等价于对参数施加一个零均值高斯先验，然后做 MAP 估计**。先验方差 \\(\\gamma^2\\) 越小（信念越强），惩罚越大；噪声方差 \\(\\sigma^2\\) 越大，数据越不可信，惩罚也相对越大。\n\n**容易混淆的点**：\n- 注意这里的 \\(\\theta\\) 先验是 \\(\\mathcal{N}(0, I_D \\gamma^2)\\)，不是 \\(\\mathcal{N}(0, I_D / \\lambda)\\) 之类——系数关系来自 MAP 推导。\n- 似然中的 \\(\\sigma^2\\) 和先验中的 \\(\\gamma^2\\) 都是需要设定的超参数，最终合并成一个 \\(\\lambda\\)。\n- 推导中我们只用了后验正比于似然×先验，没有计算归一化常数，因为 MAP 只需要最大化未归一化的后验。\n\n**如何判断自己理解了**：能独立写出从模型假设到 Ridge 目标函数的完整推导，并解释为什么先验方差小会导致更大的惩罚系数。\n\n来源：p.58-p.61",
@@ -16476,7 +16537,7 @@
       ]
     },
     {
-      "chunk_id": "N_0015",
+      "chunk_id": "N_0019",
       "note_file": "01_lecture_notes.md",
       "section_title": "ML: Frequentist Statistic Viewpoint",
       "content": "## ML: Frequentist Statistic Viewpoint [p.62-p.63]\n\n频率派统计的核心思路是：我们观测到的数据背后存在一个**确定的、但未知的真实模型**。我们的任务就是通过数据把这个模型“猜”出来。\n\n具体来说，假设我们拿到了一组样本 \\( X = [x_1, x_2, \\dots, x_n] \\)。频率派认为这些样本是从某个**参数化的概率分布** \\( P(x|\\theta) \\) 中采样得到的。这里的 \\( \\theta \\) 就是模型参数，它是一个**确定的数值**（只是我们不知道它具体是多少）。这个假设就是“确定性模型”——参数不是随机的，而是固定但未知的。\n\n那么怎么找到这个 \\( \\theta \\) 呢？频率派的核心原则是：**最大似然估计（MLE）**。直觉上，我们想要找到一组参数 \\( \\theta \\)，使得当前这组观测数据 \\( X \\) 出现的概率最大。数学上写成：\n\n\\[\n\\hat{\\theta}_{\\text{MLE}} = \\arg\\max_{\\theta} \\log P(X|\\theta)\n\\]\n\n这个式子里的 \\( \\hat{\\theta}_{\\text{MLE}} \\) 就是我们最终要估计的参数值（目标量）；\\( \\log P(X|\\theta) \\) 是似然函数的对数，它衡量的是在给定参数 \\( \\theta \\) 下，观测到整个数据集 \\( X \\) 的可能性有多大。我们通过“arg max”操作，在所有可能的 \\( \\theta \\) 中挑出使这个值最大的那一个。\n\n这里有一个关键细节：通常我们假设样本是**独立同分布（i.i.d.）** 的。在这个假设下，整个数据集的似然可以写成每个样本似然的乘积，取对数后变成求和：\n\n\\[\n\\hat{\\theta}_{\\text{MLE}} = \\arg\\max_{\\theta} \\sum_{i=1}^{n} \\log P(x_i|\\theta)\n\\]\n\n这个式子里的 \\( \\log P(x_i|\\theta) \\) 就是单个样本 \\( x_i \\) 的对数似然。把连乘变成连加，大大简化了优化问题的求解。\n\n所以频率派的学习流程可以概括为一条清晰的链条：**确定性模型 → 点估计（MLE）→ 优化问题**。也就是说，我们首先假设数据来自一个参数固定的分布，然后通过最大化似然函数来得到参数的一个点估计值，最后把这个问题转化为一个数学优化问题来求解。\n\n**容易混淆的点**：注意区分“参数是确定的”和“参数是随机的”。频率派认为参数是固定值，只是我们不知道；而贝叶斯派认为参数本身也是随机变量，有自己的分布。这是两个学派最根本的分歧。\n\n**如何判断自己理解了**：如果你能用自己的话解释清楚“为什么频率派要把学习问题转化为一个优化问题”，以及“i.i.d.假设在公式推导中起了什么作用”，那就说明你掌握了这一节的核心。\n\n来源：p.62-p.63",
@@ -16507,7 +16568,7 @@
       ]
     },
     {
-      "chunk_id": "N_0016",
+      "chunk_id": "N_0020",
       "note_file": "01_lecture_notes.md",
       "section_title": "ML: Bayesian Statistic Viewpoint",
       "content": "## ML: Bayesian Statistic Viewpoint [p.64-p.65]\n\n贝叶斯统计的核心思想是把模型参数θ本身也视为一个随机变量，而不是一个固定的未知常数。这意味着我们不再只寻找一个“最佳”参数值，而是对参数的不确定性进行建模和量化。\n\n**从先验到后验：贝叶斯定理**\n\n首先，我们假设一个概率模型，其中模型参数θ服从一个先验分布（Prior distribution）——这是我们在看到任何数据之前对θ已有的信念。当我们观察到数据X后，贝叶斯定理告诉我们如何更新这个信念：\n\n\\[\nP(\\theta|X) = \\frac{P(X|\\theta)P(\\theta)}{P(X)} \\propto P(X|\\theta)P(\\theta)\n\\]\n\n这里每个符号的含义是：\n- **后验分布（Posterior）** \\(P(\\theta|X)\\)：这是我们最终关心的目标量——在看到数据X后，参数θ的概率分布。\n- **似然函数（Likelihood）** \\(P(X|\\theta)\\)：给定参数θ下，观测到数据X的概率。它衡量了当前参数对数据的解释能力。\n- **先验分布（Prior）** \\(P(\\theta)\\)：在观测数据之前，我们对参数θ的初始信念。\n- **证据（Evidence）** \\(P(X)\\)：数据X的边缘概率，在优化中通常作为归一化常数忽略，因此后验正比于似然×先验。\n\n**MAP估计：寻找最可能的参数**\n\n在实际应用中，我们常常需要给出一个具体的参数估计值。最大后验估计（Maximum A Posterior, MAP）就是选择使后验概率最大的参数：\n\n\\[\n\\hat{\\theta}_{MAP} = \\arg\\max_{\\theta} P(\\theta|X) = \\arg\\max_{\\theta} P(X|\\theta)P(\\theta)\n\\]\n\n注意MAP估计与最大似然估计（MLE）的区别：MAP在似然函数上乘了一个先验项。当先验是均匀分布时，MAP退化为MLE。\n\n**从推断到计算：优化与采样**\n\n一旦建立了概率模型（得到分布），下一步就是进行推断。课件指出两条主要路径：\n- **优化方法**（如变分推断，Variational Inference）：用一个简单的分布去近似真实的后验分布，将推断问题转化为优化问题。\n- **采样方法**（如MCMC，马尔可夫链蒙特卡洛）：直接从后验分布中采样，用样本近似分布。\n\n**一个关键直觉：先验的影响随数据量增加而减弱**\n\n这是贝叶斯统计中非常重要的性质：当样本量很小时，先验对后验的影响较大；但随着数据量增加，似然函数逐渐主导后验，先验的影响会衰减。这意味着，即使先验设定有偏差，只要数据足够多，后验最终会“纠正”这个偏差。\n\n**复习自查要点**：贝叶斯视角解决的核心问题是“如何用概率语言表达对参数的不确定性”；它依赖的假设是参数服从先验分布；最终导向的结论是后验分布或MAP估计。\n\n来源：p.64-p.65",
@@ -16547,7 +16608,7 @@
       ]
     },
     {
-      "chunk_id": "N_0017",
+      "chunk_id": "N_0021",
       "note_file": "01_lecture_notes.md",
       "section_title": "Frequentist v.s. Bayesian",
       "content": "## Frequentist v.s. Bayesian [p.66]\n\n这一节的核心是两种统计推断框架的对比，重点不是公式，而是它们各自的设计哲学和适用场景。老师从“Frequentist”开始讲，然后对比“Bayesian”，目的是让你理解为什么同一个问题可以用不同方式回答，以及每种方式的代价是什么。\n\n**Frequentist 学派**的核心优势是效率高：它不需要设计先验分布（prior），直接基于数据做估计，因此计算上更简洁、通用性更强。但它的弱点也很明显：对稀疏数据（样本量少或某些类别数据极少）不鲁棒，而且很难直接量化估计的不确定性——虽然技术上可以做（比如构造置信区间），但效率低、解释也不直观。\n\n**Bayesian 学派**正好反过来。它的核心武器是先验分布（prior），这让它在数据稀疏时仍然能给出相对稳健的估计（先验提供了额外信息）。更重要的是，它天然能输出参数 θ 的完整后验分布，因此不确定性量化是直接的——你得到的不只是一个点估计，而是一个分布。但代价是：先验需要精心设计（否则结果可能偏差），而且整体计算耗时（尤其是高维参数或复杂模型）。\n\n**容易混淆的点**：不要把“Frequentist 不做不确定性量化”和“Bayesian 一定更好”等同起来。Frequentist 的不确定性量化是可行的，只是不高效；Bayesian 的不确定性量化是自然的，但依赖先验的合理性。选择哪个框架，取决于你对计算效率、数据稀疏程度和先验知识的信任度。\n\n来源：p.66",
@@ -16565,55 +16626,7 @@
       ]
     },
     {
-      "chunk_id": "N_0018",
-      "note_file": "01_lecture_notes.md",
-      "section_title": "Homework 1: DDL — March 16, 2025, Midnight",
-      "content": "## Homework 1: DDL — March 16, 2025, Midnight [p.68]\n\n这次作业的核心是完成一个带数据相关噪声的D阶多项式回归模型，并通过两种估计方法（MLE和MAP）学习参数θ。作业分为三个部分：两个Lab（各3分）和一个技术报告（6分，不超过3页），允许使用AI辅助。\n\n**技术报告的具体问题设定**\n\n给定N个带标签样本 {xₙ ∈ ℝ, yₙ ∈ ℝ}，我们构建一个D阶多项式回归模型，并假设噪声与输入x有关。模型形式为：\n\ny = Σ_{d=1}^{D} x^{d-1} θ_d + ε\n\n其中噪声ε的条件分布为：p(ε|x) = (1/√(2πx²)) · exp(-ε²/(2x²))\n\n这里的关键是：噪声方差不是常数，而是依赖于x²。这意味着当|x|较大时，观测噪声的方差也较大，模型对远离原点的数据点信任度更低。\n\n**问题1：MLE求解（4分）**\n\n要求：通过最大似然估计（MLE）学习参数θ，并推导出闭式解。\n\n由于噪声是高斯分布且方差为x²，对每个样本点，似然函数为：\np(yₙ|xₙ, θ) = (1/√(2πxₙ²)) · exp(-(yₙ - Σ xₙ^{d-1}θ_d)²/(2xₙ²))\n\n取负对数后，MLE等价于最小化加权最小二乘目标函数：\nJ(θ) = Σ (yₙ - Σ xₙ^{d-1}θ_d)² / xₙ²\n\n注意这里的权重是1/xₙ²，即对|x|大的样本赋予更小的权重。写成矩阵形式后，闭式解为：\nθ̂_MLE = (XᵀWX)⁻¹XᵀWy\n\n其中W是对角矩阵，第n个对角元为1/xₙ²，X是N×D的设计矩阵（第n行第d列为xₙ^{d-1}）。\n\n**问题2：MAP求解（4分）**\n\n在MLE基础上，进一步假设参数θ的每个元素服从拉普拉斯先验分布：\nθ_d ~ Laplace(0, b_d) ⇔ p(θ_d) = (1/(2b_d)) · exp(-|θ_d|/b_d)，对所有d=1,...,D\n\n拉普拉斯先验的特点是：在0处有尖峰，且尾部呈指数衰减。这相当于对参数施加L1正则化，会促使一些θ_d被推到0，实现特征选择。\n\nMAP估计需要最大化后验概率p(θ|X,y) ∝ p(y|X,θ) · p(θ)，等价于最小化：\nJ_MAP(θ) = Σ (yₙ - Σ xₙ^{d-1}θ_d)² / xₙ² + 2Σ |θ_d|/b_d\n\n由于L1正则项的存在，这个优化问题没有闭式解，需要迭代求解（如坐标下降法或梯度下降法）。\n\n**提交要求**\n- DDL：2025年3月16日午夜\n- 迟交：每周扣1分\n\n来源：p.68",
-      "source_units": [
-        "U_0120",
-        "U_0121",
-        "U_0122"
-      ],
-      "source_blocks": [
-        "p068_b001",
-        "p068_b002",
-        "p068_b003",
-        "p068_b004"
-      ]
-    },
-    {
-      "chunk_id": "N_0019",
-      "note_file": "01_lecture_notes.md",
-      "section_title": "The Bias of Estimation",
-      "content": "## The Bias of Estimation [p.26, p.27, p.29, p.30]\n\n这一节要回答的核心问题是：当我们用一个估计量（estimator）去推测真实参数时，这个估计量本身会不会系统性地偏离真实值？也就是说，如果我们反复从同一个真实模型生成不同的数据，然后用同一个估计方法去算，这些估计值的平均会不会恰好等于真实参数？如果不等，差多少？这个差值就是“偏差”（bias）。\n\n课件首先引入了符号：真实参数记为 \\(\\theta\\)，基于样本数据 \\(X\\) 得到的估计量记为 \\(\\hat{\\theta}\\)。这里的 \\(\\theta\\) 是未知但固定的真实值（ground truth），而 \\(\\hat{\\theta}\\) 是一个随机变量，因为它依赖于随机抽取的样本 \\(X\\)。偏差的定义就是估计量的期望与真实值之间的差：  \n\\[\n\\text{Bias}(\\hat{\\theta}) = \\mathbb{E}[\\hat{\\theta}] - \\theta\n\\]  \n其中 \\(\\mathbb{E}[\\hat{\\theta}]\\) 是对所有可能的样本 \\(X\\)（这些样本由真实模型 \\(\\theta\\) 生成）取期望。换句话说，偏差衡量的是估计量在长期重复抽样中的平均表现是否瞄准了真实值。\n\n理解偏差的关键在于区分两个概念：一是“估计量的期望” \\(\\mathbb{E}[\\hat{\\theta}]\\)，它是对所有可能数据集的平均；二是“某一个具体样本算出的估计值” \\(\\hat{\\theta}\\)，它只是随机实现。如果偏差为零，称估计量是无偏的（unbiased），意味着平均而言估计不会系统性地偏离目标；如果偏差不为零，则存在系统性误差，即使样本量再大，估计也会偏向某一侧。\n\n课件没有给出具体的无偏估计例子或推导，但这一概念是后续讨论均方误差（MSE）、方差-偏差权衡（bias-variance tradeoff）的基础。理解偏差后，可以问自己：如果我用某个公式去估计参数，重复采样多次，这些估计值的平均值是正好等于真实值，还是偏大或偏小？如果偏了，偏了多少？这就是偏差要回答的问题。\n\n来源：p.26, p.27, p.29, p.30",
-      "source_units": [
-        "U_0047"
-      ],
-      "source_blocks": [
-        "p026_b003",
-        "p027_b006",
-        "p029_b007",
-        "p030_b007"
-      ]
-    },
-    {
-      "chunk_id": "N_0020",
-      "note_file": "01_lecture_notes.md",
-      "section_title": "The Bias of Estimation",
-      "content": "## The Bias of Estimation [p.27-p.30\n\n这一节的核心问题是：当我们用一个统计量去估计某个未知参数时，这个估计到底准不准？偏差（Bias）就是衡量“系统性地偏离真实值”程度的指标。\n\n首先明确符号：我们关心的未知参数记为θ，基于观测数据计算出的估计量记为θ̂。偏差的定义是Bias(θ̂, θ) = E[θ̂] - θ，即估计量的期望与真实参数之间的差。课件特别强调了一个关键等价关系：Bias(θ̂, θ) = 0 ⇔ 估计量θ̂是无偏的（unbiased）。这意味着，如果重复采样无数次并计算估计值，这些估计值的平均值恰好等于真实参数θ。\n\n理解这个概念的难点在于区分“偏差”和“随机误差”。偏差是系统性的，即使样本量增大也不会消失；而随机误差会随着样本量增大而减小。例如，样本方差除以n-1而不是n，就是为了消除偏差——如果除以n，估计量就是有偏的。\n\n判断自己是否理解：能回答“为什么无偏性重要”以及“有偏估计量是否一定不好”这两个问题。前者关系到估计的长期准确性，后者则提示我们有时为了降低方差可以接受少量偏差（比如正则化方法）。\n\n来源：p.27-p.30",
-      "source_units": [
-        "U_0048"
-      ],
-      "source_blocks": [
-        "p027_b003",
-        "p028_b003",
-        "p029_b003",
-        "p030_b003",
-        "p030_b008"
-      ]
-    },
-    {
-      "chunk_id": "N_0021",
+      "chunk_id": "N_0022",
       "note_file": "01_lecture_notes.md",
       "section_title": "Formula near The Bias of Estimation",
       "content": "## Formula near The Bias of Estimation [p.27-p.32]\n\n这一节的核心是理解“估计量的偏差”这个概念的数学定义，以及它为什么能衡量估计的好坏。课件从最一般的公式出发，然后通过样本均值这个具体例子，演示了偏差是如何计算的。\n\n首先，课件给出了偏差的定义式：\n`Bias( θ̂, θ) = E X|θ [ θ̂] − θ = E X|θ [ θ̂ − θ]`\n\n这里需要仔细拆解每个符号的角色：\n- **θ** 是我们想要估计的“真实参数”，它是未知的、固定的真值（ground truth）。\n- **θ̂** 是估计量，它是一个关于样本 X 的函数，所以它本身是一个随机变量。\n- **E X|θ [·]** 是条件期望，读作“在真实参数为 θ 的条件下，对样本 X 的分布求期望”。这个符号非常关键：它意味着我们在计算偏差时，假设数据 X 确实是从参数为 θ 的真实分布中生成的。换句话说，我们是在“上帝视角”下评价估计量——我们知道真实值 θ，然后看估计量的平均表现。\n- 所以，`E X|θ [ θ̂]` 是估计量在无数次重复抽样下的平均取值。偏差就是这个平均值与真实值 θ 的差。如果偏差为 0，说明估计量在平均意义上是准确的（无偏估计）；如果偏差不为 0，说明估计量系统性地高估或低估了真实值。\n\n接着，课件用一个最经典的例子来演示如何计算偏差：**用样本均值估计总体均值**。\n\n假设我们有独立同分布（i.i.d.）的随机变量 `{X₁, X₂, ..., X_N}`，每个 Xₙ 的期望都是 µ，方差都是 σ²。我们构造的估计量是样本均值：\n`µ̂ = (1/N) Σ_{n=1}^{N} Xₙ`\n\n现在计算偏差 `Bias(µ̂, µ)`：\n`Bias(µ̂, µ) = E X|µ [µ̂] − µ`\n代入 µ̂ 的定义：\n`= E X|µ [ (1/N) Σ_{n=1}^{N} Xₙ ] − µ`\n由于期望的线性性质，可以把求和符号和常数 1/N 提到期望外面：\n`= (1/N) Σ_{n=1}^{N} E X|µ [ Xₙ ] − µ`\n因为每个 Xₙ 的期望都是 µ（这是 i.i.d. 假设的直接推论），所以：\n`= (1/N) * N * µ − µ = µ − µ = 0`\n\n这个推导过程清晰地展示了：样本均值 µ̂ 的偏差为 0，因此它是总体均值 µ 的一个无偏估计量。课件在这里并没有给出最终的等号结果（课件内容在等号处中断了），但从推导步骤可以自然得出结论。\n\n理解偏差的关键在于区分“估计量的期望”和“真实参数”。偏差不是衡量某一次估计的好坏，而是衡量估计量作为一个随机变量，其长期平均表现是否瞄准了目标。如果读到这里，你能自己说出“为什么样本均值的偏差是 0”的推导逻辑，就说明真正理解了。\n\n来源：p.27-p.32",
@@ -16637,19 +16650,6 @@
       ]
     },
     {
-      "chunk_id": "N_0022",
-      "note_file": "01_lecture_notes.md",
-      "section_title": "Toy Example 1",
-      "content": "## Toy Example 1 [p.31-p.32]\n\n这节课从一个非常基础但关键的问题开始：**样本均值是否是总体均值的无偏估计？** 这个问题看似简单，却是理解“无偏性”这一统计核心概念的最佳切入点。\n\n老师先明确了符号含义：设总体均值为 μ，我们从中独立随机抽取 n 个样本 X₁, X₂, ..., Xₙ。样本均值记为 \\(\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n}X_i\\)。这里的关键是：μ 是固定的未知参数（目标量），而 \\(\\bar{X}\\) 是依赖于样本的随机变量（估计量）。\n\n推导过程很直接：要判断 \\(\\bar{X}\\) 是否无偏，就是看它的期望是否等于 μ。根据期望的线性性质，\\(E[\\bar{X}] = E[\\frac{1}{n}\\sum X_i] = \\frac{1}{n}\\sum E[X_i]\\)。由于每个样本 X_i 都是从总体中随机抽取的，所以 \\(E[X_i] = μ\\)。于是 \\(E[\\bar{X}] = \\frac{1}{n} \\cdot nμ = μ\\)。\n\n结论是：**样本均值确实是总体均值的无偏估计**。这个结论成立的前提是样本独立同分布且总体均值存在——不需要总体服从任何特定分布，这是它强大的地方。\n\n容易混淆的点：无偏性说的是“平均而言”估计量等于真值，并不意味着某一次抽样的样本均值恰好等于 μ。如果重复抽样很多次，这些样本均值的平均值会趋近 μ。另外，这里讨论的是对均值的估计，如果换成对方差的估计，情况就不同了（样本方差除以 n 是有偏的，除以 n-1 才是无偏的）。\n\n来源：p.31-p.32",
-      "source_units": [
-        "U_0050"
-      ],
-      "source_blocks": [
-        "p031_b001",
-        "p032_b001"
-      ]
-    },
-    {
       "chunk_id": "N_0023",
       "note_file": "01_lecture_notes.md",
       "section_title": "Formula near E X|µ [X n ] − µ",
@@ -16664,23 +16664,6 @@
     },
     {
       "chunk_id": "N_0024",
-      "note_file": "01_lecture_notes.md",
-      "section_title": "Toy Example 2",
-      "content": "## Toy Example 2 [p.33-p.38]\n\n这一节的核心问题是：**如何对总体方差进行无偏估计？** 它直接承接上一节“有偏估计”的讨论，通过一个具体的小例子（Toy Example）来展示为什么直觉上的样本方差公式（除以 \\(n\\)）是有偏的，以及如何修正得到无偏估计（除以 \\(n-1\\)）。\n\n**推导逻辑**：假设我们有一个总体，其真实均值为 \\(\\mu\\)，真实方差为 \\(\\sigma^2\\)。我们从中抽取一个大小为 \\(n\\) 的样本 \\(X_1, X_2, \\dots, X_n\\)。直觉上，我们会用样本方差 \\(S^2 = \\frac{1}{n} \\sum_{i=1}^n (X_i - \\bar{X})^2\\) 来估计 \\(\\sigma^2\\)，其中 \\(\\bar{X}\\) 是样本均值。但问题是，这个 \\(S^2\\) 的期望值并不等于 \\(\\sigma^2\\)，而是等于 \\(\\frac{n-1}{n} \\sigma^2\\)。也就是说，它系统性低估了真实方差——这就是“有偏”。\n\n**为什么会有偏？** 关键原因在于：当我们用样本均值 \\(\\bar{X}\\) 代替总体均值 \\(\\mu\\) 时，样本点 \\(X_i\\) 与 \\(\\bar{X}\\) 的偏差平方和，总是小于它们与 \\(\\mu\\) 的偏差平方和（因为 \\(\\bar{X}\\) 本身就是让平方和最小的那个点）。因此，\\(\\sum (X_i - \\bar{X})^2\\) 平均而言偏小，导致除以 \\(n\\) 后得到的估计偏小。\n\n**修正方法**：为了得到无偏估计，我们需要将分母从 \\(n\\) 改为 \\(n-1\\)，即定义 \\(S^2_{\\text{unbiased}} = \\frac{1}{n-1} \\sum_{i=1}^n (X_i - \\bar{X})^2\\)。可以证明，这个新统计量的期望正好等于 \\(\\sigma^2\\)。这里的 \\(n-1\\) 被称为“自由度”，它反映了在计算偏差平方和时，由于我们用了 \\(\\bar{X}\\) 来估计 \\(\\mu\\)，实际上损失了一个自由度（因为 \\(\\sum (X_i - \\bar{X}) = 0\\)，所以只有 \\(n-1\\) 个独立的偏差）。\n\n**容易混淆的点**：很多人会问“为什么是 \\(n-1\\) 而不是 \\(n\\)？” 关键在于区分“估计量的期望”和“估计量的具体取值”。无偏性是关于期望的性质，不是保证每一次估计都准确。另外，当样本量 \\(n\\) 很大时，\\(n\\) 和 \\(n-1\\) 的差别很小，有偏和无偏估计的结果会非常接近，但在小样本情况下，修正至关重要。\n\n**如何判断自己理解了？** 如果你能向别人解释清楚：为什么除以 \\(n\\) 会低估方差，以及除以 \\(n-1\\) 如何恰好纠正这个偏差，并且能理解“自由度”在这里的直观含义，那么你就掌握了这一节的核心。\n\n来源：p.33-p.38",
-      "source_units": [
-        "U_0056"
-      ],
-      "source_blocks": [
-        "p033_b001",
-        "p034_b001",
-        "p035_b001",
-        "p036_b001",
-        "p037_b001",
-        "p038_b001"
-      ]
-    },
-    {
-      "chunk_id": "N_0025",
       "note_file": "01_lecture_notes.md",
       "section_title": "Formula near 1 N",
       "content": "## Formula near 1 N [p.33-p.38]\n\n这一节的核心是推导方差估计量的偏差（Bias），即当我们用样本数据去估计总体方差 σ² 时，这个估计量到底会高估还是低估。课件从最直观的估计量出发，一步步拆解偏差的来源。\n\n首先明确符号含义：σ̂² 是我们构造的方差估计量，σ² 是真实的总体方差，X 表示样本数据（X₁, X₂, ..., X_N），µ̂ 是样本均值（即 (1/N)ΣXₙ）。偏差的定义是 Bias(σ̂², σ²) = E_{X|σ²}[σ̂²] − σ²，即在给定真实方差 σ² 的条件下，估计量的期望减去真实值。如果这个差为正，说明估计量平均偏高；为负则平均偏低。\n\n课件给出的具体形式是：Bias(σ̂², σ²) = E_{X|σ²}[ (1/N) Σ_{n=1}^{N} (Xₙ − µ̂)² ] − σ²。注意这里的关键：估计量 σ̂² 被构造为样本与样本均值之差的平方的平均值，即 (1/N) Σ (Xₙ − µ̂)²。这个形式看起来很自然，但问题在于 µ̂ 本身也是从样本算出来的，而不是真实的总体均值 µ。正是这个“用样本均值代替总体均值”的操作，导致了偏差。\n\n推导的核心逻辑是：当我们用 µ̂ 代替 µ 时，Σ (Xₙ − µ̂)² 会比 Σ (Xₙ − µ)² 平均偏小，因为 µ̂ 是使平方和最小的那个点（最小二乘性质）。所以 (1/N) Σ (Xₙ − µ̂)² 的期望会小于 σ²，即偏差为负。课件通过展开期望运算，最终会得到 Bias = −σ²/N（具体推导过程在 p.34-p.37 中逐步展开，包括将 µ̂ 写成 (1/N)ΣXₙ 代入并利用期望的线性性质）。这个结果告诉我们：用 N 做分母的样本方差会系统性地低估真实方差，低估的程度随着样本量 N 增大而减小。\n\n容易混淆的点：不要把这里的 µ̂ 和总体均值 µ 搞混。µ̂ 是随机变量（依赖于样本），而 µ 是固定常数。在计算期望时，必须对 µ̂ 的随机性也取期望，这正是偏差产生的根源。另外，注意这里的求和是对所有样本点，分母是 N 而不是 N−1——这正是后面引入无偏估计（分母改为 N−1）的动机。\n\n来源：p.33-p.38",
@@ -16703,7 +16686,7 @@
       ]
     },
     {
-      "chunk_id": "N_0026",
+      "chunk_id": "N_0025",
       "note_file": "01_lecture_notes.md",
       "section_title": "1 N",
       "content": "## 1 N [p.35-p.38]\n\n这一节的核心是推导方差估计量 \\(\\hat{\\sigma}^2\\) 的偏差公式，并解释为什么常用的样本方差公式中分母是 \\(N-1\\) 而不是 \\(N\\)。课件从偏差的定义出发，逐步展开代数变换，最终揭示偏差的来源。\n\n**偏差的定义与起点**  \n偏差定义为估计量的期望与真实参数之差：\\(\\text{Bias}(\\hat{\\sigma}^2, \\sigma^2) = \\mathbb{E}_{X|\\sigma^2}[\\hat{\\sigma}^2] - \\sigma^2\\)。这里 \\(\\hat{\\sigma}^2 = \\frac{1}{N} \\sum_{n=1}^N (X_n - \\hat{\\mu})^2\\)，其中 \\(\\hat{\\mu} = \\frac{1}{N} \\sum_{n=1}^N X_n\\) 是样本均值，\\(\\sigma^2\\) 是真实方差，\\(\\mu\\) 是真实均值。注意：\\(\\hat{\\sigma}^2\\) 使用的是样本均值 \\(\\hat{\\mu}\\) 而非真实均值 \\(\\mu\\)，这是偏差产生的关键。\n\n**代数展开与化简**  \n课件将 \\(\\hat{\\sigma}^2\\) 的表达式改写为：  \n\\[\n\\hat{\\sigma}^2 = \\frac{1}{N} \\sum_{n=1}^N [(X_n - \\mu) - (\\hat{\\mu} - \\mu)]^2\n\\]  \n展开平方项：  \n\\[\n= \\frac{1}{N} \\sum_{n=1}^N \\left[ (X_n - \\mu)^2 - 2(X_n - \\mu)(\\hat{\\mu} - \\mu) + (\\hat{\\mu} - \\mu)^2 \\right]\n\\]  \n然后对 \\(n\\) 求和。注意 \\(\\sum_{n=1}^N (X_n - \\mu) = N(\\hat{\\mu} - \\mu)\\)，因此第二项求和为 \\(-2(\\hat{\\mu} - \\mu) \\cdot N(\\hat{\\mu} - \\mu) = -2N(\\hat{\\mu} - \\mu)^2\\)。第三项求和为 \\(N(\\hat{\\mu} - \\mu)^2\\)。合并后得到：  \n\\[\n\\hat{\\sigma}^2 = \\frac{1}{N} \\sum_{n=1}^N (X_n - \\mu)^2 - (\\hat{\\mu} - \\mu)^2\n\\]  \n这个形式清晰表明：\\(\\hat{\\sigma}^2\\) 等于“用真实均值计算的方差”减去“样本均值与真实均值偏差的平方”。\n\n**求期望与偏差结果**  \n对 \\(\\hat{\\sigma}^2\\) 取期望（条件于 \\(\\sigma^2\\)）：  \n\\[\n\\mathbb{E}[\\hat{\\sigma}^2] = \\mathbb{E}\\left[ \\frac{1}{N} \\sum_{n=1}^N (X_n - \\mu)^2 \\right] - \\mathbb{E}[(\\hat{\\mu} - \\mu)^2]\n\\]  \n第一项中，\\(\\mathbb{E}[(X_n - \\mu)^2] = \\sigma^2\\)，所以 \\(\\frac{1}{N} \\sum_{n=1}^N \\sigma^2 = \\sigma^2\\)。第二项是样本均值的方差：\\(\\mathbb{E}[(\\hat{\\mu} - \\mu)^2] = \\text{Var}(\\hat{\\mu}) = \\frac{\\sigma^2}{N}\\)。因此：  \n\\[\n\\mathbb{E}[\\hat{\\sigma}^2] = \\sigma^2 - \\frac{\\sigma^2}{N} = \\frac{N-1}{N} \\sigma^2\n\\]  \n代入偏差定义：  \n\\[\n\\text{Bias}(\\hat{\\sigma}^2, \\sigma^2) = \\frac{N-1}{N} \\sigma^2 - \\sigma^2 = -\\frac{\\sigma^2}{N}\n\\]  \n这说明 \\(\\hat{\\sigma}^2\\) 系统地低估了真实方差，偏差为 \\(-\\sigma^2/N\\)。课件中后续的推导（证据中未完整给出）应会引出无偏估计量 \\(\\frac{1}{N-1} \\sum (X_n - \\hat{\\mu})^2\\)。\n\n**理解要点**  \n- 偏差的根源在于用 \\(\\hat{\\mu}\\) 代替 \\(\\mu\\)：\\(\\hat{\\mu}\\) 本身会“靠近”样本，使得 \\((X_n - \\hat{\\mu})^2\\) 平均小于 \\((X_n - \\mu)^2\\)，导致低估。  \n- 代数变换的关键是引入 \\(\\mu\\) 并分离出 \\((\\hat{\\mu} - \\mu)^2\\)，从而将问题转化为已知的方差关系。  \n- 结果 \\(\\mathbb{E}[\\hat{\\sigma}^2] = \\frac{N-1}{N} \\sigma^2\\) 直接解释了为什么分母用 \\(N-1\\) 可以修正偏差：乘以 \\(\\frac{N}{N-1}\\) 后期望变为 \\(\\sigma^2\\)。\n\n来源：p.35-p.38",
@@ -16718,7 +16701,7 @@
       ]
     },
     {
-      "chunk_id": "N_0027",
+      "chunk_id": "N_0026",
       "note_file": "01_lecture_notes.md",
       "section_title": "▶ The unbiased estimation is σ̂ 2 =",
       "content": "## ▶ The unbiased estimation is σ̂ 2 = [p.37-p.38]\n\n当我们用样本方差去估计总体方差时，一个常见的问题是：直接用样本数据计算的方差（除以n）会系统性地低估总体方差。这是因为样本均值本身是从样本中估计出来的，它比总体均值更“靠近”样本数据点，导致离差平方和偏小。为了纠正这个偏差，我们引入无偏估计量σ̂²。\n\n课件中给出的无偏估计公式是：σ̂² = (1/(n-1)) * Σ(xᵢ - x̄)²，其中xᵢ是第i个样本观测值，x̄是样本均值，n是样本容量。关键符号的角色：目标量是总体方差σ²，参数是样本数据，分布假设是独立同分布（i.i.d.），优化目标是使估计量的期望等于总体方差，即E[σ̂²] = σ²。\n\n这个公式的推导逻辑是：先计算样本方差（除以n），然后证明其期望为((n-1)/n)σ²，所以需要乘以n/(n-1)来修正偏差，最终得到分母为n-1。容易混淆的点是：为什么不是除以n或n+1？因为只有除以n-1才能保证无偏性，即估计量的期望恰好等于总体方差。\n\n理解这个知识点的关键：当你看到样本方差公式中分母是n-1时，要意识到这不是随意选择的，而是为了消除系统性偏差。如果后续遇到假设检验或置信区间，这个无偏估计量就是计算标准误的基础。\n\n来源：p.37-p.38",
@@ -16731,7 +16714,7 @@
       ]
     },
     {
-      "chunk_id": "N_0028",
+      "chunk_id": "N_0027",
       "note_file": "01_lecture_notes.md",
       "section_title": "Formula near 1 N−1",
       "content": "## Formula near 1 N−1 [p.37-p.38]\n\n这一节的核心是理解为什么样本方差的分母是 \\(N-1\\) 而不是 \\(N\\)。课件从“无偏估计”的角度切入，帮助我们区分“总体方差”和“样本方差”这两个容易混淆的概念。\n\n首先明确目标量：我们想估计总体方差 \\(\\sigma^2\\)，但通常只能拿到一组样本 \\(x_1, x_2, \\dots, x_N\\)。直觉上，直接用样本计算离差平方和再除以 \\(N\\) 似乎合理，但这样做得到的估计量是有偏的——它会系统性地低估真实的 \\(\\sigma^2\\)。原因在于，计算样本离差时用到了样本均值 \\(\\bar{x}\\) 而不是总体均值 \\(\\mu\\)，而 \\(\\bar{x}\\) 本身已经“贴近”了样本点，导致离差平方和偏小。\n\n课件推导的关键步骤是：  \n1. 写出样本方差 \\(S^2 = \\frac{1}{N-1} \\sum_{i=1}^N (x_i - \\bar{x})^2\\) 的定义。  \n2. 证明 \\(E[S^2] = \\sigma^2\\)，即它是无偏的。推导中会用到恒等式 \\(\\sum (x_i - \\bar{x})^2 = \\sum (x_i - \\mu)^2 - N(\\bar{x} - \\mu)^2\\)，然后分别取期望，利用 \\(E[\\sum (x_i - \\mu)^2] = N\\sigma^2\\) 和 \\(E[N(\\bar{x} - \\mu)^2] = \\sigma^2\\)（因为 \\(\\text{Var}(\\bar{x}) = \\sigma^2/N\\)），最终得到期望值为 \\((N\\sigma^2 - \\sigma^2)/(N-1) = \\sigma^2\\)。\n\n容易混淆的点：  \n- 分母 \\(N-1\\) 被称为“自由度”，意思是样本中有 \\(N\\) 个独立观测，但计算 \\(\\bar{x}\\) 消耗了一个自由度，所以独立偏差只有 \\(N-1\\) 个。  \n- 如果样本量 \\(N\\) 很大，\\(N\\) 和 \\(N-1\\) 的差别可以忽略；但在小样本（如 \\(N<30\\)）时，必须用 \\(N-1\\) 才能得到无偏估计。\n\n如何判断自己理解了：能用自己的话解释“为什么除以 \\(N\\) 会低估方差”，并能在实际计算中正确选择分母。\n\n来源：p.37-p.38",
@@ -16744,7 +16727,7 @@
       ]
     },
     {
-      "chunk_id": "N_0029",
+      "chunk_id": "N_0028",
       "note_file": "01_lecture_notes.md",
       "section_title": "Formula near P N",
       "content": "## Formula near P N [p.37-p.38]\n\n这一页的核心是推导一个与“近P N”相关的公式，但课件只给出了一个不完整的片段：`n=1 (X n`。从符号上看，这很可能是一个求和式的开头，表示对从n=1开始的某个量进行累加，括号内的`X n`可能是样本观测值（如第n个数据点），也可能是某个中间变量。由于证据不完整，我们只能推测：这个公式的目标可能是计算某个统计量（如均值、方差或似然函数中的累加项），而`n=1`指明了累加起点，`X n`则是被累加的对象。\n\n在复习时，建议先确认这个公式的完整形式：等号左边是什么（比如`S_N`、`L(θ)`或`μ̂`），等号右边除了求和符号和`X n`外，是否还有系数（如`1/N`）或其他项（如`(X n - μ)²`）。如果这是概率或统计中的公式，注意区分`X n`是随机变量还是具体观测值——前者用于推导分布性质，后者用于实际计算。另外，如果公式出现在“近P N”的上下文中，可能涉及“近邻”或“最近点”的概念，此时`X n`可能代表某个距离度量或索引值，而非原始数据。\n\n由于课件证据太少，无法进一步展开推导或应用。建议结合前后页或老师的口头讲解，补全公式后再理解其建模意图。\n\n来源：p.37-p.38",
@@ -16757,7 +16740,7 @@
       ]
     },
     {
-      "chunk_id": "N_0030",
+      "chunk_id": "N_0029",
       "note_file": "01_lecture_notes.md",
       "section_title": "− µ̂) 2 .(What if µ is known?)",
       "content": "## − µ̂) 2 .(What if µ is known?) [p.38]\n\n这一节要解决的问题是：当我们已经知道总体均值 µ 时，估计量的构造和性质会如何变化？课件中标题的“− µ̂) 2”可能是指某种与 µ̂ 相关的平方项（例如方差或均方误差），而“What if µ is known?”则直接点明核心假设——µ 是已知常数，不再需要从样本中估计。\n\n从课程主线看，前面讨论的通常是 µ 未知时用样本均值 µ̂ 去估计它，并评估 µ̂ 的误差或方差。现在反过来问：如果 µ 已知，那么原本依赖于 µ̂ 的统计量（比如样本方差中使用的偏差项）是否需要调整？这里的关键是，当 µ 已知时，样本对 µ 的偏离可以直接用 (Xᵢ − µ) 计算，而不必用 (Xᵢ − µ̂)，这会影响自由度、无偏性以及后续的假设检验或置信区间构造。\n\n容易混淆的点是：不要以为“µ 已知”意味着问题变简单了——它实际上改变了估计量的分母（例如从 n−1 变成 n），并且使得某些原本无偏的估计量变得有偏，反之亦然。要判断自己是否理解，可以试着回答：如果 µ 已知，样本方差 S² 应该用 n 还是 n−1 作分母？为什么？\n\n来源：p.38",
@@ -16766,6 +16749,18 @@
       ],
       "source_blocks": [
         "p038_b015"
+      ]
+    },
+    {
+      "chunk_id": "N_0030",
+      "note_file": "01_lecture_notes.md",
+      "section_title": "▶ Model/Feature selection strategies",
+      "content": "## ▶ Model/Feature selection strategies [p.67]\n\n这一节要解决的核心问题是：当面对多个候选模型或大量特征时，我们依据什么标准来做选择？这直接关系到模型最终在未知数据上的表现。\n\n课件首先点明了选择策略的必要性：如果不加选择地使用所有特征或复杂模型，容易导致过拟合——模型在训练集上表现很好，但在新数据上泛化能力差。因此，我们需要一套系统的方法来权衡模型复杂度与拟合能力。\n\n从课程主线来看，这一节承接了之前对模型评估（如交叉验证、偏差-方差权衡）的讨论，并引向后续更具体的特征选择算法（如正则化、前向/后向搜索）。理解选择策略，是理解为什么有些模型会被“惩罚”或“剪枝”的前提。\n\n判断自己是否理解这一节的关键在于：能否解释清楚“为什么一个在训练集上准确率更高的模型，不一定比一个稍低但更简单的模型好？”以及“在选择特征时，除了相关性，还需要考虑哪些因素（如冗余性、计算成本）？”\n\n来源：p.67",
+      "source_units": [
+        "U_0119"
+      ],
+      "source_blocks": [
+        "p067_b005"
       ]
     },
     {
@@ -16807,13 +16802,18 @@
     {
       "chunk_id": "N_0034",
       "note_file": "01_lecture_notes.md",
-      "section_title": "▶ Model/Feature selection strategies",
-      "content": "## ▶ Model/Feature selection strategies [p.67]\n\n这一节要解决的核心问题是：当面对多个候选模型或大量特征时，我们依据什么标准来做选择？这直接关系到模型最终在未知数据上的表现。\n\n课件首先点明了选择策略的必要性：如果不加选择地使用所有特征或复杂模型，容易导致过拟合——模型在训练集上表现很好，但在新数据上泛化能力差。因此，我们需要一套系统的方法来权衡模型复杂度与拟合能力。\n\n从课程主线来看，这一节承接了之前对模型评估（如交叉验证、偏差-方差权衡）的讨论，并引向后续更具体的特征选择算法（如正则化、前向/后向搜索）。理解选择策略，是理解为什么有些模型会被“惩罚”或“剪枝”的前提。\n\n判断自己是否理解这一节的关键在于：能否解释清楚“为什么一个在训练集上准确率更高的模型，不一定比一个稍低但更简单的模型好？”以及“在选择特征时，除了相关性，还需要考虑哪些因素（如冗余性、计算成本）？”\n\n来源：p.67",
+      "section_title": "Homework 1: DDL — March 16, 2025, Midnight",
+      "content": "## Homework 1: DDL — March 16, 2025, Midnight [p.68]\n\n这次作业的核心是完成一个带数据相关噪声的D阶多项式回归模型，并通过两种估计方法（MLE和MAP）学习参数θ。作业分为三个部分：两个Lab（各3分）和一个技术报告（6分，不超过3页），允许使用AI辅助。\n\n**技术报告的具体问题设定**\n\n给定N个带标签样本 {xₙ ∈ ℝ, yₙ ∈ ℝ}，我们构建一个D阶多项式回归模型，并假设噪声与输入x有关。模型形式为：\n\ny = Σ_{d=1}^{D} x^{d-1} θ_d + ε\n\n其中噪声ε的条件分布为：p(ε|x) = (1/√(2πx²)) · exp(-ε²/(2x²))\n\n这里的关键是：噪声方差不是常数，而是依赖于x²。这意味着当|x|较大时，观测噪声的方差也较大，模型对远离原点的数据点信任度更低。\n\n**问题1：MLE求解（4分）**\n\n要求：通过最大似然估计（MLE）学习参数θ，并推导出闭式解。\n\n由于噪声是高斯分布且方差为x²，对每个样本点，似然函数为：\np(yₙ|xₙ, θ) = (1/√(2πxₙ²)) · exp(-(yₙ - Σ xₙ^{d-1}θ_d)²/(2xₙ²))\n\n取负对数后，MLE等价于最小化加权最小二乘目标函数：\nJ(θ) = Σ (yₙ - Σ xₙ^{d-1}θ_d)² / xₙ²\n\n注意这里的权重是1/xₙ²，即对|x|大的样本赋予更小的权重。写成矩阵形式后，闭式解为：\nθ̂_MLE = (XᵀWX)⁻¹XᵀWy\n\n其中W是对角矩阵，第n个对角元为1/xₙ²，X是N×D的设计矩阵（第n行第d列为xₙ^{d-1}）。\n\n**问题2：MAP求解（4分）**\n\n在MLE基础上，进一步假设参数θ的每个元素服从拉普拉斯先验分布：\nθ_d ~ Laplace(0, b_d) ⇔ p(θ_d) = (1/(2b_d)) · exp(-|θ_d|/b_d)，对所有d=1,...,D\n\n拉普拉斯先验的特点是：在0处有尖峰，且尾部呈指数衰减。这相当于对参数施加L1正则化，会促使一些θ_d被推到0，实现特征选择。\n\nMAP估计需要最大化后验概率p(θ|X,y) ∝ p(y|X,θ) · p(θ)，等价于最小化：\nJ_MAP(θ) = Σ (yₙ - Σ xₙ^{d-1}θ_d)² / xₙ² + 2Σ |θ_d|/b_d\n\n由于L1正则项的存在，这个优化问题没有闭式解，需要迭代求解（如坐标下降法或梯度下降法）。\n\n**提交要求**\n- DDL：2025年3月16日午夜\n- 迟交：每周扣1分\n\n来源：p.68",
       "source_units": [
-        "U_0119"
+        "U_0120",
+        "U_0121",
+        "U_0122"
       ],
       "source_blocks": [
-        "p067_b005"
+        "p068_b001",
+        "p068_b002",
+        "p068_b003",
+        "p068_b004"
       ]
     }
   ],

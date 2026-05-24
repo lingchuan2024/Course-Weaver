@@ -133,6 +133,49 @@ class ProjectPipelineTests(unittest.TestCase):
         self.assertEqual(project.note_plan, [])
         self.assertEqual(project.coverage_summary["merged"], 1)
 
+    def test_reorders_note_plan_into_learning_path(self):
+        pages = [
+            PageIR(page_id="p002", page_number=2, width=400, height=300, blocks=["p002_b001"]),
+            PageIR(page_id="p003", page_number=3, width=400, height=300, blocks=["p003_b001"]),
+            PageIR(page_id="p004", page_number=4, width=400, height=300, blocks=["p004_b001"]),
+        ]
+        blocks = [
+            Block(
+                block_id="p002_b001",
+                page_id="p002",
+                page_number=2,
+                block_type="title",
+                text="Linear Regression",
+                bbox=[10, 20, 100, 40],
+                reading_order=1,
+            ),
+            Block(
+                block_id="p003_b001",
+                page_id="p003",
+                page_number=3,
+                block_type="title",
+                text="Random Variables and Instances/Samples",
+                bbox=[10, 20, 100, 40],
+                reading_order=1,
+            ),
+            Block(
+                block_id="p004_b001",
+                page_id="p004",
+                page_number=4,
+                block_type="title",
+                text="Homework 1",
+                bbox=[10, 20, 100, 40],
+                reading_order=1,
+            ),
+        ]
+
+        project = build_project_ir("demo", "demo.pdf", pages, blocks)
+        titles = [section.section_title for section in project.note_plan]
+
+        self.assertEqual(titles[0], "Random Variables and Instances/Samples")
+        self.assertLess(titles.index("Random Variables and Instances/Samples"), titles.index("Linear Regression"))
+        self.assertNotIn("Homework 1", titles)
+
 
 if __name__ == "__main__":
     unittest.main()

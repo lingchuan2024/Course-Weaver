@@ -7,7 +7,13 @@ from courseweaver.coverage import build_coverage
 from courseweaver.exporter import export_project
 from courseweaver.llm import create_llm_client
 from courseweaver.models import Block, PageIR, ProjectIR
-from courseweaver.notes import add_relationship_review_chunk, generate_note_chunks, plan_notes, refine_note_chunks_with_llm
+from courseweaver.notes import (
+    add_relationship_review_chunk,
+    generate_note_chunks,
+    plan_notes,
+    refine_note_chunks_with_llm,
+    reorder_note_plan_for_learning,
+)
 from courseweaver.pdf_parser import parse_pdf
 from courseweaver.relations import build_relations
 from courseweaver.units import extract_units, merge_units
@@ -45,6 +51,7 @@ def build_project_ir(
     page_units = extract_units(blocks)
     knowledge_units = merge_units(page_units)
     note_plan = plan_notes(knowledge_units)
+    note_plan = reorder_note_plan_for_learning(note_plan, knowledge_units)
     relations = build_relations(knowledge_units, note_plan)
     note_chunks = generate_note_chunks(knowledge_units, note_plan)
     if llm_client is not None:

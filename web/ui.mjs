@@ -21,6 +21,7 @@ const state = {
   indexes: null,
   selectedPageId: null,
   selectedBlockId: null,
+  activeSectionTitle: "",
   query: "",
   tool: "tree",
 };
@@ -69,6 +70,7 @@ els.search.addEventListener("input", (event) => {
 });
 els.prevPage.addEventListener("click", () => movePage(-1));
 els.nextPage.addEventListener("click", () => movePage(1));
+els.noteContent.addEventListener("scroll", updateActiveSectionFromScroll, { passive: true });
 for (const tab of els.toolTabs) {
   tab.addEventListener("click", () => setTool(tab.dataset.tool));
 }
@@ -121,6 +123,7 @@ function setProject(project) {
   state.indexes = indexProject(project);
   state.selectedPageId = findFirstLearningPage(project);
   state.selectedBlockId = null;
+  state.activeSectionTitle = "";
   state.query = "";
   state.tool = "tree";
   els.search.value = "";
@@ -227,6 +230,7 @@ function renderNote() {
   els.noteContent.querySelectorAll(".source-chip").forEach((chip) => {
     chip.addEventListener("click", () => selectBlock(chip.dataset.blockId));
   });
+  updateActiveSectionFromScroll();
 }
 
 function renderTool() {
@@ -250,13 +254,13 @@ function renderKnowledgeTree() {
 
   els.toolContent.innerHTML = `
     <div class="tool-summary">
-      <strong>课程知识树</strong>
-      <span>${tree.length} 个主干节点</span>
+      <strong>学习路径图</strong>
+      <span id="learning-progress-text">${learningProgressText(tree)}</span>
     </div>
-    <div class="tree-map" role="tree">
+    <div class="tree-map learning-graph" role="tree">
       <div class="tree-root">
         <strong>Lecture</strong>
-        <span>主线</span>
+        <span>Progress</span>
       </div>
       ${tree.map(renderTreeNode).join("") || emptyMarkup("没有匹配的知识节点")}
     </div>
@@ -265,6 +269,7 @@ function renderKnowledgeTree() {
   els.toolContent.querySelectorAll("[data-jump-title]").forEach((button) => {
     button.addEventListener("click", () => scrollToNoteSection(button.dataset.jumpTitle));
   });
+  updateGraphProgressClasses();
 }
 
 function renderTreeNode(node) {
@@ -284,7 +289,7 @@ function renderTreeNode(node) {
     .join("");
 
   return `
-    <section class="branch-node" role="treeitem">
+    <section class="branch-node" role="treeitem" data-section-title="${escapeHtml(node.title)}" data-section-index="${node.index}">
       <div class="branch-stem" aria-hidden="true"></div>
       <div class="branch-card">
         <span class="branch-index">${String(node.index).padStart(2, "0")}</span>
@@ -390,7 +395,48 @@ function updateToolTabs() {
 function scrollToNoteSection(title) {
   const target = [...els.noteContent.querySelectorAll(".note-section")]
     .find((section) => section.dataset.sectionTitle === title);
-  if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    state.activeSectionTitle = title;
+    updateGraphProgressClasses();
+  }
+}
+
+function updateActiveSectionFromScroll() {
+  if (!state.project) return;
+  const sections = [...els.noteContent.querySelectorAll(".note-section")];
+  if (!sections.length) return;
+  const containerTop = els.noteContent.getBoundingClientRect().top;
+  let active = sections[0];
+  for (const section of sections) {
+    const offset = section.getBoundingClientRect().top - containerTop;
+    if (offset <= 120) active = section;
+  }
+  const title = active.dataset.sectionTitle || "";
+  if (title === state.activeSectionTitle) return;
+  state.activeSectionTitle = title;
+  updateGraphProgressClasses();
+}
+
+function updateGraphProgressClasses() {
+  const nodes = [...els.toolContent.querySelectorAll(".branch-node")];
+  if (!nodes.length) return;
+  const activeIndex = nodes.findIndex((node) => node.dataset.sectionTitle === state.activeSectionTitle);
+  nodes.forEach((node, index) => {
+    node.classList.toggle("active", index === activeIndex);
+    node.classList.toggle("completed", activeIndex >= 0 && index < activeIndex);
+    node.classList.toggle("upcoming", activeIndex < 0 || index > activeIndex);
+  });
+  const progressText = els.toolContent.querySelector("#learning-progress-text");
+  if (progressText) progressText.textContent = learningProgressText(nodes);
+}
+
+function learningProgressText(treeOrNodes) {
+  const total = treeOrNodes.length;
+  const titles = (state.project?.note_plan || []).map((section) => section.section_title);
+  const activeIndex = titles.indexOf(state.activeSectionTitle);
+  if (activeIndex < 0) return `${total} 个节点`;
+  return `${Math.min(activeIndex + 1, total)} / ${total} 正在学习`;
 }
 
 function downloadCurrentNote() {
